@@ -1,8 +1,4 @@
-# Deck of Cards
+# [Python Essentials: Card Deck Class in 3 Steps](https://www.skillshare.com/classes/Python-Essentials-Card-Deck-Class-in-3-Steps/968840398/projects)
 
-This is the next project in our course line-up.
- 
-We are experimenting with a technique to Classes: where we pass around the 'Deck' as a list, and then explain why a class would make life easier. 
+We are demonstrate why Classes are useful: before creating a class we pass around the 'Deck' info as a list, and then demo what it would look like as a class instead. 
 Let us know what you think. 
-
-The course itself is not published, and the code is not finalised, so take what you see here with a pinch of salt.
