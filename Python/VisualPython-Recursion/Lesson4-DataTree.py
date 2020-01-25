@@ -40,6 +40,9 @@ def populate_binary_tree(current_node, new_value):
         turtle.backward(50)
         turtle.right(45)
 
+#########################################################################
+########### MAIN HOMEWORK BEGINS HERE - AVOID SPOILERS ##################
+#########################################################################
 
 def draw_binary_tree(current_node):
     if(current_node.value == None):
