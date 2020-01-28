@@ -55,7 +55,7 @@ def draw_triangle_homework_version(edge1, edge2 = None, edge3 = None):
         edge2 = edge1
         edge3 = edge1
 
-    #The above check ensures that if once here you can never have more than 1 blank edge
+    #The above check ensures that once here you can never have more than 1 blank edge
     if(edge2 is None):
         edge2 = edge1
     if(edge3 is None):
