@@ -9,7 +9,7 @@ def setup_turtle():
     turtle.width(5)
 
 def draw_triangle(edge1, edge2 = None, edge3 = None):
-    if (edge2 is None and edge3 is None):
+    if (edge2 is None or edge3 is None):
         edge2 = edge1
         edge3 = edge1
 
