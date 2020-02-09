@@ -3,7 +3,7 @@ from numpy import arccos, degrees
 
 def setup_turtle():
     turtle.clear()
-    turtle.speed(3)
+    turtle.speed(0)
     turtle.width(5)
 
 def draw_triangle(edge1, edge2 = None, edge3 = None):
@@ -37,10 +37,24 @@ def get_next_color():
     color_index += 1
     return colors[bounded_index]
 
+def draw_row(total_triangle):
+    for x in range(0, 2):
+        for y in range(0, total_triangle):
+            turtle.color(get_next_color())
+            draw_triangle(60, 85, 60)
+            turtle.forward(60)
+        turtle.right(90)
+        turtle.forward(60)
+        turtle.right(90)
+
 setup_turtle()
-for i in range(1,17):
-    turtle.color(get_next_color())
-    draw_triangle(i*10, i*15, i*20)
-    turtle.left(120)
+end = 6
+for i in range(end + 1):
+    draw_row(end+1)
+    if(i == end):
+        break
+    turtle.left(90)
+    turtle.forward(60)
+    turtle.right(90)
 
 turtle.exitonclick()

@@ -22,39 +22,6 @@ def get_next_color():
 setup_turtle()
 for i in range(100):
     turtle.color(get_next_color())
-    draw_square(200,33)
+    draw_square(200, 33)
 
 turtle.exitonclick()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
