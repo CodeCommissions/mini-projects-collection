@@ -3,8 +3,8 @@ import turtle
 turtle.width(20)
 for new_color in ["red", "orange", "yellow", "green", "blue", "indigo", "violet"]:
     turtle.color(new_color)
-    turtle.forward(200)
-    turtle.backward(200)
+    turtle.forward(300)
+    turtle.backward(300)
     turtle.right(90)
     turtle.penup()
     turtle.forward(20)

@@ -21,3 +21,7 @@ turtle.penup()
 turtle.goto(-500, 500)
 
 turtle.exitonclick()
+
+
+
+
