@@ -10,7 +10,7 @@ turtle.width(2)
 magnification = 50
 steps = 500
 
-#Set the spirographs 3 main variables
+#Set the spirograph's 3 main variables
 R = 4
 r = 5
 d = 1.5
