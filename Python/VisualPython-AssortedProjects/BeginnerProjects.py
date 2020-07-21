@@ -1,0 +1,199 @@
+import turtle
+import random
+
+def get_default_turtle(existing_turtle=None):
+    if existing_turtle is None:
+        existing_turtle = turtle.Turtle()
+        existing_turtle.color(0.9, 0.9, 0.9)
+
+    return existing_turtle
+
+
+class DrawShape:
+    """
+    Draw a single shape.
+    You can do this with nothing but forward() and left() call.
+    You can go a step further and use a for loop.
+    """
+
+    def __init__(self, pen):
+        self._sides = 4
+        self._pen = pen
+        self._edge_length = 100
+
+    def _draw(self, sides):
+        for _ in range(sides):
+            self._pen.forward(self._edge_length)
+            self._pen.left(360 / sides)
+
+        self._pen.ht()
+
+    @staticmethod
+    def draw_now(sides=4, pen=None) -> turtle.Turtle:
+        pen = get_default_turtle(pen)
+
+        traceable = DrawShape(pen)
+        traceable._draw(sides)
+
+        return pen
+
+
+class DrawOverlappingShapes:
+    @staticmethod
+    def draw_now(start_sides=3, end_sides=5, pen=None):
+        pen = get_default_turtle(pen)
+        for i in range(start_sides, end_sides + 1):
+            DrawShape.draw_now(i, pen)
+
+        return pen
+
+
+class DrawSeparatedShapes:
+    @staticmethod
+    def draw_now(pen=None):
+        pen = get_default_turtle(pen)
+
+        traceable = DrawShape(pen)
+
+        for offset, sides, color in [(-200, 3, (0.9, 0.9, 0.9)), (0, 4, (0.8, 0.8, 0.8)), (200, 20, (0.7, 0.7, 0.7))]:
+            pen.penup()
+            pen.goto(offset, 0)
+            pen.pendown()
+
+            pen.color(*color)
+            traceable._edge_length = 400/sides
+            traceable._draw(sides)
+
+        return pen
+
+
+class DrawTarget:
+    @staticmethod
+    def draw_now(pen=None):
+        pen = get_default_turtle(pen)
+        y = -200
+
+        pen.speed(10)
+
+        sides = 7
+        for i in range(sides):
+            pen.penup()
+            pen.goto(0, y)
+            pen.pendown()
+
+            # decide which color
+            pen.color(['red', 'white'][i % 2])
+
+            # draw circle
+            pen.begin_fill()
+            pen.circle((sides-i)*40)
+            pen.end_fill()
+
+            y += 40
+
+        return pen
+
+
+class DrawCaptainShield:
+    @staticmethod
+    def draw_now(pen=None):
+        pen = get_default_turtle(pen)
+        y = -200
+
+        pen.speed(10)
+
+        for i in range(4):
+            pen.penup()
+            pen.goto(0, y)
+            pen.pendown()
+
+            # decide which color
+            pen.color(['red', 'light grey', 'red', 'blue'][i])
+
+            # draw circle
+            pen.begin_fill()
+            pen.circle((7-i)*40)
+            pen.end_fill()
+
+            y += 40
+
+        pen.goto(-150, 130)
+        pen.color("white")
+        pen.begin_fill()
+        for i in range(5):
+            pen.forward(300)
+            pen.right(144)
+        pen.end_fill()
+
+        pen.ht()
+        return pen
+
+
+class DrawWhirlpool:
+    @staticmethod
+    def draw_now():
+        colors = ["blue", "dark blue", "navy"]
+        pens = []
+        for i in range(6):
+            new_turtle = turtle.Turtle()
+            new_turtle.width(4)
+            new_turtle.color(colors[i%3])
+            new_turtle.left(i * 60)
+            new_turtle.speed(10)
+            pens.append(new_turtle)
+
+        for i in range(1, 8):
+            for pen in pens:
+                pen.begin_fill()
+                pen.forward(i * 15)
+                pen.left(30)
+
+        pen.ht()
+        return pens
+
+
+class DrawPieChart:
+    @staticmethod
+    def draw_now(pen=None):
+        pen = get_default_turtle(pen)
+        pen.speed(10)
+
+        colors = ["red", "light grey"]
+        for i in range(6):
+            pen.color(colors[i%2])
+            pen.begin_fill()
+            for _ in range(3):
+                pen.forward(100)
+                pen.left(360/3)
+            pen.end_fill()
+            pen.left(60)
+
+        pen.ht()
+        return pen
+
+
+class RacerTurtles:
+    @staticmethod
+    def race_now():
+        pens = []
+        total_pens = 8
+        for i in range(total_pens):
+            pen = turtle.Turtle()
+            pens.append(pen)
+            pen.shape("turtle")
+            pen.penup()
+            pen.goto(-300, 300 - i * 80)
+            pen.penup()
+            pen.pendown()
+
+        winner_found = False
+        finish_line = 400
+        while not winner_found:
+            mover = random.choice(pens)
+            distance = random.randint(1, 10)
+            mover.forward(distance)
+            x, y = mover.pos()
+            if x >= finish_line:
+                winner_found = True
+                mover.color("red")
+                mover.shapesize(4)
