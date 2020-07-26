@@ -1,4 +1,6 @@
 import turtle
+import random
+import BeginnerProjects
 from math import cos, sin, tan, sqrt
 
 class DrawGraph:
@@ -100,3 +102,61 @@ class DrawGraph:
 
         #And finally, tan, to demo that our long-line-prevention logic serves a purpose
         self.draw_graph(tan, -7.9, 7.9, 0.05)
+
+class DrawGarden:
+    def __init__(self, pen=None):
+        self.pen = BeginnerProjects.get_default_turtle(pen)
+        self.pen.speed(0)
+
+    def draw_now(self):
+        total_flowers = 10
+        for _ in range(total_flowers):
+            x, y = random.randint(-300, 300), random.randint(-300, 300)
+            size = random.randint(150, 200)
+            self.draw_flower(x, y, size)
+
+    def draw_petals(self, x, y):
+        self._teleport_to(x, y)
+        sides = 7
+        petals = 6
+        size = random.randint(40,60)
+        self.pen.setheading(random.randint(0, 360))
+        for _ in range(petals):
+            for _ in range(sides):
+                self.pen.forward(size)
+                self.pen.left(360 / sides)
+            self.pen.left(360 / petals)
+
+    def draw_flower(self, x, y, size):
+        self.draw_stem(x, y, size)
+        self.draw_petals(x, y)
+
+    def draw_stem(self, x, y, size):
+        self._teleport_to(x, y)
+        w = self.pen.width()
+        self.pen.width(3)
+        self.pen.setheading(-90)
+        self.pen.forward(size)
+        self.pen.width(w)
+
+    def _teleport_to(self, x, y):
+        if self.pen.isdown():
+            self.pen.penup()
+            self.pen.goto(x, y)
+            self.pen.pendown()
+        else:
+            self.pen.goto(x, y)
+
+
+
+
+
+
+
+
+
+
+
+
+
+

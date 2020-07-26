@@ -12,7 +12,7 @@ import SpecialTurtles
 # BeginnerProjects.DrawPieChart.draw_now()
 # BeginnerProjects.DrawTarget.draw_now()
 # BeginnerProjects.DrawCaptainShield.draw_now()
-BeginnerProjects.RacerTurtles.race_now()
+# BeginnerProjects.RacerTurtles.race_now()
 
 # SpecialTurtles.Demos.conga_turtle_demo()
 # SpecialTurtles.Demos.rainbow_turtle_demo()
@@ -23,7 +23,7 @@ BeginnerProjects.RacerTurtles.race_now()
 
 
 # FunctionFocusedProjects.DrawGraph().draw_now()
-
+FunctionFocusedProjects.DrawGarden().draw_now()
 
 
 turtle.exitonclick()
