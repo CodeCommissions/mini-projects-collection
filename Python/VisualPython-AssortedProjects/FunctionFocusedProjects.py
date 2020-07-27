@@ -3,6 +3,7 @@ import random
 import BeginnerProjects
 from math import cos, sin, tan, sqrt
 
+
 class DrawGraph:
     def __init__(self):
         self.color_index = 0
@@ -103,6 +104,7 @@ class DrawGraph:
         #And finally, tan, to demo that our long-line-prevention logic serves a purpose
         self.draw_graph(tan, -7.9, 7.9, 0.05)
 
+
 class DrawGarden:
     def __init__(self, pen=None):
         self.pen = BeginnerProjects.get_default_turtle(pen)
@@ -148,9 +150,76 @@ class DrawGarden:
             self.pen.goto(x, y)
 
 
+class DrawNightSky:
+    def __init__(self, pen=None):
+        self.pen = BeginnerProjects.get_default_turtle(pen)
+        self.pen.speed(0)
+        self.star_coords = []
 
+    def draw_now(self):
+        self.paint_background()
+        self.draw_stars(30)
+        self.draw_moon()
 
+    def paint_background(self):
+        self.pen.color("midnight blue")
+        self.pen.goto(-500, -500)
+        self.pen.begin_fill()
+        for x, y in [[500, -500], [500, 500], [-500, 500], [-500, -500]]:
+            self.pen.goto(x, y)
+        self.pen.end_fill()
 
+    def draw_star(self, x, y, size):
+        self.pen.penup()
+        self.pen.goto(x, y)
+        self.pen.pendown()
+
+        self.pen.color("gold")
+        self.pen.begin_fill()
+        for _ in range(5):
+            self.pen.forward(size)
+            self.pen.right(144)
+        self.pen.end_fill()
+
+    def _get_new_star_position(self):
+        while True:
+            new_x, new_y = random.randint(-500, 400), random.randint(-500, 400)
+            too_close = False
+            for x, y in self.star_coords:
+                distance = sqrt((x-new_x)**2 + (y-new_y)**2)
+                if distance < 140:
+                    too_close = True
+                    break
+
+            if not too_close:
+                return new_x, new_y
+
+    def draw_stars(self, total):
+        for _ in range(total):
+            x, y = self._get_new_star_position()
+            self.star_coords.append((x, y))
+
+            size = random.randint(80, 120)
+            self.draw_star(x, y, size)
+
+    def draw_moon(self):
+        self.pen.penup()
+
+        self.pen.setheading(90)
+        self.pen.goto(-50, 50)
+        self.pen.pendown()
+
+        self.pen.begin_fill()
+        self.pen.color("silver")
+        self.pen.circle(200)
+        self.pen.end_fill()
+
+        self.pen.goto(-40, 50)
+
+        self.pen.begin_fill()
+        self.pen.color("midnight blue")
+        self.pen.circle(160)
+        self.pen.end_fill()
 
 
 

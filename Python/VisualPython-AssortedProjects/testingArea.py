@@ -23,7 +23,7 @@ import SpecialTurtles
 
 
 # FunctionFocusedProjects.DrawGraph().draw_now()
-FunctionFocusedProjects.DrawGarden().draw_now()
-
+# FunctionFocusedProjects.DrawGarden().draw_now()
+FunctionFocusedProjects.DrawNightSky().draw_now()
 
 turtle.exitonclick()
