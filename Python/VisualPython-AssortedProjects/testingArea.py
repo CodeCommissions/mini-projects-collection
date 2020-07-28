@@ -3,6 +3,7 @@ import random
 import BeginnerProjects
 import FunctionFocusedProjects
 import SpecialTurtles
+import IntermediateProjects
 
 
 # BeginnerProjects.DrawShape.draw_now()
@@ -27,6 +28,12 @@ import SpecialTurtles
 # FunctionFocusedProjects.DrawGraph().draw_now()
 # FunctionFocusedProjects.DrawGarden().draw_now()
 # FunctionFocusedProjects.DrawNightSky().draw_now()
-FunctionFocusedProjects.SpiralArt().draw_now()
+# FunctionFocusedProjects.SpiralArt().draw_now()
+
+spiro_drawer = IntermediateProjects.DrawTrueSpirograph()
+spiro_drawer.print_more_info()
+spiro_drawer.R = 6
+spiro_drawer.r = 1
+spiro_drawer.draw_now()
 
 turtle.exitonclick()
