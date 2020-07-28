@@ -1,6 +1,7 @@
 import turtle
 import random
 
+
 def get_default_turtle(existing_turtle=None):
     if existing_turtle is None:
         existing_turtle = turtle.Turtle()
@@ -197,3 +198,43 @@ class RacerTurtles:
                 winner_found = True
                 mover.color("red")
                 mover.shapesize(4)
+
+
+class PolygonFromUser:
+    @staticmethod
+    def draw_now():
+        pen = get_default_turtle()
+        pen.color("black")
+        pen.write("How many sides?\n(Look at the terminal)")
+        raw_input = input("How many sides: ")
+
+        pen.clear()
+        try:
+            edges = int(raw_input)
+        except:
+            pen.write("Invalid input. Please quit.")
+            return
+
+        size = 1000/edges
+        for _ in range(edges):
+            pen.forward(size)
+            pen.left(360/edges)
+
+        return pen
+
+
+class DrawChessBoard:
+    @staticmethod
+    def draw_now():
+        pen = get_default_turtle()
+        pen.shape("square")
+        pen.shapesize(2)
+        pen.penup()
+
+        for x in range(8):
+            for y in range(8):
+                pen.goto(-120 + x*40, -120 + y*40)
+                pen.color("black" if x % 2 == y % 2 else "light gray")
+                pen.stamp()
+
+        return pen

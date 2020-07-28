@@ -13,6 +13,8 @@ import SpecialTurtles
 # BeginnerProjects.DrawTarget.draw_now()
 # BeginnerProjects.DrawCaptainShield.draw_now()
 # BeginnerProjects.RacerTurtles.race_now()
+# BeginnerProjects.PolygonFromUser.draw_now()
+# BeginnerProjects.DrawChessBoard.draw_now()
 
 # SpecialTurtles.Demos.conga_turtle_demo()
 # SpecialTurtles.Demos.rainbow_turtle_demo()
@@ -24,6 +26,7 @@ import SpecialTurtles
 
 # FunctionFocusedProjects.DrawGraph().draw_now()
 # FunctionFocusedProjects.DrawGarden().draw_now()
-FunctionFocusedProjects.DrawNightSky().draw_now()
+# FunctionFocusedProjects.DrawNightSky().draw_now()
+FunctionFocusedProjects.SpiralArt().draw_now()
 
 turtle.exitonclick()

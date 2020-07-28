@@ -222,7 +222,46 @@ class DrawNightSky:
         self.pen.end_fill()
 
 
+class SpiralArt:
+    def __init__(self, pen=None):
+        self.pen = BeginnerProjects.get_default_turtle(pen)
+        self.pen.speed("fast")
+        # Could be random, but it starts looking ugly with more than 3 spirals
+        self.spirals = 3
+        self.pen.screen.colormode(255)
 
+    def draw_now(self):
+        for _ in range(self.spirals):
+            x, y = random.randint(-300, 300), random.randint(-300, 300)
+            self.draw_spiral(x, y)
+
+    def draw_spiral(self, x, y):
+        self.pen.penup()
+        self.pen.goto(x, y)
+        self.pen.pendown()
+
+        edges = random.randint(16, 26)
+        for i in range(edges):
+            self.randomize_pen()
+            self.pen.forward(10 + i*5)
+            self.pen.left(33)
+
+
+    def randomize_pen(self):
+        r, g, b = random.randint(0, 255), random.randint(0, 255), random.randint(0, 255)
+        self.pen.color(r, g, b)
+        new_width = random.randint(1, 4)
+        self.pen.width(new_width)
+
+
+
+    def paint_background(self):
+        self.pen.color("midnight blue")
+        self.pen.goto(-500, -500)
+        self.pen.begin_fill()
+        for x, y in [[500, -500], [500, 500], [-500, 500], [-500, -500]]:
+            self.pen.goto(x, y)
+        self.pen.end_fill()
 
 
 
