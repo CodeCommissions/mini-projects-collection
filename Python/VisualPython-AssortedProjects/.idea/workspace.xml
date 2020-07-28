@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e043b1a1-98e8-4f74-a03d-98ce6082bdd1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BeginnerProjects.py" beforeDir="false" afterPath="$PROJECT_DIR$/BeginnerProjects.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FunctionFocusedProjects.py" beforeDir="false" afterPath="$PROJECT_DIR$/FunctionFocusedProjects.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testingArea.py" beforeDir="false" afterPath="$PROJECT_DIR$/testingArea.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,7 +28,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BeginnerProjects.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="966">
+            <state relative-caret-position="1272">
               <caret line="240" selection-start-line="240" selection-end-line="240" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
@@ -60,8 +58,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/FunctionFocusedProjects.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="232" column="23" lean-forward="true" selection-start-line="232" selection-start-column="23" selection-end-line="232" selection-end-column="23" />
+            <state relative-caret-position="711">
+              <caret line="254" selection-start-line="254" selection-end-line="254" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -241,23 +239,6 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/firstProgram.py" />
     <entry file="file://$PROJECT_DIR$/CongaTurtleClassDemo.py" />
-    <entry file="file://$PROJECT_DIR$/SpecialTurtles.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="19" column="34" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BeginnerProjects.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="966">
-          <caret line="240" selection-start-line="240" selection-end-line="240" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/testingArea.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
@@ -275,10 +256,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/SpecialTurtles.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="19" column="34" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BeginnerProjects.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1272">
+          <caret line="240" selection-start-line="240" selection-end-line="240" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/FunctionFocusedProjects.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="232" column="23" lean-forward="true" selection-start-line="232" selection-start-column="23" selection-end-line="232" selection-end-column="23" />
+        <state relative-caret-position="711">
+          <caret line="254" selection-start-line="254" selection-end-line="254" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>

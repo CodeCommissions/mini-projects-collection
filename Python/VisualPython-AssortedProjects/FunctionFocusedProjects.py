@@ -246,24 +246,11 @@ class SpiralArt:
             self.pen.forward(10 + i*5)
             self.pen.left(33)
 
-
     def randomize_pen(self):
         r, g, b = random.randint(0, 255), random.randint(0, 255), random.randint(0, 255)
         self.pen.color(r, g, b)
         new_width = random.randint(1, 4)
         self.pen.width(new_width)
-
-
-
-    def paint_background(self):
-        self.pen.color("midnight blue")
-        self.pen.goto(-500, -500)
-        self.pen.begin_fill()
-        for x, y in [[500, -500], [500, 500], [-500, 500], [-500, -500]]:
-            self.pen.goto(x, y)
-        self.pen.end_fill()
-
-
 
 
 
