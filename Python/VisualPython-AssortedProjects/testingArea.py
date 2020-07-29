@@ -3,8 +3,12 @@ import BeginnerProjects, FunctionFocusedProjects
 import IntermediateProjects, RecursiveProjects
 import SpecialTurtles
 
+########################################################################################################
+# Uncomment a chunk of code, and hit run to see it in action.
+# Certain chunks are one-liners, others are larger so you can experiment.
+########################################################################################################
 
-
+# # Any one of these will run in isolation:
 # BeginnerProjects.DrawShape.draw_now()
 # BeginnerProjects.DrawSeparatedShapes.draw_now()
 # BeginnerProjects.DrawOverlappingShapes()
@@ -16,17 +20,23 @@ import SpecialTurtles
 # BeginnerProjects.PolygonFromUser.draw_now()
 # BeginnerProjects.DrawChessBoard.draw_now()
 
-# SpecialTurtles.Demos.conga_turtle_demo()
-# SpecialTurtles.Demos.rainbow_turtle_demo()
-# rainbow_pen = SpecialTurtles.CongaTurtle(6)
-# for i in range(6):
-#     rainbow_pen.forward(220)
-#     rainbow_pen.left(60)
-
 # FunctionFocusedProjects.DrawGraph().draw_now()
 # FunctionFocusedProjects.DrawGarden().draw_now()
 # FunctionFocusedProjects.DrawNightSky().draw_now()
 # FunctionFocusedProjects.SpiralArt().draw_now()
+
+
+########################################################################################################
+# Examples after this point are often not one-liners.
+# Be a bit careful with how much you uncomment.
+########################################################################################################
+
+# SpecialTurtles.Demos.conga_turtle_demo()
+# SpecialTurtles.Demos.rainbow_turtle_demo()
+# rainbow_pen = SpecialTurtles.rainbow_turtle_demo()
+# for i in range(6):
+#     rainbow_pen.forward(220)
+#     rainbow_pen.left(60)
 
 # spiro_drawer = IntermediateProjects.DrawTrueSpirograph()
 # spiro_drawer.print_more_info()
@@ -34,10 +44,9 @@ import SpecialTurtles
 # spiro_drawer.r = 1
 # spiro_drawer.draw_now()
 
-snowflake_drawer = RecursiveProjects.KochSnowflakeDrawer()
-for i in range(4):
-    snowflake_drawer.draw_snowflake(i, 300)
-
-
+RecursiveProjects.KochSnowflakeDrawer().draw_snowflake(2, 50)
+# snowflake_drawer = RecursiveProjects.KochSnowflakeDrawer()
+# for i in range(4):
+#    snowflake_drawer.draw_snowflake(i, 300)
 
 turtle.exitonclick()
