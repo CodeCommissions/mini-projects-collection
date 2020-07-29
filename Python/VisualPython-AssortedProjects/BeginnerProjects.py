@@ -9,6 +9,13 @@ def get_default_turtle(existing_turtle=None):
 
     return existing_turtle
 
+def teleport_turtle(turt : turtle.Turtle, x, y):
+    if turt.isdown():
+        turt.penup()
+        turt.goto(x, y)
+        turt.pendown()
+    else:
+        turt.goto(x, y)
 
 class DrawShape:
     def __init__(self, pen):
@@ -206,8 +213,8 @@ class RacerTurtles:
 
 class PolygonFromUser:
     @staticmethod
-    def draw_now():
-        pen = get_default_turtle()
+    def draw_now(pen=None):
+        pen = get_default_turtle(pen)
         pen.color("black")
         pen.write("How many sides?\n(Look at the terminal)")
         raw_input = input("How many sides: ")
@@ -229,8 +236,8 @@ class PolygonFromUser:
 
 class DrawChessBoard:
     @staticmethod
-    def draw_now():
-        pen = get_default_turtle()
+    def draw_now(pen=None):
+        pen = get_default_turtle(pen)
         pen.shape("square")
         pen.shapesize(2)
         pen.penup()
@@ -242,3 +249,90 @@ class DrawChessBoard:
                 pen.stamp()
 
         return pen
+
+
+class Minion:
+    @staticmethod
+    def draw_now(pen=None):
+        pen = get_default_turtle(pen)
+        pen.speed(0)
+
+        pen.color("yellow")
+        teleport_turtle(pen, -100, -100)
+        pen.begin_fill()
+        pen.forward(200)
+        pen.left(90)
+        pen.forward(200)
+        for i in range(18):
+            pen.forward(18)
+            pen.left(10)
+        pen.forward(220)
+        pen.left(90)
+        pen.end_fill()
+
+        pen.color("black")
+        teleport_turtle(pen, -105, 115)
+        pen.begin_fill()
+        for i in range(2):
+            pen.forward(205)
+            pen.right(90)
+            pen.forward(20)
+            pen.right(90)
+        pen.end_fill()
+
+        pen.color("silver")
+        teleport_turtle(pen, -60, 110)
+        pen.right(90)
+        pen.begin_fill()
+        for i in range(36):
+            pen.forward(10)
+            pen.left(10)
+        pen.end_fill()
+
+        pen.color("white")
+        teleport_turtle(pen, -38, 110)
+        pen.begin_fill()
+        for i in range(36):
+            pen.forward(6)
+            pen.left(10)
+        pen.end_fill()
+
+        pen.color("brown")
+        teleport_turtle(pen, -15, 110)
+        pen.begin_fill()
+        for i in range(36):
+            pen.forward(2)
+            pen.left(10)
+        pen.end_fill()
+        pen.left(90)
+        teleport_turtle(pen, -105, -30)
+
+        pen.begin_fill()
+        pen.color("blue")
+        for distance, direction in [[30, 90], [50, -90], [150, -90], [50, 90], [25, 90], [70, 90], [207, 90], [70, 0]]:
+            pen.forward(distance)
+            pen.right(direction)
+        pen.end_fill()
+
+        teleport_turtle(pen, -30, 0)
+        pen.color("black")
+        pen.right(90)
+        for i in range(18):
+            pen.forward(6)
+            pen.left(3)
+
+        teleport_turtle(pen, 0, 210)
+        pen.setheading(0)
+        for i in range(3):
+            pen.left(45)
+            pen.forward(70)
+            pen.backward(70)
+
+        return pen
+
+    @staticmethod
+    def print_more_info():
+        print("Draw a minion from Despicable Me")
+        print("You'll need forward(), left()/right(), goto(), color(), penup(), and pendown() at least.")
+        print("You can reduce the number of loops you need if you use circle()...")
+        print("  ...but you will need at least 1 for the mouth")

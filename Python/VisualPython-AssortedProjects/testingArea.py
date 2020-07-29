@@ -12,6 +12,7 @@ import SpecialTurtles
 # BeginnerProjects.DrawShape.draw_now()
 # BeginnerProjects.DrawThreeShapes.draw_now()
 # BeginnerProjects.DrawOverlappingShapes()
+BeginnerProjects.Minion.draw_now()
 # BeginnerProjects.DrawWhirlpool.draw_now()
 # BeginnerProjects.DrawPieChart.draw_now()
 # BeginnerProjects.DrawTarget.draw_now()
