@@ -11,12 +11,6 @@ def get_default_turtle(existing_turtle=None):
 
 
 class DrawShape:
-    """
-    Draw a single shape.
-    You can do this with nothing but forward() and left() call.
-    You can go a step further and use a for loop.
-    """
-
     def __init__(self, pen):
         self._sides = 4
         self._pen = pen
@@ -38,6 +32,12 @@ class DrawShape:
 
         return pen
 
+    @staticmethod
+    def print_more_info():
+        print("Draw a single shape.")
+        print("You can do this with nothing but turtle.forward() and turtle.left() calls.")
+        print("You *can* go a step further and use a for loop.")
+
 
 class DrawOverlappingShapes:
     @staticmethod
@@ -49,24 +49,28 @@ class DrawOverlappingShapes:
         return pen
 
 
-class DrawSeparatedShapes:
+class DrawThreeShapes:
     @staticmethod
-    def draw_now(pen=None):
-        pen = get_default_turtle(pen)
-
-        traceable = DrawShape(pen)
-
-        for offset, sides, color in [(-200, 3, (0.9, 0.9, 0.9)), (0, 4, (0.8, 0.8, 0.8)), (200, 20, (0.7, 0.7, 0.7))]:
+    def draw_now(pen=None) -> turtle.Turtle:
+        pen = pen or turtle.Turtle()
+        pen.width(3)
+        drawer = DrawShape(pen)
+        for x, y, sides, color in [[-200,-200,3,"blue"], [0,0,4,"violet"], [200,200,5,"lavender"]]:
             pen.penup()
-            pen.goto(offset, 0)
+            pen.goto(x, y)
             pen.pendown()
 
-            pen.color(*color)
-            traceable._edge_length = 400/sides
-            traceable._draw(sides)
+            pen.color(color)
+            drawer.draw_now(sides, pen)
 
         return pen
 
+    @staticmethod
+    def print_more_info():
+        print("Draw 3 shapes, disconnected from each other.")
+        print("As well as forward() and left() calls, you'll need penup() and pendown().")
+        print("Use of goto(x, y) might make things easier.")
+        print("Use of loops is encouraged, but not required.")
 
 class DrawTarget:
     @staticmethod

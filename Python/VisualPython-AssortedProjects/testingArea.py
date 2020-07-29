@@ -10,7 +10,7 @@ import SpecialTurtles
 
 # # Any one of these will run in isolation:
 # BeginnerProjects.DrawShape.draw_now()
-# BeginnerProjects.DrawSeparatedShapes.draw_now()
+# BeginnerProjects.DrawThreeShapes.draw_now()
 # BeginnerProjects.DrawOverlappingShapes()
 # BeginnerProjects.DrawWhirlpool.draw_now()
 # BeginnerProjects.DrawPieChart.draw_now()
@@ -44,7 +44,7 @@ import SpecialTurtles
 # spiro_drawer.r = 1
 # spiro_drawer.draw_now()
 
-RecursiveProjects.KochSnowflakeDrawer().draw_snowflake(2, 50)
+# RecursiveProjects.KochSnowflakeDrawer().draw_snowflake(2, 50)
 # snowflake_drawer = RecursiveProjects.KochSnowflakeDrawer()
 # for i in range(4):
 #    snowflake_drawer.draw_snowflake(i, 300)
