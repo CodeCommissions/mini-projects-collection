@@ -1,9 +1,8 @@
-import turtle
-import random
-import BeginnerProjects
-import FunctionFocusedProjects
+import turtle, random
+import BeginnerProjects, FunctionFocusedProjects
+import IntermediateProjects, RecursiveProjects
 import SpecialTurtles
-import IntermediateProjects
+
 
 
 # BeginnerProjects.DrawShape.draw_now()
@@ -24,16 +23,21 @@ import IntermediateProjects
 #     rainbow_pen.forward(220)
 #     rainbow_pen.left(60)
 
-
 # FunctionFocusedProjects.DrawGraph().draw_now()
 # FunctionFocusedProjects.DrawGarden().draw_now()
 # FunctionFocusedProjects.DrawNightSky().draw_now()
 # FunctionFocusedProjects.SpiralArt().draw_now()
 
-spiro_drawer = IntermediateProjects.DrawTrueSpirograph()
-spiro_drawer.print_more_info()
-spiro_drawer.R = 6
-spiro_drawer.r = 1
-spiro_drawer.draw_now()
+# spiro_drawer = IntermediateProjects.DrawTrueSpirograph()
+# spiro_drawer.print_more_info()
+# spiro_drawer.R = 6
+# spiro_drawer.r = 1
+# spiro_drawer.draw_now()
+
+snowflake_drawer = RecursiveProjects.KochSnowflakeDrawer()
+for i in range(4):
+    snowflake_drawer.draw_snowflake(i, 300)
+
+
 
 turtle.exitonclick()
