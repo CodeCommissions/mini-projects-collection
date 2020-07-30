@@ -9,13 +9,15 @@ def get_default_turtle(existing_turtle=None):
 
     return existing_turtle
 
-def teleport_turtle(turt : turtle.Turtle, x, y):
+
+def teleport_turtle(turt: turtle.Turtle, x, y):
     if turt.isdown():
         turt.penup()
         turt.goto(x, y)
         turt.pendown()
     else:
         turt.goto(x, y)
+
 
 class DrawShape:
     def __init__(self, pen):
@@ -62,7 +64,7 @@ class DrawThreeShapes:
         pen = pen or turtle.Turtle()
         pen.width(3)
         drawer = DrawShape(pen)
-        for x, y, sides, color in [[-200,-200,3,"blue"], [0,0,4,"violet"], [200,200,5,"lavender"]]:
+        for x, y, sides, color in [[-200, -200, 3, "blue"], [0, 0, 4, "violet"], [200, 200, 5, "lavender"]]:
             pen.penup()
             pen.goto(x, y)
             pen.pendown()
@@ -78,6 +80,7 @@ class DrawThreeShapes:
         print("As well as forward() and left() calls, you'll need penup() and pendown().")
         print("Use of goto(x, y) might make things easier.")
         print("Use of loops is encouraged, but not required.")
+
 
 class DrawTarget:
     @staticmethod
@@ -98,7 +101,7 @@ class DrawTarget:
 
             # draw circle
             pen.begin_fill()
-            pen.circle((sides-i)*40)
+            pen.circle((sides - i) * 40)
             pen.end_fill()
 
             y += 40
@@ -124,7 +127,7 @@ class DrawCaptainShield:
 
             # draw circle
             pen.begin_fill()
-            pen.circle((7-i)*40)
+            pen.circle((7 - i) * 40)
             pen.end_fill()
 
             y += 40
@@ -141,6 +144,35 @@ class DrawCaptainShield:
         return pen
 
 
+class SnailShell:
+    @staticmethod
+    def draw_now(pen=None):
+        pen = get_default_turtle(pen)
+        pen.speed(0)
+        pen.width(3)
+        pen.color("black")
+
+        size = 200
+
+        for i in range(20):
+            pen.fillcolor(["blue", "light blue"][i%2])
+            pen.begin_fill()
+            pen.circle(size)
+            pen.end_fill()
+            size -= 10
+            pen.right(45)
+
+        pen.ht()
+        return pen
+
+    @staticmethod
+    def print_more_info():
+        print("Draw a snail shell from behind.")
+        print("You aren't allowed to use forward() or goto().")
+        print("This is an exercise is using circle(), right(), begin_fill(), and end_fill()")
+        print("You don't *need* a loop to do this - but it will shrink your code from 140+ lines to more like just 20.")
+
+
 class DrawWhirlpool:
     @staticmethod
     def draw_now():
@@ -149,7 +181,7 @@ class DrawWhirlpool:
         for i in range(6):
             new_turtle = turtle.Turtle()
             new_turtle.width(4)
-            new_turtle.color(colors[i%3])
+            new_turtle.color(colors[i % 3])
             new_turtle.left(i * 60)
             new_turtle.speed(10)
             pens.append(new_turtle)
@@ -172,11 +204,11 @@ class DrawPieChart:
 
         colors = ["red", "light grey"]
         for i in range(6):
-            pen.color(colors[i%2])
+            pen.color(colors[i % 2])
             pen.begin_fill()
             for _ in range(3):
                 pen.forward(100)
-                pen.left(360/3)
+                pen.left(360 / 3)
             pen.end_fill()
             pen.left(60)
 
@@ -226,10 +258,10 @@ class PolygonFromUser:
             pen.write("Invalid input. Please quit.")
             return
 
-        size = 1000/edges
+        size = 1000 / edges
         for _ in range(edges):
             pen.forward(size)
-            pen.left(360/edges)
+            pen.left(360 / edges)
 
         return pen
 
@@ -244,7 +276,7 @@ class DrawChessBoard:
 
         for x in range(8):
             for y in range(8):
-                pen.goto(-120 + x*40, -120 + y*40)
+                pen.goto(-120 + x * 40, -120 + y * 40)
                 pen.color("black" if x % 2 == y % 2 else "light gray")
                 pen.stamp()
 

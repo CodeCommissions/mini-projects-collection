@@ -11,8 +11,9 @@ import SpecialTurtles
 # # Any one of these will run in isolation:
 # BeginnerProjects.DrawShape.draw_now()
 # BeginnerProjects.DrawThreeShapes.draw_now()
-# BeginnerProjects.DrawOverlappingShapes()
-BeginnerProjects.Minion.draw_now()
+# BeginnerProjects.DrawOverlappingShapes.draw_now()
+BeginnerProjects.SnailShell.draw_now()
+# BeginnerProjects.Minion.draw_now()
 # BeginnerProjects.DrawWhirlpool.draw_now()
 # BeginnerProjects.DrawPieChart.draw_now()
 # BeginnerProjects.DrawTarget.draw_now()
