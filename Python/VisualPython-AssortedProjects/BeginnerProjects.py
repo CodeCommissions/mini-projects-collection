@@ -144,6 +144,33 @@ class DrawCaptainShield:
         return pen
 
 
+class DrawGrassTuft:
+    @staticmethod
+    def draw_now(pen=None):
+        pen = get_default_turtle(pen)
+
+        tufts = random.randint(20, 30)
+        for i in range(tufts):
+            # Choose an angle from 0 to 40, and then apply a deviation that biases angles to 0 to 10 (slightly)
+            offset = random.randint(0, 40)
+            for sd in range(2, 8):
+                offset = offset if offset < sd*5 else offset + random.randint(-5, 5)
+
+            length = random.randint(90, 120)
+            pen.setheading(90 + offset*[-1, 1][i % 2])
+
+            # Offset the amount of green by up to 10%
+            pen.color(0.2, 0.7+random.random()/10, 0.2)
+            pen.width(3)
+            pen.forward(length)
+            pen.color(0.2, 0.8+random.random()/10, 0.2)
+            pen.width(2)
+            pen.backward(length)
+
+        return pen
+
+
+
 class SnailShell:
     @staticmethod
     def draw_now(pen=None):
@@ -247,6 +274,7 @@ class PolygonFromUser:
     @staticmethod
     def draw_now(pen=None):
         pen = get_default_turtle(pen)
+        pen.width(2)
         pen.color("black")
         pen.write("How many sides?\n(Look at the terminal)")
         raw_input = input("How many sides: ")

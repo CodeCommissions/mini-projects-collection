@@ -12,14 +12,15 @@ import SpecialTurtles
 # BeginnerProjects.DrawShape.draw_now()
 # BeginnerProjects.DrawThreeShapes.draw_now()
 # BeginnerProjects.DrawOverlappingShapes.draw_now()
-BeginnerProjects.SnailShell.draw_now()
+# BeginnerProjects.PolygonFromUser.draw_now()
+BeginnerProjects.DrawGrassTuft.draw_now()
+# BeginnerProjects.SnailShell.draw_now()
 # BeginnerProjects.Minion.draw_now()
 # BeginnerProjects.DrawWhirlpool.draw_now()
 # BeginnerProjects.DrawPieChart.draw_now()
 # BeginnerProjects.DrawTarget.draw_now()
 # BeginnerProjects.DrawCaptainShield.draw_now()
 # BeginnerProjects.RacerTurtles.race_now()
-# BeginnerProjects.PolygonFromUser.draw_now()
 # BeginnerProjects.DrawChessBoard.draw_now()
 
 # FunctionFocusedProjects.DrawGraph().draw_now()
@@ -43,7 +44,7 @@ BeginnerProjects.SnailShell.draw_now()
 # spiro_drawer = IntermediateProjects.DrawTrueSpirograph()
 # spiro_drawer.print_more_info()
 # spiro_drawer.R = 6
-# spiro_drawer.r = 1
+# spiro_drawer.r = 2
 # spiro_drawer.draw_now()
 
 # RecursiveProjects.KochSnowflakeDrawer().draw_snowflake(2, 50)
@@ -52,3 +53,47 @@ BeginnerProjects.SnailShell.draw_now()
 #    snowflake_drawer.draw_snowflake(i, 300)
 
 turtle.exitonclick()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
