@@ -200,6 +200,32 @@ class SnailShell:
         print("You don't *need* a loop to do this - but it will shrink your code from 140+ lines to more like just 20.")
 
 
+class DrawGradientBackground:
+    @staticmethod
+    def draw_now(pen=None):
+        pen = get_default_turtle(pen)
+        pen.speed(0)
+
+        total_lines = 20
+        height = 1000/total_lines
+        pen.setheading(90)
+        for i in range(1, total_lines):
+            teleport_turtle(pen, -500, -500+height*i)
+
+            color_offset = 0.3/total_lines * i
+            pen.color(0 + color_offset, 0.3 + color_offset, 0.6+color_offset)
+            DrawGradientBackground.draw_row(pen, height, 1000)
+
+        return pen
+
+    @staticmethod
+    def draw_row(pen, height, width):
+        pen.begin_fill()
+        for distance in [height, width, height, width]:
+            pen.forward(distance)
+            pen.right(90)
+        pen.end_fill()
+
 class DrawWhirlpool:
     @staticmethod
     def draw_now():
