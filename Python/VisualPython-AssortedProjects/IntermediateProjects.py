@@ -3,6 +3,59 @@ import turtle
 from math import sin, cos, pi, gcd
 
 
+class SevenSegmentDrawer:
+    def __init__(self):
+        self.pen = turtle.Turtle()
+        self._setup_layout_maps()
+        self.pen
+
+    def _setup_layout_maps(self):
+        self._number_map = \
+        {1: [0, 0, 0, 1, 0, 0, 1],
+         2: [1, 0, 1, 1, 1, 1, 0],
+         3: [1, 0, 1, 1, 0, 1, 1],
+         4: [0, 1, 1, 1, 0, 0, 1],
+         5: [1, 1, 1, 0, 0, 1, 1],
+         6: [1, 1, 1, 0, 1, 1, 1],
+         7: [1, 0, 0, 1, 0, 0, 1],
+         8: [1, 1, 1, 1, 1, 1, 1],
+         9: [1, 1, 1, 1, 0, 0, 1],
+         0: [1, 1, 0, 1, 1, 1, 1]}
+        #    0, 1, 2, 3, 4, 5, 6
+
+        self._segment_positions = \
+        [   # X,    Y, W,  Height
+            [20,    0, 100, 20],    # Top middle
+            [0,     20, 20, 100],   # top left
+            [20,    120, 100, 20],   # centre
+            [120,   20, 20, 100],   # top right
+            [0,     140, 20, 100],   # bottom left
+            [20,    240, 100, 20],  # bottom centre
+            [120,   140, 20, 100],   # bottom right
+        ]
+
+    def _draw_segments(self, row):
+        for i in range(len(row)):
+            layout = self._segment_positions[i]
+            self.pen.fillcolor("light grey" if row[i] == 0 else "red")
+            self.pen.penup()
+            self.pen.goto(layout[0], -layout[1])
+            self.pen.pendown()
+
+            self.pen.begin_fill()
+            for distance in [layout[2], layout[3], layout[2], layout[3]]:
+                self.pen.forward(distance)
+                self.pen.right(90)
+            self.pen.end_fill()
+
+    def draw_now(self, number, pen=None):
+        self.pen.setheading(0)
+        self.pen.speed(0)
+        self.pen = pen if pen is not None else self.pen
+        segment_layout = self._number_map[number]
+        self._draw_segments(segment_layout)
+
+
 class DrawTrueSpirograph:
     def __init__(self):
         self.pen = turtle.Turtle()

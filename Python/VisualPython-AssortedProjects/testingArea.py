@@ -1,4 +1,4 @@
-import turtle, random
+import turtle, random, time
 import BeginnerProjects, FunctionFocusedProjects
 import IntermediateProjects, RecursiveProjects
 import SpecialTurtles
@@ -14,7 +14,7 @@ import SpecialTurtles
 # BeginnerProjects.DrawOverlappingShapes.draw_now()
 # BeginnerProjects.PolygonFromUser.draw_now()
 # BeginnerProjects.DrawGrassTuft.draw_now()
-BeginnerProjects.DrawGradientBackground.draw_now()
+# BeginnerProjects.DrawGradientBackground.draw_now()
 # BeginnerProjects.SnailShell.draw_now()
 # BeginnerProjects.Minion.draw_now()
 # BeginnerProjects.DrawWhirlpool.draw_now()
@@ -41,6 +41,11 @@ BeginnerProjects.DrawGradientBackground.draw_now()
 # for i in range(6):
 #     rainbow_pen.forward(220)
 #     rainbow_pen.left(60)
+
+drawer = IntermediateProjects.SevenSegmentDrawer()
+for num in range(10):
+    drawer.draw_now(num)
+    time.sleep(1)
 
 # spiro_drawer = IntermediateProjects.DrawTrueSpirograph()
 # spiro_drawer.print_more_info()
