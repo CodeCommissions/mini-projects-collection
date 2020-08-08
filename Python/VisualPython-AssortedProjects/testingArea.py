@@ -16,6 +16,7 @@ import SpecialTurtles
 # BeginnerProjects.DrawGrassTuft.draw_now()
 # BeginnerProjects.DrawGradientBackground.draw_now()
 # BeginnerProjects.SnailShell.draw_now()
+# BeginnerProjects.SnailShell.draw_now(colors=["red", "orange", "yellow", "green", "blue", "indigo", "violet"])
 # BeginnerProjects.Minion.draw_now()
 # BeginnerProjects.DrawWhirlpool.draw_now()
 # BeginnerProjects.DrawPieChart.draw_now()
@@ -42,10 +43,10 @@ import SpecialTurtles
 #     rainbow_pen.forward(220)
 #     rainbow_pen.left(60)
 
-drawer = IntermediateProjects.SevenSegmentDrawer()
-for num in range(10):
-    drawer.draw_now(num)
-    time.sleep(1)
+# drawer = IntermediateProjects.SevenSegmentDrawer()
+# for num in range(10):
+#     drawer.draw_now(num)
+#     time.sleep(1)
 
 # spiro_drawer = IntermediateProjects.DrawTrueSpirograph()
 # spiro_drawer.print_more_info()

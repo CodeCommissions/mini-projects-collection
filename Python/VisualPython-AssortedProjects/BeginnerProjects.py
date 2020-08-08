@@ -173,7 +173,7 @@ class DrawGrassTuft:
 
 class SnailShell:
     @staticmethod
-    def draw_now(pen=None):
+    def draw_now(pen=None, colors=["blue", "light blue"]):
         pen = get_default_turtle(pen)
         pen.speed(0)
         pen.width(3)
@@ -182,7 +182,7 @@ class SnailShell:
         size = 200
 
         for i in range(20):
-            pen.fillcolor(["blue", "light blue"][i%2])
+            pen.fillcolor(colors[i % len(colors)])
             pen.begin_fill()
             pen.circle(size)
             pen.end_fill()
@@ -195,9 +195,13 @@ class SnailShell:
     @staticmethod
     def print_more_info():
         print("Draw a snail shell from behind.")
-        print("You aren't allowed to use forward() or goto().")
+        print("You shouldn't use forward() or goto(), they'll just complicate things.")
         print("This is an exercise is using circle(), right(), begin_fill(), and end_fill()")
+        print("You'll also either need to use `ifs` or indexable lists to toggle colors.")
         print("You don't *need* a loop to do this - but it will shrink your code from 140+ lines to more like just 20.")
+        print("")
+        print("For an extra challenge, make the colors customisable:")
+        print("\tA call like `draw_now(colors=['red','blue','green'])` will draw a 3 colored shell.")
 
 
 class DrawGradientBackground:
@@ -225,6 +229,7 @@ class DrawGradientBackground:
             pen.forward(distance)
             pen.right(90)
         pen.end_fill()
+
 
 class DrawWhirlpool:
     @staticmethod

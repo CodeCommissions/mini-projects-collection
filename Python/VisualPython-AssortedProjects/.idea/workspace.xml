@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e043b1a1-98e8-4f74-a03d-98ce6082bdd1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/IntermediateProjects.py" beforeDir="false" afterPath="$PROJECT_DIR$/IntermediateProjects.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BeginnerProjects.py" beforeDir="false" afterPath="$PROJECT_DIR$/BeginnerProjects.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/testingArea.py" beforeDir="false" afterPath="$PROJECT_DIR$/testingArea.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,10 +18,7 @@
         <entry file="file://$PROJECT_DIR$/testingArea.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
-              <caret line="45" column="21" lean-forward="true" selection-start-line="45" selection-start-column="21" selection-end-line="45" selection-end-column="21" />
-              <folding>
-                <element signature="e#0#21#0" expanded="true" />
-              </folding>
+              <caret line="18" column="115" lean-forward="true" selection-start-line="18" selection-start-column="115" selection-end-line="18" selection-end-column="115" />
             </state>
           </provider>
         </entry>
@@ -28,8 +26,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/BeginnerProjects.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="507">
-              <caret line="424" selection-start-line="424" selection-end-line="424" />
+            <state relative-caret-position="342">
+              <caret line="184" column="37" selection-start-line="184" selection-start-column="37" selection-end-line="184" selection-end-column="37" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -49,8 +47,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SpecialTurtles.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="34" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
+            <state relative-caret-position="255">
+              <caret line="15" column="94" lean-forward="true" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="94" />
             </state>
           </provider>
         </entry>
@@ -67,7 +65,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/FunctionFocusedProjects.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="779">
+            <state relative-caret-position="818">
               <caret line="171" column="17" selection-start-line="171" selection-start-column="8" selection-end-line="171" selection-end-column="17" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
@@ -79,8 +77,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/IntermediateProjects.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="52" column="25" lean-forward="true" selection-start-line="52" selection-start-column="25" selection-end-line="52" selection-end-column="25" />
+            <state relative-caret-position="867">
+              <caret line="52" column="25" selection-start-line="52" selection-start-column="25" selection-end-line="52" selection-end-column="25" />
               <folding>
                 <element signature="e#46#59#0" expanded="true" />
               </folding>
@@ -112,15 +110,15 @@
         <option value="$PROJECT_DIR$/KeyControlledTurtle.py" />
         <option value="$PROJECT_DIR$/FunctionFocusedProjects.py" />
         <option value="$PROJECT_DIR$/RecursiveProjects.py" />
-        <option value="$PROJECT_DIR$/testingArea.py" />
         <option value="$PROJECT_DIR$/IntermediateProjects.py" />
+        <option value="$PROJECT_DIR$/testingArea.py" />
         <option value="$PROJECT_DIR$/BeginnerProjects.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="840" />
-    <option name="y" value="107" />
+    <option name="x" value="267" />
+    <option name="y" value="-18" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
   </component>
@@ -235,7 +233,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1444563" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14765458" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -259,37 +257,20 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/firstProgram.py" />
     <entry file="file://$PROJECT_DIR$/CongaTurtleClassDemo.py" />
-    <entry file="file://$PROJECT_DIR$/RecursiveProjects.py">
+    <entry file="file://$PROJECT_DIR$/IntermediateProjects.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        <state relative-caret-position="867">
+          <caret line="52" column="25" selection-start-line="52" selection-start-column="25" selection-end-line="52" selection-end-column="25" />
+          <folding>
+            <element signature="e#46#59#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SpecialTurtles.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="34" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testingArea.py">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
-          <caret line="45" column="21" lean-forward="true" selection-start-line="45" selection-start-column="21" selection-end-line="45" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FunctionFocusedProjects.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="779">
-          <caret line="171" column="17" selection-start-line="171" selection-start-column="8" selection-end-line="171" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
+          <caret line="15" column="94" lean-forward="true" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="94" />
         </state>
       </provider>
     </entry>
@@ -300,20 +281,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/IntermediateProjects.py">
+    <entry file="file://$PROJECT_DIR$/FunctionFocusedProjects.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="52" column="25" lean-forward="true" selection-start-line="52" selection-start-column="25" selection-end-line="52" selection-end-column="25" />
+        <state relative-caret-position="818">
+          <caret line="171" column="17" selection-start-line="171" selection-start-column="8" selection-end-line="171" selection-end-column="17" />
           <folding>
-            <element signature="e#46#59#0" expanded="true" />
+            <element signature="e#0#13#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RecursiveProjects.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testingArea.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="18" column="115" lean-forward="true" selection-start-line="18" selection-start-column="115" selection-end-line="18" selection-end-column="115" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/BeginnerProjects.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="507">
-          <caret line="424" selection-start-line="424" selection-end-line="424" />
+        <state relative-caret-position="342">
+          <caret line="184" column="37" selection-start-line="184" selection-start-column="37" selection-end-line="184" selection-end-column="37" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>
