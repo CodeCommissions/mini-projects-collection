@@ -15,6 +15,7 @@ import SpecialTurtles
 # BeginnerProjects.PolygonFromUser.draw_now()
 # BeginnerProjects.DrawGrassTuft.draw_now()
 # BeginnerProjects.DrawGradientBackground.draw_now()
+BeginnerProjects.Wormhole.draw_now()
 # BeginnerProjects.SnailShell.draw_now()
 # BeginnerProjects.SnailShell.draw_now(colors=["red", "orange", "yellow", "green", "blue", "indigo", "violet"])
 # BeginnerProjects.Minion.draw_now()

@@ -170,6 +170,34 @@ class DrawGrassTuft:
         return pen
 
 
+class Wormhole:
+    @staticmethod
+    def draw_now(pen=None):
+        pen = get_default_turtle(pen)
+        pen.speed(0)
+        pen.width(1)
+        pen.color("black")
+
+        pen.seth(-90)
+        for i in range(1,150):
+            pen.color(i/150, i/150, i/150)
+            teleport_turtle(pen, i-100, i)
+            pen.circle(i)
+            pen.right(0.5)
+
+
+        pen.ht()
+        return pen
+
+    @staticmethod
+    def print_more_info():
+        print("Draw a wormhole.")
+        print("This is an exercise is using circle(), right(), and goto().")
+        print("The color shift is optional, and can be achieved with an equation like `i/max_circles`.")
+        print("You definitely need a loop to do this.")
+        print("")
+        print("See if you can draw an exit to the existing wormhole. Maybe by linking 2 similar shapes.")
+
 
 class SnailShell:
     @staticmethod

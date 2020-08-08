@@ -18,6 +18,7 @@ class KochSnowflakeDrawer:
         colors = ["red", "maroon", "blue"]
         for i in range(3):
             self.pen.color(colors[i])
+
             self.pen.right(120)
             self.draw_edge(order, size)
 
