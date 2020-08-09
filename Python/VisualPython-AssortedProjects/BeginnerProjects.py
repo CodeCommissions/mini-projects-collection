@@ -185,7 +185,6 @@ class Wormhole:
             pen.circle(i)
             pen.right(0.5)
 
-
         pen.ht()
         return pen
 
@@ -257,6 +256,67 @@ class DrawGradientBackground:
             pen.forward(distance)
             pen.right(90)
         pen.end_fill()
+
+
+class Dice:
+    @staticmethod
+    def draw_now(pen=None, number=0):
+        pen = get_default_turtle(pen)
+        pen.speed(0)
+
+        if number == 0:
+            number = random.randint(1, 6)
+
+        teleport_turtle(pen, -100, 100)
+        pen.pencolor("black")
+        pen.width(3)
+        pen.fillcolor("light grey")
+
+        pen.begin_fill()
+        for i in range(4):
+            pen.forward(200)
+            pen.right(90)
+        pen.end_fill()
+
+        teleport_turtle(pen, 0, -15)
+
+        pen.color("white")
+        if number in [1, 3, 5]:
+            Dice.draw_offset_circle(pen, 0, 0)
+
+        if number == 6:
+            Dice.draw_offset_circle(pen, -30, -50)
+            Dice.draw_offset_circle(pen, -30, 0)
+            Dice.draw_offset_circle(pen, -30, 50)
+            Dice.draw_offset_circle(pen, 30, -50)
+            Dice.draw_offset_circle(pen, 30, 0)
+            Dice.draw_offset_circle(pen, 30, 50)
+
+        if number in [4, 5]:
+            Dice.draw_offset_circle(pen, -50, -50)
+            Dice.draw_offset_circle(pen, -50, 50)
+            Dice.draw_offset_circle(pen, 50, -50)
+            Dice.draw_offset_circle(pen, 50, 50)
+
+        if number == 3:
+            Dice.draw_offset_circle(pen, -50, -50)
+            Dice.draw_offset_circle(pen, 50, 50)
+
+        if number == 2:
+            Dice.draw_offset_circle(pen, 0, -40)
+            Dice.draw_offset_circle(pen, 0, 40)
+
+        pen.ht()
+
+    def draw_offset_circle(pen : turtle.Turtle, x_offset, y_offset):
+        start_x, start_y = pen.position()
+
+        teleport_turtle(pen, start_x+x_offset, start_y+y_offset)
+        pen.begin_fill()
+        pen.circle(15)
+        pen.end_fill()
+
+        teleport_turtle(pen, start_x, start_y)
 
 
 class DrawWhirlpool:
