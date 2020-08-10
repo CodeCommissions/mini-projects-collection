@@ -258,6 +258,46 @@ class DrawGradientBackground:
         pen.end_fill()
 
 
+class DrawPencilLead:
+    @staticmethod
+    def draw_now(pen=None):
+        pen = get_default_turtle(pen)
+        pen.speed(0)
+
+        pen.width(2)
+        teleport_turtle(pen, 100, 0)
+        pen.color("black")
+        pen.begin_fill()
+        pen.setheading(90)
+        pen.circle(100)
+        pen.end_fill()
+        teleport_turtle(pen, 0, 0)
+
+        for i in range(400):
+            pen.left(3.35)
+            shade = random.randint(0,255)/255
+            pen.color(shade, shade, shade)
+            distance = random.randint(100,110)
+            pen.forward(distance)
+
+            if i < 200:
+                x, y = pen.position()
+                pen.goto(-300, -300)
+                pen.color(shade/2,shade/2,shade/2)
+                pen.goto(x, y)
+            teleport_turtle(pen, 0, 0)
+
+        pen.ht()
+        return pen
+
+    @staticmethod
+    def print_more_info():
+        print("A zoomed in view of clutch pencil lead (i.e. graphite).")
+        print("If you change the colors to more beige/khaki tones, you can turn this into a piece of uncooked spaghetti")
+        print()
+        print("Depending on your approach, you can get away with not using an `if`, but you will need at least 1 loop.")
+
+
 class Dice:
     @staticmethod
     def draw_now(pen=None, number=0):
@@ -307,6 +347,7 @@ class Dice:
             Dice.draw_offset_circle(pen, 0, 40)
 
         pen.ht()
+        return pen
 
     def draw_offset_circle(pen : turtle.Turtle, x_offset, y_offset):
         start_x, start_y = pen.position()
