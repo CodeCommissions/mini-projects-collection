@@ -82,6 +82,48 @@ class DrawThreeShapes:
         print("Use of loops is encouraged, but not required.")
 
 
+class DrawSquareSpiral:
+    @staticmethod
+    def draw_now(pen=None):
+        pen = get_default_turtle(pen)
+
+        pen.speed(10)
+        pen.width(2)
+        pen.color("black")
+
+        sides = 40
+        length = 10
+        for i in range(sides):
+            pen.forward(length)
+            length += 10
+
+            pen.right(90)
+
+        return pen
+
+    @staticmethod
+    def draw_enhanced_version(pen1=None, pen2=None):
+        pen1 = get_default_turtle(pen1)
+        pen2 = get_default_turtle(pen2)
+
+        for p in [pen1, pen2]:
+            p.speed(5)
+            p.width(2)
+            p.color("black")
+
+        sides = 40
+        length = 10
+        pen1.right(180)
+        for i in range(sides):
+            pen1.forward(length)
+            pen2.forward(length)
+            length += 10
+
+            pen1.right(90)
+            pen2.left(90)
+
+        return pen1, pen2
+
 class DrawTarget:
     @staticmethod
     def draw_now(pen=None):
