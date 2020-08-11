@@ -102,7 +102,7 @@ class DrawSquareSpiral:
         return pen
 
     @staticmethod
-    def draw_enhanced_version(pen1=None, pen2=None):
+    def draw_doubled_version(pen1=None, pen2=None):
         pen1 = get_default_turtle(pen1)
         pen2 = get_default_turtle(pen2)
 
@@ -123,6 +123,7 @@ class DrawSquareSpiral:
             pen2.left(90)
 
         return pen1, pen2
+
 
 class DrawTarget:
     @staticmethod
@@ -209,6 +210,28 @@ class DrawGrassTuft:
             pen.width(2)
             pen.backward(length)
 
+        return pen
+
+
+class DrawMedicCross:
+    @staticmethod
+    def draw_now(pen=None):
+        pen = get_default_turtle(pen)
+        pen.getscreen().bgcolor("red")
+        pen.color("white")
+
+        teleport_turtle(pen, 100, 100)
+
+        pen.begin_fill()
+        for i in range(12):
+            pen.forward(200)
+            if i % 3 == 2:
+                pen.left(90)
+            else:
+                pen.right(90)
+        pen.end_fill()
+
+        pen.ht()
         return pen
 
 
