@@ -536,6 +536,50 @@ class DrawChessBoard:
         return pen
 
 
+class DrawCircleOfCircles:
+    @staticmethod
+    def draw_now(pen=None, circles=6, debug_mode=False):
+        pen = get_default_turtle(pen)
+
+        edge_length = 600/circles
+        teleport_turtle(pen, -edge_length/2, edge_length/2)
+
+        for edge in range(circles):
+            # If we're in debug mode, we want to leave a trail begin so we can see what went wrong
+            if debug_mode:
+                pen.forward(edge_length / 2)
+            else:
+                pen.penup()
+                pen.forward(edge_length / 2)
+                pen.pendown()
+
+            pen.begin_fill()
+            pen.circle(edge_length/2)
+            pen.end_fill()
+
+            if debug_mode:
+                pen.forward(edge_length/2)
+            else:
+                pen.penup()
+                pen.forward(edge_length / 2)
+                pen.pendown()
+
+            pen.right(360 / circles)
+
+        pen.ht()
+        return pen
+
+    @staticmethod
+    def print_more_info():
+        print("Draw X circles equally spaces around a centre spot.")
+        print("The main goal of this is to introduce `if-else` blocks (with VERY simple conditions).")
+        print("Setting debug-mode to True should make the turtle leave behind a trail.")
+        print("Setting debug-mode to False should make the turtle only draw circles and nothing else.")
+        print()
+        print("If you choose not to implement the debug mode, then you don't need `if-else`s")
+
+
+
 class Minion:
     @staticmethod
     def draw_now(pen=None):
