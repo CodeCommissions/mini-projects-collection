@@ -1,5 +1,6 @@
 ## https://en.wikipedia.org/wiki/Hypotrochoid
 import turtle
+import random
 from math import sin, cos, pi, gcd
 
 
@@ -106,3 +107,85 @@ class DrawTrueSpirograph:
         print("This whole project is just connecting small changes in XY coordinates based on that maths.")
         print("To see some more interesting versions, change the default values of magnification, steps, R, r, and d.")
         print("If you change r or R, note that they have to be integers.")
+
+
+class PandemicTurtleSimulator:
+    def __init__(self, turtle_count=20):
+        self.turtles = [turtle.Turtle() for _ in range(turtle_count)]
+
+        for t in self.turtles:
+            t.is_sick = False
+            t.speed(0)
+            t.penup()
+            x, y = random.randint(-280,280), random.randint(-280,280)
+            t.goto(x, y)
+            t.seth(random.randint(0,360))
+            t.shape("turtle")
+            t.color("black")
+
+        seed_sickness = random.choice(self.turtles)
+        seed_sickness.is_sick = True
+        seed_sickness.color("red")
+
+    def _spread_sickness(self, t : turtle.Turtle):
+        from math import sqrt
+        for other in self.turtles:
+            if other == t:
+                continue
+
+            x, y = t.position()
+            new_x, new_y = other.position()
+            distance = sqrt((x-new_x)**2 + (y-new_y)**2)
+
+            if distance < 20 and (t.is_sick or other.is_sick):
+                other.is_sick = True
+                other.color("red")
+                t.is_sick = True
+                t.color("red")
+
+    def _move_turtle(self, turtle_to_move : turtle.Turtle):
+        x, y = turtle_to_move.position()
+        if x > 300:
+            turtle_to_move.seth(random.randint(95, 265))
+            x = 300
+        elif x < -300:
+            turtle_to_move.seth(random.randint(95, 265) + 180)
+            x = -300
+
+        if y > 300:
+            turtle_to_move.seth(random.randint(5, 175)+180)
+            y = 300
+        elif y < -300:
+            turtle_to_move.seth(random.randint(5, 175))
+            y = -300
+
+        turtle_to_move.goto(x, y)
+
+        angle = random.randint(0, 30)-15
+
+        turtle_to_move.right(angle)
+
+        distance = random.randint(10,30)
+        turtle_to_move.forward(distance)
+
+    def draw_single_step(self):
+        for t in self.turtles:
+            self._move_turtle(t)
+            self._spread_sickness(t)
+
+    def draw_now(self):
+        turtle.penup()
+        turtle.goto(-300, 300)
+        turtle.pendown()
+        for i in range(4):
+            turtle.forward(600)
+            turtle.right(90)
+        turtle.ht()
+
+        for _ in range(500):
+            sick_count = sum([1 for t in self.turtles if t.is_sick])
+            print(sick_count)
+            if sick_count == len(self.turtles):
+                break
+            self.draw_single_step()
+

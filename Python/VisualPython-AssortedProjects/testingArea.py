@@ -30,7 +30,7 @@ import SpecialTurtles
 # BeginnerProjects.DrawTarget.draw_now()
 # BeginnerProjects.DrawCaptainShield.draw_now()
 # BeginnerProjects.RacerTurtles.race_now()
-BeginnerProjects.DrawChessBoard.draw_now(height=7, width=7)
+# BeginnerProjects.DrawChessBoard.draw_now(height=7, width=7)
 
 # FunctionFocusedProjects.DrawGraph().draw_now()
 # FunctionFocusedProjects.DrawGarden().draw_now()
@@ -60,6 +60,8 @@ BeginnerProjects.DrawChessBoard.draw_now(height=7, width=7)
 # spiro_drawer.R = 6
 # spiro_drawer.r = 2
 # spiro_drawer.draw_now()
+
+IntermediateProjects.PandemicTurtleSimulator(turtle_count=60).draw_now()
 
 # RecursiveProjects.KochSnowflakeDrawer().draw_snowflake(2, 50)
 # snowflake_drawer = RecursiveProjects.KochSnowflakeDrawer()
