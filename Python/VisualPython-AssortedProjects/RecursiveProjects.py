@@ -22,3 +22,29 @@ class KochSnowflakeDrawer:
             self.pen.right(120)
             self.draw_edge(order, size)
 
+
+class GenericShapeFractal:
+    def __init__(self, pen=None):
+        if pen is None:
+            self.pen = turtle.Turtle()
+            self.pen.speed(0)
+            self.pen.up()
+            self.pen.goto(-200, -200)
+        else:
+            self.pen = pen
+
+
+    def draw(self, size, order, edges=3):
+        for edge in range(edges):
+            if order > 0:
+                self.draw(size/2, order-1, edges)
+
+            if order == 0:
+                self.pen.down()
+            else:
+                self.pen.up()
+
+            self.pen.forward(size)
+            self.pen.left(360 / edges)
+
+
