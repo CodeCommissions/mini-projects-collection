@@ -521,16 +521,18 @@ class PolygonFromUser:
 
 class DrawChessBoard:
     @staticmethod
-    def draw_now(pen=None):
+    def draw_now(pen=None, height=8, width=8):
         pen = get_default_turtle(pen)
         pen.shape("square")
         pen.shapesize(2)
         pen.penup()
 
-        for x in range(8):
-            for y in range(8):
+        for x in range(width):
+            for y in range(height):
                 pen.goto(-120 + x * 40, -120 + y * 40)
                 pen.color("black" if x % 2 == y % 2 else "light gray")
+                # Alternative that avoid ifs (nice for demoing variety of solutions/techniques):
+                # pen.color(["black", "light gray"][(x + y) % 2])
                 pen.stamp()
 
         return pen
