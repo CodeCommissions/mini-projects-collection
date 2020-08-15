@@ -109,11 +109,6 @@ class DrawTrueSpirograph:
         print("If you change r or R, note that they have to be integers.")
 
 
-class CellularAutomaton:
-    def __init__(self):
-        pass
-
-
 class PandemicTurtleSimulator:
     def __init__(self, turtle_count=20):
         self.turtles = [turtle.Turtle() for _ in range(turtle_count)]

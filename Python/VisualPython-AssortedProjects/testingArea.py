@@ -18,6 +18,7 @@ import SpecialTurtles
 # BeginnerProjects.Minion.draw_now() # The minion is a long project, but isn't very complicated if you break it up.
 # BeginnerProjects.DrawGrassTuft.draw_now()
 # BeginnerProjects.DrawGradientBackground.draw_now()
+BeginnerProjects.Spear.draw_now()  # Similar structure to the GradientBackground project - but with a start and end
 # BeginnerProjects.DrawMedicCross.draw_now()
 # BeginnerProjects.Wormhole.draw_now()
 # BeginnerProjects.SnailShell.draw_now()
@@ -68,7 +69,7 @@ import SpecialTurtles
 # for i in range(4):
 #    snowflake_drawer.draw_snowflake(i, 300)
 
-RecursiveProjects.GenericShapeFractal().draw(size=1600, complexity=2, edges=7)
+# RecursiveProjects.GenericShapeFractal().draw(size=1600, complexity=2, edges=7)
 
 
 turtle.exitonclick()

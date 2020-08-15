@@ -667,3 +667,53 @@ class Minion:
         print("You'll need forward(), left()/right(), goto(), color(), penup(), and pendown() at least.")
         print("You can reduce the number of loops you need if you use circle()...")
         print("  ...but you will need at least 1 loop to draw the mouth.")
+
+
+class Spear:
+    @staticmethod
+    def draw_now(pen=None):
+        pen = get_default_turtle(pen)
+        pen.color("black")
+        pen.speed(0)
+        pen.width(5)
+        size = 60
+
+        teleport_turtle(pen, 0, -300)
+        pen.left(90)
+
+        # Draw pommel
+        pen.begin_fill()
+        pen.circle(size/2)
+        pen.end_fill()
+
+        # Draw body
+        for i in range(8):
+            pen.fillcolor(["sienna3", "sienna1"][i%2])
+
+            # Draw body segment
+            pen.begin_fill()
+            for edge in range(4):
+                pen.forward(size)
+                pen.left(90)
+            pen.forward(size)
+            pen.end_fill()
+
+        # Draw spear head
+        pen.fillcolor("light grey")
+        pen.begin_fill()
+        for angle, distance in [[-30, size/2], [30, size/2], [30, size*1.5], [90+30, size*1.5], [30, size/2], [30, size/2]]:
+            pen.left(angle)
+            pen.forward(distance)
+
+        pen.end_fill()
+
+        pen.ht()
+        return pen
+
+    @staticmethod
+    def print_more_info():
+        print("Draw a spear with alternating colors.")
+        print("You need to be able to divide up the main problem into 3 sub-problems (pommel, body/shaft, and head)")
+        print("You'll need circle(), forward(), left()/right(), goto(), color(), penup(), and pendown() at least.")
+        print("Loops are essential for the shaft - you can either use nested loops or a rectangle() helper function")
+        print("Ifs will help, but can be skipped if you know about lists and the mod operator")
