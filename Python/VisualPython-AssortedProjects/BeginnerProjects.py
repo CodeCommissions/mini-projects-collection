@@ -581,7 +581,6 @@ class DrawCircleOfCircles:
         print("If you choose not to implement the debug mode, then you don't need `if-else`s")
 
 
-
 class Minion:
     @staticmethod
     def draw_now(pen=None):
@@ -663,7 +662,8 @@ class Minion:
 
     @staticmethod
     def print_more_info():
-        print("Draw a minion from Despicable Me")
+        print("Draw a minion from Despicable Me.")
+        print("This is a long project, but not complex. A good opportunity to demo how messy code can be divided up.")
         print("You'll need forward(), left()/right(), goto(), color(), penup(), and pendown() at least.")
         print("You can reduce the number of loops you need if you use circle()...")
-        print("  ...but you will need at least 1 for the mouth")
+        print("  ...but you will need at least 1 loop to draw the mouth.")

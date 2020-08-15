@@ -68,7 +68,7 @@ import SpecialTurtles
 # for i in range(4):
 #    snowflake_drawer.draw_snowflake(i, 300)
 
-RecursiveProjects.GenericShapeFractal().draw(300, 4, edges=3)
+RecursiveProjects.GenericShapeFractal().draw(size=1600, complexity=2, edges=7)
 
 
 turtle.exitonclick()

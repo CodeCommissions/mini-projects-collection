@@ -33,18 +33,17 @@ class GenericShapeFractal:
         else:
             self.pen = pen
 
-
-    def draw(self, size, order, edges=3):
+    def draw(self, size=400, complexity=2, edges=3):
         for edge in range(edges):
-            if order > 0:
-                self.draw(size/2, order-1, edges)
+            if complexity > 0:
+                self.draw(size/2, complexity-1, edges)
 
-            if order == 0:
+            if complexity == 0:
                 self.pen.down()
             else:
                 self.pen.up()
 
-            self.pen.forward(size)
+            self.pen.forward(size/edges)
             self.pen.left(360 / edges)
 
 
