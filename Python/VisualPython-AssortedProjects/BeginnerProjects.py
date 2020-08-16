@@ -146,6 +146,44 @@ class StampedSpiral:
         return pen
 
 
+class Star:
+    @staticmethod
+    def draw_now(pen=None, size=200, edges=5, bgcolor="midnight blue", turtle_color="gold"):
+        window = turtle.Screen()
+        window.bgcolor(bgcolor)
+
+        pen = get_default_turtle(pen)
+        pen.shape("turtle")
+        pen.seth(180)
+        pen.width(6)
+
+        if edges%2 == 0:
+            print(f"Warning, stars have to have an off number of edges. Rounding up from {edges} to {edges+1}.")
+            edges += 1
+
+        # Draw a black outline
+        pen.color("black")
+        for i in range(edges):
+            pen.forward(size)
+            pen.left(180 - 360 / (edges * 2))
+
+        # Shrink and reposition the turtle so the inner star will be smaller
+        pen.width(0)
+        pen.color(turtle_color)
+        x, y = pen.position()
+        teleport_turtle(pen, x-8, y-2)
+
+        # Draw the inner star
+        pen.begin_fill()
+        for i in range(edges):
+            pen.forward(size-16)
+            pen.left(180-360/(edges*2))
+        pen.end_fill()
+
+        pen.ht()
+        return pen
+
+
 class DrawTarget:
     @staticmethod
     def draw_now(pen=None):

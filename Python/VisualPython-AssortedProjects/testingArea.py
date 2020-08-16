@@ -12,10 +12,11 @@ import SpecialTurtles
 # BeginnerProjects.DrawShape.draw_now()
 # BeginnerProjects.DrawThreeShapes.draw_now()
 # BeginnerProjects.DrawOverlappingShapes.draw_now()
+# BeginnerProjects.PolygonFromUser.draw_now()
 # BeginnerProjects.DrawSquareSpiral.draw_now()
 # BeginnerProjects.DrawSquareSpiral.draw_doubled_version()
-BeginnerProjects.StampedSpiral.draw_now()
-# BeginnerProjects.PolygonFromUser.draw_now()
+# BeginnerProjects.StampedSpiral.draw_now()
+BeginnerProjects.Star.draw_now(size=200, edges=5, bgcolor="midnight blue", turtle_color="gold")
 # BeginnerProjects.Minion.draw_now() # The minion is a long project, but isn't very complicated if you break it up.
 # BeginnerProjects.DrawGrassTuft.draw_now()
 # BeginnerProjects.DrawGradientBackground.draw_now()
