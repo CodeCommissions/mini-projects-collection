@@ -125,6 +125,27 @@ class DrawSquareSpiral:
         return pen1, pen2
 
 
+class StampedSpiral:
+    @staticmethod
+    def draw_now(pen=None):
+        window = turtle.Screen()
+        window = window.bgcolor("light green")
+
+        pen = get_default_turtle(pen)
+        pen.shape("turtle")
+        pen.color("blue")
+
+        pen.penup()
+        size = 20
+        for i in range(45):
+            pen.stamp()
+            size += 3
+            pen.forward(size)
+            pen.right(24)
+
+        return pen
+
+
 class DrawTarget:
     @staticmethod
     def draw_now(pen=None):

@@ -14,6 +14,7 @@ import SpecialTurtles
 # BeginnerProjects.DrawOverlappingShapes.draw_now()
 # BeginnerProjects.DrawSquareSpiral.draw_now()
 # BeginnerProjects.DrawSquareSpiral.draw_doubled_version()
+BeginnerProjects.StampedSpiral.draw_now()
 # BeginnerProjects.PolygonFromUser.draw_now()
 # BeginnerProjects.Minion.draw_now() # The minion is a long project, but isn't very complicated if you break it up.
 # BeginnerProjects.DrawGrassTuft.draw_now()
@@ -30,7 +31,7 @@ import SpecialTurtles
 # BeginnerProjects.DrawPieChart.draw_now()
 # BeginnerProjects.DrawTarget.draw_now()
 # BeginnerProjects.DrawCaptainShield.draw_now()
-BeginnerProjects.RandomWalking.draw_now(max_steps=500)
+# BeginnerProjects.RandomWalking.draw_now(max_steps=500)
 # BeginnerProjects.RacerTurtles.race_now()
 # BeginnerProjects.DrawChessBoard.draw_now(height=7, width=7)
 
