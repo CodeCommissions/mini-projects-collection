@@ -581,6 +581,71 @@ class DrawCircleOfCircles:
         print("If you choose not to implement the debug mode, then you don't need `if-else`s")
 
 
+class RandomWalking:
+    @staticmethod
+    def draw_now(pen: turtle.Turtle = None, max_steps=400):
+        pen = get_default_turtle(pen)
+
+        # Draw Bounding Box/s
+        pen.color("black")
+        teleport_turtle(pen, -300, 300)
+        for _ in range(4):
+            pen.forward(600)
+            pen.right(90)
+
+        # Starting position
+        pen.speed(0)
+        x, y = random.randint(-280,280), random.randint(-280, 280)
+        teleport_turtle(pen, x, y)
+        pen.seth(random.randint(0,360))
+        pen.shape("turtle")
+        pen.color("silver")
+
+        for step in range(max_steps):
+            RandomWalking.move_bounded_turtle(pen)
+
+        pen.shapesize(2)
+        pen.color("grey")
+        return pen
+
+    @staticmethod
+    def move_bounded_turtle(turtle_to_move : turtle.Turtle):
+        x, y = turtle_to_move.position()
+        if x > 300:
+            turtle_to_move.seth(random.randint(95, 265))
+            x = 300
+        elif x < -300:
+            turtle_to_move.seth(random.randint(95, 265) + 180)
+            x = -300
+
+        if y > 300:
+            turtle_to_move.seth(random.randint(5, 175)+180)
+            y = 300
+        elif y < -300:
+            turtle_to_move.seth(random.randint(5, 175))
+            y = -300
+
+        # Reset to within border
+        turtle_to_move.goto(x, y)
+
+        # Move and turn
+        angle = random.randint(0, 30)-15
+        distance = random.randint(10, 30)
+
+        turtle_to_move.right(angle)
+        turtle_to_move.forward(distance)
+
+    @staticmethod
+    def print_more_info():
+        print("Make a turtle move around inside a bounding box. Motion should be random, but not extreme. ")
+        print("For example, gradual changes in direction of up to 30 degrees, rather `set_heading(x % 360)`.")
+        print("This projects requires that you fetch turtle state, and change behaviour based on that information.")
+        print("A helper function like `move_bounded_turtle()` will make life easier. But it's not essential")
+        print()
+        print("A reasonable understanding of variables, loops, and if is needed.")
+        print("You can add a fill effect to your turtle, and you'll end up drawing abstract paintings.")
+
+
 class Minion:
     @staticmethod
     def draw_now(pen=None):

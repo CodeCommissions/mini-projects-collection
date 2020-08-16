@@ -18,7 +18,7 @@ import SpecialTurtles
 # BeginnerProjects.Minion.draw_now() # The minion is a long project, but isn't very complicated if you break it up.
 # BeginnerProjects.DrawGrassTuft.draw_now()
 # BeginnerProjects.DrawGradientBackground.draw_now()
-BeginnerProjects.Spear.draw_now()  # Similar structure to the GradientBackground project - but with a start and end
+# BeginnerProjects.Spear.draw_now()  # Similar structure to the GradientBackground project - but with a start and end
 # BeginnerProjects.DrawMedicCross.draw_now()
 # BeginnerProjects.Wormhole.draw_now()
 # BeginnerProjects.SnailShell.draw_now()
@@ -30,6 +30,7 @@ BeginnerProjects.Spear.draw_now()  # Similar structure to the GradientBackground
 # BeginnerProjects.DrawPieChart.draw_now()
 # BeginnerProjects.DrawTarget.draw_now()
 # BeginnerProjects.DrawCaptainShield.draw_now()
+BeginnerProjects.RandomWalking.draw_now(max_steps=500)
 # BeginnerProjects.RacerTurtles.race_now()
 # BeginnerProjects.DrawChessBoard.draw_now(height=7, width=7)
 
