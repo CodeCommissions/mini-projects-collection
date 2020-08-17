@@ -225,6 +225,46 @@ class ClockFace:
         return pen
 
 
+class DrawBarGraph:
+    @staticmethod
+    def draw_now(pen=None, data=[200,10,50,100,150,200,150]):
+        pen = get_default_turtle(pen)
+
+        pen.width(2)
+        pen.color("black")
+        colors = ["green", "blue",  "yellow", "orange", "red"]
+
+        # Offset the turtle on the x-axis, so the final graph will be roughly centered
+        teleport_turtle(pen, -25*len(data)/2, 0)
+
+        for num in data:
+            # If any element is above or below our boundaries, hard-code a color
+            if num < 0:
+                pen.fillcolor("grey")
+            elif num // 50 >= len(colors):
+                pen.fillcolor("dark red")
+            else:
+                pen.fillcolor(colors[num // 50])
+
+            # Draw a single bar (may belong in it's own function)
+            pen.begin_fill()
+            pen.seth(90)
+            pen.forward(num)
+            pen.seth(0)
+            pen.forward(7)
+            pen.write(num)
+            pen.forward(23)
+            pen.seth(-90)
+            pen.forward(num)
+            pen.end_fill()
+
+            # Separate each bar by 5 pixels.
+            x, y = pen.position()
+            teleport_turtle(pen, x+5, y)
+
+        pen.ht()
+        return pen
+
 class DrawTarget:
     @staticmethod
     def draw_now(pen=None):
