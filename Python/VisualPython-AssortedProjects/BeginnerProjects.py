@@ -184,6 +184,47 @@ class Star:
         return pen
 
 
+class ClockFace:
+    @staticmethod
+    def draw_now(pen=None, size=200, hours=12, minutes=12):
+        pen = get_default_turtle(pen)
+        pen.shape("turtle")
+        pen.seth(90)
+        pen.width(6)
+
+        pen.color("black")
+        for i in range(12):
+            pen.penup()
+            pen.forward(size*0.8)
+            pen.pendown()
+
+            pen.forward(size*0.1)
+            pen.penup()
+            pen.forward(size*0.1)
+
+            pen.stamp()
+            pen.backward(size)
+            pen.right(360/12)
+
+        pen.shape("circle")
+        pen.stamp()
+
+        pen.shape("arrow")
+        pen.pendown()
+        minute_angle = (minutes % 60) * (360 / 60)
+        hour_angle = (hours%12)*(360/12) + minute_angle/12
+
+        for angle, distance in [[minute_angle, size*0.7],
+                                [hour_angle, size*0.5]]:
+            pen.seth(90-angle)
+            pen.forward(distance)
+            pen.stamp()
+            pen.backward(distance)
+
+        pen.ht()
+        return pen
+
+
 class DrawTarget:
     @staticmethod
     def draw_now(pen=None):
