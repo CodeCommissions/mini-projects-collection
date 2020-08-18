@@ -265,6 +265,7 @@ class DrawBarGraph:
         pen.ht()
         return pen
 
+
 class DrawTarget:
     @staticmethod
     def draw_now(pen=None):
@@ -451,6 +452,46 @@ class DrawGradientBackground:
             color_offset = 0.3/total_lines * i
             pen.color(0 + color_offset, 0.3 + color_offset, 0.6+color_offset)
             DrawGradientBackground.draw_row(pen, height, 1000)
+
+        return pen
+
+    @staticmethod
+    def draw_row(pen, height, width):
+        pen.begin_fill()
+        for distance in [height, width, height, width]:
+            pen.forward(distance)
+            pen.right(90)
+        pen.end_fill()
+
+
+class BrickWall:
+    @staticmethod
+    def draw_brick(pen:turtle.Turtle, color, width, height):
+        pen.fillcolor(color)
+
+        pen.begin_fill()
+        for distance in [width, height, width, height]:
+            pen.forward(distance)
+            pen.right(90)
+        pen.end_fill()
+
+    @staticmethod
+    def draw_now(pen=None):
+        pen = get_default_turtle(pen)
+        pen.color("black")
+        pen.width(4)
+        pen.speed(0)
+
+        for y in range(400, -400, -50):
+            for x in range(-600, 500, 100):
+                if y % 100 == 0:
+                    offset = 50
+                else:
+                    offset = 0
+
+                c = random.choice(["sienna1","sienna2","sienna3","sienna4","chocolate1","chocolate2","chocolate3"])
+                teleport_turtle(pen, x+offset, y)
+                BrickWall.draw_brick(pen, c, 100, 50)
 
         return pen
 
