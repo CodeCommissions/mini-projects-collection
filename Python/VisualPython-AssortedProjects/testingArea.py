@@ -27,7 +27,7 @@ import SpecialTurtles
 # BeginnerProjects.Wormhole.draw_now()
 # BeginnerProjects.SnailShell.draw_now()
 # BeginnerProjects.SnailShell.draw_now(colors=["red", "orange", "yellow", "green", "blue", "indigo", "violet"])
-BeginnerProjects.BrickWall.draw_now()
+# BeginnerProjects.BrickWall.draw_now()
 # BeginnerProjects.DrawPencilLead.draw_now()
 # BeginnerProjects.DrawCircleOfCircles.draw_now(debug_mode=False, circles=12)
 # BeginnerProjects.Dice.draw_now(number=3)
@@ -76,7 +76,6 @@ BeginnerProjects.BrickWall.draw_now()
 #    snowflake_drawer.draw_snowflake(i, 300)
 
 # RecursiveProjects.GenericShapeFractal().draw(size=1600, complexity=2, edges=7)
-
 
 turtle.exitonclick()
 
