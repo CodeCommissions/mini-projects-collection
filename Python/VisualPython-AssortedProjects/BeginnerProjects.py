@@ -762,6 +762,35 @@ class DrawCircleOfCircles:
         print("If you choose not to implement the debug mode, then you don't need `if-else`s")
 
 
+class LineGraph:
+    @staticmethod
+    def draw_now(pen: turtle.Turtle = None, data = None):
+        # Use given arguments, or generate some defaults
+        pen = get_default_turtle(pen)
+        if data is None:
+            data = [[random.randint(-30, 30)+x, random.randint(-30, 30)+x] for x in range(-400, 400, 98)]
+
+        pen.color('black')
+        pen.width(2)
+
+        # Draw the axes
+        teleport_turtle(pen, 400, 0)
+        pen.goto(-400, 0)
+        teleport_turtle(pen, 0, 400)
+        pen.goto(0, -400)
+
+        # Plot the data
+        pen.shape("circle")
+        teleport_turtle(pen, data[0][0], data[0][1])
+        for x, y in data:
+            pen.goto(x, y)
+            pen.stamp()
+            pen.write(f"    ({x}, {y})", align="left", font=("Arial", 10, "bold"))
+
+        return pen
+
+
+
 class RandomWalking:
     @staticmethod
     def draw_now(pen: turtle.Turtle = None, max_steps=400):

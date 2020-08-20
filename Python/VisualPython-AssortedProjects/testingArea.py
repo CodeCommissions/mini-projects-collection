@@ -33,6 +33,7 @@ import SpecialTurtles
 # BeginnerProjects.Dice.draw_now(number=3)
 # BeginnerProjects.DrawWhirlpool.draw_now()
 # BeginnerProjects.DrawPieChart.draw_now()
+BeginnerProjects.LineGraph.draw_now(data=[[-374, -396], [-324, -295], [-230, -211], [-85, -79], [-16, -21], [116, 70], [158, 165], [269, 286], [398, 405]])
 # BeginnerProjects.DrawTarget.draw_now()
 # BeginnerProjects.DrawCaptainShield.draw_now()
 # BeginnerProjects.RandomWalking.draw_now(max_steps=500)
@@ -78,47 +79,3 @@ import SpecialTurtles
 # RecursiveProjects.GenericShapeFractal().draw(size=1600, complexity=2, edges=7)
 
 turtle.exitonclick()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
