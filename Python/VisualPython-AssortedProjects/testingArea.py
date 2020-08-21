@@ -33,7 +33,7 @@ import SpecialTurtles
 # BeginnerProjects.Dice.draw_now(number=3)
 # BeginnerProjects.DrawWhirlpool.draw_now()
 # BeginnerProjects.DrawPieChart.draw_now()
-BeginnerProjects.LineGraph.draw_now(data=[[-374, -396], [-324, -295], [-230, -211], [-85, -79], [-16, -21], [116, 70], [158, 165], [269, 286], [398, 405]])
+# BeginnerProjects.LineGraph.draw_now(data=[[-374, -396], [-324, -295], [-230, -211], [-85, -79], [-16, -21], [116, 70], [158, 165], [269, 286], [398, 405]])
 # BeginnerProjects.DrawTarget.draw_now()
 # BeginnerProjects.DrawCaptainShield.draw_now()
 # BeginnerProjects.RandomWalking.draw_now(max_steps=500)
@@ -44,7 +44,7 @@ BeginnerProjects.LineGraph.draw_now(data=[[-374, -396], [-324, -295], [-230, -21
 # FunctionFocusedProjects.DrawGarden().draw_now()
 # FunctionFocusedProjects.DrawNightSky().draw_now()
 # FunctionFocusedProjects.SpiralArt().draw_now()
-
+FunctionFocusedProjects.ParallelTurtleFlock(edges=6, angle=360/6, size=200, turtle_count=25).draw_now()
 
 ########################################################################################################
 # Examples after this point are often not one-liners.

@@ -790,7 +790,6 @@ class LineGraph:
         return pen
 
 
-
 class RandomWalking:
     @staticmethod
     def draw_now(pen: turtle.Turtle = None, max_steps=400):

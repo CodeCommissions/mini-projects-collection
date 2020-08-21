@@ -222,6 +222,32 @@ class DrawNightSky:
         self.pen.end_fill()
 
 
+class ParallelTurtleFlock:
+    def __init__(self, edges=6, angle=360/6, size=150, turtle_count=10):
+        turtle.Screen().bgcolor("black")
+        self.edges = edges
+        self.size = size
+        self.angle = angle
+        self.pens = []
+        for i in range(turtle_count):
+            pen = turtle.Turtle()
+            pen.speed(0)
+            pen.width(2)
+            pen.color(random.random(), random.random(), random.random())
+            self.pens.append(pen)
+
+            pen.penup()
+            pen.goto(i*15-300, i*15-300)
+            pen.pendown()
+
+    def draw_now(self):
+        for side in range(self.edges):
+            for pen in self.pens:
+                pen.forward(self.size)
+                pen.left(self.angle)
+
+        [pen.ht() for pen in self.pens]
+
 class SpiralArt:
     def __init__(self, pen=None):
         self.pen = BeginnerProjects.get_default_turtle(pen)
