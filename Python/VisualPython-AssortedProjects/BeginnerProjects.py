@@ -631,20 +631,37 @@ class DrawWhirlpool:
 
 class DrawPieChart:
     @staticmethod
-    def draw_now(pen=None):
+    def draw_now(pen=None, data=[25, 10, 50, 52, 30]):
+        from math import pi
+
+        # Circle size calculations
+        edges = sum(data)
+        circumference = 1000
+        radius = circumference / (2 * pi)
+        edge_size = circumference / edges
+
+        # Pen setup
         pen = get_default_turtle(pen)
-        pen.speed(10)
+        pen.color("black")
+        pen.width(4)
+        pen.speed(3)
+        teleport_turtle(pen, radius, 0)
+        pen.seth(90)
 
-        colors = ["red", "light grey"]
-        for i in range(6):
-            pen.color(colors[i % 2])
+        for segment in data:
+            pen.fillcolor(segment/sum(data), random.random(), segment/sum(data))
+            # Move to the center, start a fill, move back to the edge, draw the current edge/segment, finish the fill.
+            x, y = pen.position()
+            # Center the turtle on (0, 0) because it started drawing its far right edge at (radius, 0)
+            pen.goto(0, 0)
             pen.begin_fill()
-            for _ in range(3):
-                pen.forward(100)
-                pen.left(360 / 3)
+            pen.goto(x, y)
+            for i in range(int(round(segment))):
+                pen.left(360/edges)
+                pen.forward(edge_size)
             pen.end_fill()
-            pen.left(60)
 
+        pen.goto(0, 0)
         pen.ht()
         return pen
 
