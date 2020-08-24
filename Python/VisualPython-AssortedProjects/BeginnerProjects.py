@@ -354,6 +354,33 @@ class DrawGrassTuft:
         return pen
 
 
+class Bubbles:
+    @staticmethod
+    def draw_now(pen=None):
+        pen = get_default_turtle(pen)
+        pen.color("blue")
+        pen.width(3)
+        teleport_turtle(pen, 0, -200)
+
+        bubbles = random.randint(5,7)
+        # Scale the starting bubble size from from 0.75 to 1.25
+        size = (1+(random.random()-0.5)/2) * (8*bubbles)
+
+        for i in range(bubbles):
+            x, y = pen.position()
+            pen.color(random.choice(["royalblue1", "royalblue2", "royalblue3", "royalblue4"]))
+
+            pen.circle(size)
+            size = int(size*0.8)
+            if size <= 5:
+                break
+
+            teleport_turtle(pen, random.randint(-size, size), int(y+size*2.2))
+
+        pen.ht()
+        return pen
+
+
 class DrawMedicCross:
     @staticmethod
     def draw_now(pen=None):

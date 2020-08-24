@@ -20,6 +20,7 @@ import SpecialTurtles
 # BeginnerProjects.Minion.draw_now() # The minion is a long project, but isn't very complicated if you break it up.
 # BeginnerProjects.ClockFace.draw_now(size=250, hours=2, minutes=30)
 # BeginnerProjects.DrawGrassTuft.draw_now()
+BeginnerProjects.Bubbles.draw_now()
 # BeginnerProjects.DrawGradientBackground.draw_now()
 # BeginnerProjects.DrawBarGraph.draw_now(data = [20, 51, 105, 156, 201, 275, 180, -75, -150, 10])
 # BeginnerProjects.Spear.draw_now()  # Similar structure to the GradientBackground project - but with a start and end
@@ -32,7 +33,7 @@ import SpecialTurtles
 # BeginnerProjects.DrawCircleOfCircles.draw_now(debug_mode=False, circles=12)
 # BeginnerProjects.Dice.draw_now(number=3)
 # BeginnerProjects.DrawWhirlpool.draw_now()
-BeginnerProjects.DrawPieChart.draw_now(data=[10, 17, 50, 52, 30])
+# BeginnerProjects.DrawPieChart.draw_now(data=[10, 17, 50, 52, 30])
 # BeginnerProjects.LineGraph.draw_now(data=[[-374, -396], [-230, -211], [-16, -21], [158, 165], [269, 286], [398, 405]])
 # BeginnerProjects.DrawTarget.draw_now()
 # BeginnerProjects.DrawCaptainShield.draw_now()
