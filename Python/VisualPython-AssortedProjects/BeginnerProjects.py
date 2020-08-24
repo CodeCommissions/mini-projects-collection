@@ -154,6 +154,7 @@ class StampArt:
             pen.goto(0, 0)
             pen.pendown()
 
+        return pen
 
 
 class StampedSpiral:
@@ -175,6 +176,37 @@ class StampedSpiral:
             pen.right(24)
 
         return pen
+
+
+class Slinky:
+    @staticmethod
+    def draw_now(pen=None):
+        pen = get_default_turtle(pen)
+        pen.speed(0)
+        pen.seth(-90)
+
+        for i in range(15):
+            pen.color(random.random(), random.random(), random.random())
+
+            for j in range(10):
+                pen.right(6+14)
+                pen.forward(12+j)
+
+            pen.color(random.random(), random.random(), random.random())
+            for j in range(10):
+                pen.right(12+j)
+                pen.forward(12+j)
+
+        pen.ht()
+        return pen
+
+    @staticmethod
+    def print_more_info():
+        print("Draw a slinky")
+        print("Avoid using turtle.circle() - you'll want to use nested loops (maybe more than 1).")
+        print("Adjust the turtle's right() and forward() arguments so they change as loop variable change.")
+        print("")
+        print("The code isn't complex, but it may take a lot of experimentation to avoid just creating a spirograph")
 
 
 class Star:
