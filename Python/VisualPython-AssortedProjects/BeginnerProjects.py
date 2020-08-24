@@ -125,6 +125,37 @@ class DrawSquareSpiral:
         return pen1, pen2
 
 
+class StampArt:
+    @staticmethod
+    def draw_now(pen=None):
+        pen = get_default_turtle(pen)
+        pen = turtle.Turtle()
+
+        turtle.setup(800, 600)
+        pen.shape("turtle")
+        pen.speed(0)
+        half_width, half_height = turtle.Screen().screensize()
+
+        for i in range(20):
+            pen.penup()
+            x_pos, y_pos = pen.position()
+            while (x_pos < half_width) and (x_pos >= -half_width) and (y_pos < half_height) and (y_pos >= -half_height):
+                new_color = (random.random(), random.random(), random.random())
+                pen.pencolor(new_color)
+                pen.fillcolor("white")
+                pen.shapesize(random.randint(1, 4))
+                pen.stamp()
+
+                pen.right(random.randint(0, 359))
+                pen.forward(random.randint(25, 100))
+                x_pos, y_pos = pen.position()
+
+            pen.penup()
+            pen.goto(0, 0)
+            pen.pendown()
+
+
+
 class StampedSpiral:
     @staticmethod
     def draw_now(pen=None):
