@@ -1,4 +1,75 @@
-## Bubble homework
+## Gradient Color Homework
+
+Add color-changing logic to bottom loop of this skeleton code. We're looking for a gradient that changes only slightly each time the loop is called, but you can use whatever colors you like.
+
+Here are some useful tips:
+ - You'll need to use `pen.color(r, g, b)` to set the color. 
+ - Don't forget that by default, `color()` expects numbers from 0 to 1.
+ - Experiment with different starting values, and types of changes for your `r, g, b` values. Some combination will be awesome, some will be ugly.
+ - You can use an `if` to check if your `r, g, b` values go out of bounds, and cap that at 0 and 1 (or 0 and 255 if you change the color mode).
+
+### Original black-only code
+
+```python
+import turtle
+
+
+def draw_rectangle_at(pen, x, y):
+    pen.up()
+    pen.goto(x, y)
+    pen.down()
+
+    pen.begin_fill()
+    for i in range(4):
+        if i == 0 or i == 2:
+            pen.forward(400)
+        else:
+            pen.forward(20)
+        pen.right(90)
+    pen.end_fill()
+
+
+t = turtle.Turtle()
+t.speed("fast")
+for y in range(-200, 220, 20):
+    draw_rectangle_at(t, -200, y)
+
+turtle.exitonclick()
+```
+
+### Solution
+
+```python
+import turtle
+
+
+def draw_rectangle_at(pen, x, y):
+    pen.up()
+    pen.goto(x, y)
+    pen.down()
+
+    pen.begin_fill()
+    for i in range(4):
+        if i == 0 or i == 2:
+            pen.forward(400)
+        else:
+            pen.forward(20)
+        pen.right(90)
+    pen.end_fill()
+
+
+t = turtle.Turtle()
+t.speed("fast")
+r, g, b = 0.0, 0.1, 0.2
+for y in range(-200, 220, 20):
+    t.color(r, g, b)
+    draw_rectangle_at(t, -200, y)
+    b = b + 0.025
+
+turtle.exitonclick()
+```
+
+## Bubble Homework
 
 Convert the grass-tuft drawing program into one that draws a stream of bubbles
 
