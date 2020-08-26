@@ -178,6 +178,46 @@ class StampedSpiral:
         return pen
 
 
+class AgeGroupTurtle:
+    @staticmethod
+    def draw_now(pen=None):
+        # Turtle setup
+        pen = get_default_turtle(pen)
+        pen.shape("turtle")
+        pen.color("blue")
+        pen.seth(90)
+
+        # Get and display age
+        max_age = 80
+        age = random.randint(0, max_age)
+        pen.write(f"I'm {age}...", align="center", font=("Arial", 12, "bold"))
+
+        teleport_turtle(pen, 0, -20)
+
+        # Find the first group that the turtle fits in, and display it.
+        ages_groups = [[2, "baby"], [5, "toddler"], [13, "kiddie"], [18, "teen"], [50, "adult"], [max_age+1, "old"]]
+        size = 1
+        for age_boundary, group in ages_groups:
+            pen.shapesize(size)
+            if age < age_boundary:
+                a_or_an = "a" if group[0] not in "aeiou" else "an"
+                pen.write(f"So I'm {a_or_an} {group} turtle!", align="center", font=("Arial", 12, "bold"))
+                break
+            size += 1
+
+        # Move away from the text so it isn't hidden.
+        teleport_turtle(pen, 0, size*-20-20)
+        return pen
+
+    @staticmethod
+    def print_more_info():
+        print("Make a turtle that gives a greeting based on a randomly generated age.")
+        print("For example, if the turtle is under 2 years old it might say `I'm a baby`")
+        print("")
+        print("Needs an `if`. You *can* get away with not using an `elif` or `else`, but you'll need a list instead.")
+        print("For extra points, change `shapesize` so the turtle looks bigger when it's older.")
+
+
 class Slinky:
     @staticmethod
     def draw_now(pen=None):
