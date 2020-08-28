@@ -82,6 +82,33 @@ class DrawThreeShapes:
         print("Use of loops is encouraged, but not required.")
 
 
+class NestedShapes:
+    @staticmethod
+    def draw_now(pen=None, shapes=5, sides=4) -> turtle.Turtle:
+        pen = get_default_turtle(pen)
+        pen.color("black")
+        pen.width(3)
+
+        for shape in range(shapes):
+            teleport_turtle(pen, 0, (shape + 1) * 105/sides)
+            pen.forward((shape + 1) * 105/sides)
+
+            for side in range(sides-1):
+                pen.right(360/sides)
+                pen.forward((shape+1) * 210/sides)
+
+            pen.right(360 / sides)
+            pen.forward((shape + 1) * 105/sides)
+
+            # drawer.draw_now(sides, pen)
+
+        return pen
+
+    @staticmethod
+    def print_more_info():
+        print("")
+
+
 class DrawSquareSpiral:
     @staticmethod
     def draw_now(pen=None):
