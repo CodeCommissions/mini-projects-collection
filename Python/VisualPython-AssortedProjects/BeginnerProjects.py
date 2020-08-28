@@ -100,13 +100,13 @@ class NestedShapes:
             pen.right(360 / sides)
             pen.forward((shape + 1) * 105/sides)
 
-            # drawer.draw_now(sides, pen)
-
+        pen.ht()
         return pen
 
     @staticmethod
     def print_more_info():
-        print("")
+        print("Draw shapes inside each other - gradually getting bigger/smaller.")
+        print("You can do this with a helper function (like `draw_shape()`), or you can use nested loops.")
 
 
 class DrawSquareSpiral:
@@ -934,6 +934,71 @@ class DrawCircleOfCircles:
         print("Setting debug-mode to False should make the turtle only draw circles and nothing else.")
         print()
         print("If you choose not to implement the debug mode, then you don't need `if-else`s")
+
+
+class TruthTable:
+    @staticmethod
+    def draw_now(pen=None):
+        pen = get_default_turtle(pen)
+        pen.speed(0)
+        pen.width(1)
+        pen.color("black")
+
+        # Draw the main truth table
+        pen.seth(-90)
+        row = 0
+        for a in [True, False]:
+            for b in [True, False]:
+                for c in [True, False]:
+                    teleport_turtle(pen, 0, row*35)
+                    TruthTable.draw_row(pen, a, b, c)
+                    row += 1
+
+        # Draw column headings
+        teleport_turtle(pen, 0, row * 35 - 35)
+        pen.seth(0)
+        pen.penup()
+        pen.backward(16)
+        for message in ["a", "b", "c", "All?", "Any?", "ONLY\n  b?"]:
+            pen.write(message, align="center", font=("Arial", 10, "bold"))
+            pen.forward(37)
+
+        # Draw a dividing line between the values, and the results
+        pen.color("dark red")
+        pen.down()
+        pen.width(2)
+        teleport_turtle(pen, 35*2+3, -30)
+        pen.seth(90)
+        pen.forward(280)
+
+        pen.ht()
+        return pen
+
+    @staticmethod
+    def draw_row(pen:turtle.Turtle, a, b, c):
+        x, y = pen.position()
+        for bool_value in [a, b, c, a and b and c, a or b or c, b and not c and not a]:
+            teleport_turtle(pen, x, y)
+            color = "black" if bool_value else "light grey"
+            pen.fillcolor(color)
+
+            pen.begin_fill()
+            for _ in range(4):
+                pen.forward(30)
+                pen.right(90)
+            pen.end_fill()
+
+            x += 35
+
+    @staticmethod
+    def print_more_info():
+        print("Draw a truth table.")
+        print("Good practice for using conditionals, and boolean logic.")
+        print("Depending on your approach, you may need many nested loops.")
+        print("")
+        print("There are ways to decrease the amount of nesting (like using helper functions). ")
+        print("But you don't technically need them.")
+        print("Extra challenges include adding spaces between blocks, and including labels for each column")
 
 
 class LineGraph:
