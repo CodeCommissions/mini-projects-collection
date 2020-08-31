@@ -1089,6 +1089,57 @@ class TruthTable:
         print("Extra challenges include adding spaces between blocks, and including labels for each column")
 
 
+class RightAngleCalculator:
+    @staticmethod
+    def draw_now(pen: turtle.Turtle = None, a=3, b=3, c=None):
+        from math import sqrt
+        pen = get_default_turtle(pen)
+        pen.color("black")
+
+        f = ("Arial", 14, "bold")
+        if None not in [a, b, c] and a**2+b**2 != c**2:
+            pen.write(f"{a}² + {b}² != {c}²\nInvalid right angle triangle.", align="center", font=f)
+            return
+
+        if sum([1 for val in [a, b, c] if val is None]) > 1:
+            pen.write(f"Need at least 2 values", align="center", font=f)
+            return
+
+        if a is None:
+            a = sqrt(c**2 - b**2)
+
+        if b is None:
+            b = sqrt(c ** 2 - a ** 2)
+
+        if c is None:
+            c = sqrt(a ** 2 + b ** 2)
+
+        if a == 0 or b == 0 or c == 0:
+            pen.write("At least 1 edge was worked out to have a length of 0.\n" +
+                      "Therefore your triangle will be a line.\nCheck that c is greater than a and b.",
+                      align="center", font=f)
+            return
+
+        pen.seth(0)
+
+        for x_mid, y_mid, x_end, y_end, letter, val in [[a/2, 0, a, 0, "a", a],
+                                                        [a, b / 2, a, b, "b", b],
+                                                        [a/2, b/2, 0, 0, "c", c]]:
+            pen.goto(x_mid, y_mid)
+            pen.write(f"{letter}={val}", align="left", font=f)
+            pen.goto(x_end, y_end)
+
+    @staticmethod
+    def print_more_info():
+        print("Calculate and draw a right-angle triangle from 2 edges.")
+        print("You'll need to use ifs to check which of a/b/c are missing.")
+        print("Drawing the triangle can just use a, b, and/or c as XY coordinates in several goto()s.")
+        print("")
+        print("https://en.wikipedia.org/wiki/Pythagorean_theorem")
+        print("Displaying the lengths you calculate in the middle of each line is an extra challenge.")
+        print("Just displaying sizes to the console is more than enough.")
+
+
 class LineGraph:
     @staticmethod
     def draw_now(pen: turtle.Turtle = None, data = None):
