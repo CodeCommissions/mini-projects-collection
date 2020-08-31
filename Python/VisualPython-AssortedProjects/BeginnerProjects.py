@@ -527,6 +527,22 @@ class DrawGrassTuft:
 
         return pen
 
+    @staticmethod
+    def draw_now_version2(pen=None):
+        pen = get_default_turtle(pen)
+        for i in range(8):
+            angle = random.randint(-30, 30)
+            distance = random.randint(20, 40)
+            color = random.choice(["green2","green3","green4"])
+            pen.color(color)
+
+            # Which way will the grass-strand be draw?
+            pen.seth(90-angle)
+
+            # Draw a piece of grass.
+            pen.forward(distance)
+            pen.backward(distance)
+
 
 class Bubbles:
     @staticmethod
@@ -554,6 +570,34 @@ class Bubbles:
         pen.ht()
         return pen
 
+    @staticmethod
+    def draw_now_version2(pen=None):
+        pen = get_default_turtle(pen)
+        for i in range(8):
+            angle = random.randint(-30, 30)
+            distance = random.randint(20, 40)
+            color = random.choice(["green2", "green3", "green4"])
+            pen.color(color)
+
+            # Point up +- 30 degrees
+            pen.seth(90 - angle)
+            # You could also use `t.left(angle)` here for a similar effect
+
+            # Move away from where you were last
+            pen.penup()
+            pen.forward(distance + 20)
+            pen.pendown()
+
+            # Draw a bubble
+            pen.circle(distance)
+
+    @staticmethod
+    def print_more_info():
+        print("Draw series of bubbles.")
+        print("Version 2 is a variant that can be made with only small changes to DrawGrassTuft.draw_now_version2().")
+        print("")
+        print("You definitely need a loop to do this.")
+        print("Optionally you can use random to vary sizes, and an if() to check that things don't go out of bounds.")
 
 class DrawMedicCross:
     @staticmethod

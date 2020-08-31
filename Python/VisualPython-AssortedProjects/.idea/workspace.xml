@@ -13,11 +13,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/testingArea.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="127">
-              <caret line="28" column="52" lean-forward="true" selection-start-line="28" selection-start-column="52" selection-end-line="28" selection-end-column="52" />
+            <state relative-caret-position="348">
+              <caret line="41" column="43" lean-forward="true" selection-start-line="30" selection-start-column="37" selection-end-line="41" selection-end-column="43" />
               <folding>
                 <element signature="e#0#27#0" expanded="true" />
               </folding>
@@ -25,11 +25,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/BeginnerProjects.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="246">
-              <caret line="403" column="67" lean-forward="true" selection-start-line="403" selection-start-column="67" selection-end-line="406" selection-end-column="20" />
+            <state relative-caret-position="1641">
+              <caret line="599" column="116" selection-start-line="599" selection-start-column="116" selection-end-line="599" selection-end-column="116" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -99,8 +99,8 @@
       <find>grasstu</find>
       <find>squarespi</find>
       <find>write(</find>
-      <find>bar</find>
       <find>bargra</find>
+      <find>bar</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -115,8 +115,8 @@
         <option value="$PROJECT_DIR$/mini_demo.py" />
         <option value="$PROJECT_DIR$/FunctionFocusedProjects.py" />
         <option value="$PROJECT_DIR$/deleteme.py" />
-        <option value="$PROJECT_DIR$/BeginnerProjects.py" />
         <option value="$PROJECT_DIR$/testingArea.py" />
+        <option value="$PROJECT_DIR$/BeginnerProjects.py" />
       </list>
     </option>
   </component>
@@ -355,22 +355,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BeginnerProjects.py">
+    <entry file="file://$PROJECT_DIR$/testingArea.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="403" column="67" lean-forward="true" selection-start-line="403" selection-start-column="67" selection-end-line="406" selection-end-column="20" />
+        <state relative-caret-position="348">
+          <caret line="41" column="43" lean-forward="true" selection-start-line="30" selection-start-column="37" selection-end-line="41" selection-end-column="43" />
           <folding>
-            <element signature="e#0#13#0" expanded="true" />
+            <element signature="e#0#27#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/testingArea.py">
+    <entry file="file://$PROJECT_DIR$/BeginnerProjects.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="28" column="52" lean-forward="true" selection-start-line="28" selection-start-column="52" selection-end-line="28" selection-end-column="52" />
+        <state relative-caret-position="1641">
+          <caret line="599" column="116" selection-start-line="599" selection-start-column="116" selection-end-line="599" selection-end-column="116" />
           <folding>
-            <element signature="e#0#27#0" expanded="true" />
+            <element signature="e#0#13#0" expanded="true" />
           </folding>
         </state>
       </provider>
