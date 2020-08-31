@@ -82,6 +82,37 @@ class DrawThreeShapes:
         print("Use of loops is encouraged, but not required.")
 
 
+class StickHouseChallenge:
+    @staticmethod
+    def draw_now(pen=None, size=150):
+        from math import sqrt
+        size = abs(size)
+        pen = get_default_turtle(pen)
+        pen.getscreen().bgcolor("black")
+        pen.speed(1)
+        pen.width(6)
+        teleport_turtle(pen, -size/2, -size/2)
+
+        colors = ["red", "orange", "yellow", "green", "blue", "indigo", "violet", "cyan"]
+        distances = [size,  sqrt(2*size**2), sqrt(size**2/2), sqrt(size**2/2), size, size, sqrt(2*size**2), size]
+        headings = [0, 180-45, 45, -45, 180, 270, 45, 270]
+        for heading, distance, color in zip(headings, distances, colors):
+            pen.color(color)
+            pen.seth(heading)
+            pen.forward(distance)
+
+        pen.ht()
+        return pen
+
+    @staticmethod
+    def print_more_info():
+        print("Draw a house with 8 lines that never overlap.")
+        print("Unless you know about lists, it's easier to do this project WITHOUT loops.")
+        print("You can work out the directions and distances through trial and error. But some Pythagoras will help.")
+        print()
+        print("For extra challenge add a settable size that scales up correctly. Colors are also optional.")
+
+
 class NestedShapes:
     @staticmethod
     def draw_now(pen=None, shapes=5, sides=4) -> turtle.Turtle:
