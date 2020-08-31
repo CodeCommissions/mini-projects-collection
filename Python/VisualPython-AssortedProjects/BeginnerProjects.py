@@ -386,9 +386,22 @@ class ClockFace:
         return pen
 
 
+class TwoValueBarGraph:
+    @staticmethod
+    def draw_now(pen=None, value1=0.9, value2=0.1, scaling_factor=100):
+        DrawBarGraph.draw_now(pen, data=[int(value1*scaling_factor), int(value2*scaling_factor)])
+
+    @staticmethod
+    def print_more_info():
+        print("A list-free alternative to DrawBarGraph")
+        print("A helper function that draws a single bar at XY means you won't have to do any looping.")
+        print("")
+        print("You should only need if-elses - but lists will help if you want to use several colors.")
+
+
 class DrawBarGraph:
     @staticmethod
-    def draw_now(pen=None, data=[200,10,50,100,150,200,150]):
+    def draw_now(pen=None, data=(200, 10, 50, 100, 150, 200, 150)):
         pen = get_default_turtle(pen)
 
         pen.width(2)
@@ -405,7 +418,7 @@ class DrawBarGraph:
             elif num // 50 >= len(colors):
                 pen.fillcolor("dark red")
             else:
-                pen.fillcolor(colors[num // 50])
+                pen.fillcolor(colors[int(num // 50)])
 
             # Draw a single bar (may belong in it's own function)
             pen.begin_fill()
