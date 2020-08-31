@@ -1,6 +1,6 @@
 import turtle, random, time
 import BeginnerProjects, FunctionFocusedProjects
-import IntermediateProjects, RecursiveProjects
+import IntermediateProjects, RecursiveProjects, IteratorProjects
 import SpecialTurtles
 
 ########################################################################################################
@@ -41,7 +41,7 @@ import SpecialTurtles
 # BeginnerProjects.Dice.draw_now(number=3)
 # BeginnerProjects.DrawWhirlpool.draw_now()
 # BeginnerProjects.DrawPieChart.draw_now(data=[10, 17, 50, 52, 30])
-BeginnerProjects.RightAngleCalculator.draw_now(a=None, b=300, c=500)
+# BeginnerProjects.RightAngleCalculator.draw_now(a=None, b=300, c=500)
 # BeginnerProjects.LineGraph.draw_now(data=[[-374, -396], [-230, -211], [-16, -21], [158, 165], [269, 286], [398, 405]])
 # BeginnerProjects.DrawTarget.draw_now()
 # BeginnerProjects.DrawCaptainShield.draw_now()
@@ -86,5 +86,12 @@ BeginnerProjects.RightAngleCalculator.draw_now(a=None, b=300, c=500)
 #    snowflake_drawer.draw_snowflake(i, 300)
 
 # RecursiveProjects.GenericShapeFractal().draw(size=1600, complexity=2, edges=7)
+
+################
+# Iterator projects. Recreating things like Range and Zip. Also useful if you implement __iter__()
+# These are placeholders for now, and will be refined with a matching course.
+################
+# for i in IteratorProjects.RangeRemake.Range(7, 0, -0.5):
+#     print(i)
 
 turtle.exitonclick()
