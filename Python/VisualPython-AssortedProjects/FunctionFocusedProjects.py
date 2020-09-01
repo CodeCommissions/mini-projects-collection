@@ -123,7 +123,10 @@ class DrawGarden:
         petals = 6
         size = random.randint(40,60)
         self.pen.setheading(random.randint(0, 360))
-        for _ in range(petals):
+        colors = [(random.random(), random.random(), random.random()),
+                  (random.random(), random.random(), random.random())]
+        for i in range(petals):
+            self.pen.color(colors[i%2])
             for _ in range(sides):
                 self.pen.forward(size)
                 self.pen.left(360 / sides)
@@ -134,6 +137,7 @@ class DrawGarden:
         self.draw_petals(x, y)
 
     def draw_stem(self, x, y, size):
+        self.pen.color("black")
         self._teleport_to(x, y)
         w = self.pen.width()
         self.pen.width(3)

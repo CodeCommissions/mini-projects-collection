@@ -50,7 +50,7 @@ import SpecialTurtles
 # BeginnerProjects.DrawChessBoard.draw_now(height=7, width=7)
 
 # FunctionFocusedProjects.DrawGraph().draw_now()
-# FunctionFocusedProjects.DrawGarden().draw_now()
+FunctionFocusedProjects.DrawGarden().draw_now()
 # FunctionFocusedProjects.DrawNightSky().draw_now()
 # FunctionFocusedProjects.SpiralArt().draw_now()
 # FunctionFocusedProjects.ParallelTurtleFlock(edges=6, angle=360/6, size=200, turtle_count=25).draw_now()
@@ -95,6 +95,6 @@ import SpecialTurtles
 #     print(i)
 # IteratorProjects.ZipTwoCollections.demo()
 # IteratorProjects.PermutationGenerator.demo()
-IteratorProjects.RandomColorGenerator.demo()
+# IteratorProjects.RandomColorGenerator.demo()
 
 turtle.exitonclick()
