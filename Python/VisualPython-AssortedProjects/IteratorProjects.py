@@ -1,4 +1,4 @@
-import turtle
+import turtle, random
 
 
 def teleport_turtle(turt: turtle.Turtle, x, y):
@@ -91,4 +91,14 @@ class PermutationGenerator:
 
 class RandomColorGenerator:
     # A turtle-friendly beginner-friendly iterator.
-    pass
+    @staticmethod
+    def GetColors(iterations):
+        for _ in range(iterations):
+            yield random.random(), random.random(), random.random()
+
+    @staticmethod
+    def demo(pen=None):
+        # A temporary demo that just re-uses the permutations class
+        colors = [c for c in RandomColorGenerator.GetColors(4)]
+        PermutationGenerator.demo(pen, colors)
+
