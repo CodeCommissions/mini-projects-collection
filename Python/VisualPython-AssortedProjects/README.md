@@ -1,3 +1,67 @@
+## Swiss flag homework
+
+Draw the outline of the swiss flag (or a medical cross). Extra points if you add color.
+
+The primary focus is on getting the conditional correct. As a hint, you're interested in toggling directions every **3rd** turn - modding by 3 can check this for you. Pay attention to the output values of `i` as they'll show you a pattern.
+
+### Original (incorrect) conditional
+
+```python
+import turtle
+
+pen = turtle.Turtle()
+for i in range(12):
+    pen.forward(50)
+    pen.write(i, font=("Arial", 14, "bold"))
+    pen.forward(50)
+    
+    if i % 4 == 0: # <-- FIX ME
+        pen.left(90)
+    else:
+        pen.right(90)
+
+turtle.exitonclick()
+```
+
+### Solution
+
+```python
+import turtle
+
+pen = turtle.Turtle()
+for i in range(12):
+    pen.forward(50)
+    pen.write(i, font=("Arial", 14, "bold"))
+    pen.forward(50)
+
+    if i % 3 == 1:
+        pen.left(90)
+    else:
+        pen.right(90)
+
+turtle.exitonclick()
+```
+
+Alternative version, that uses lists rather than mod:
+
+```python
+import turtle
+
+pen = turtle.Turtle()
+for i in range(12):
+    pen.forward(50)
+    pen.write(i, font=("Arial", 14, "bold"))
+    pen.forward(50)
+
+    if i in [1, 4, 7, 10]:
+        pen.left(90)
+    else:
+        pen.right(90)
+
+turtle.exitonclick()
+```
+
+
 ## Gradient Color Homework
 
 Add color-changing logic to bottom loop of this skeleton code. We're looking for a gradient that changes only slightly each time the loop is called, but you can use whatever colors you like.
