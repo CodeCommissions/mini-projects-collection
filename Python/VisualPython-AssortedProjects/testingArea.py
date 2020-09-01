@@ -93,6 +93,7 @@ import SpecialTurtles
 ################
 # for i in IteratorProjects.RangeRemake.Range(7, 0, -0.5):
 #     print(i)
-IteratorProjects.ZipTwoCollections.demo()
+# IteratorProjects.ZipTwoCollections.demo()
+IteratorProjects.PermutationGenerator.demo()
 
 turtle.exitonclick()

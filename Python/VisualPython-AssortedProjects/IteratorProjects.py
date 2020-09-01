@@ -1,6 +1,15 @@
 import turtle
 
 
+def teleport_turtle(turt: turtle.Turtle, x, y):
+    if turt.isdown():
+        turt.penup()
+        turt.goto(x, y)
+        turt.pendown()
+    else:
+        turt.goto(x, y)
+
+
 class RangeRemake:
     @staticmethod
     def Range(lower, upper=None, step=1):
@@ -45,9 +54,39 @@ class ZipTwoCollections:
 
 class PermutationGenerator:
     # Take a collection of items, and re-arrange it into every possible permutation.
-    # For example Permute([1,2,3]) will yield [1,2,3], [2,1,3], [1,3,2], [2,3,1], [3,1,2], [3,2,1]
+    # For example Permute([1,2,3]) will yield [1, 2, 3], [1, 3, 2], [2, 1, 3], [2, 3, 1], [3, 1, 2], [3, 2, 1]
     # May be too recursion-heavy.
-    pass
+    @staticmethod
+    def Permute(collection):
+        # This version makes multiple copies of `collection`. Essentially 1 for each permutation X total elements.
+        # Far from the most efficient, it does still prevent `collection` from being altered.
+        if len(collection) <= 1:
+            yield collection
+            return
+
+        # Extract every element from `collection`, move it to the front, and combine it with permutations of what's left
+        for i in range(len(collection)):
+            copy = collection[:i] + collection[i+1:]
+            for perm in PermutationGenerator.Permute(copy):
+                yield [collection[i]] + perm
+
+    @staticmethod
+    def demo(pen=None, colors=["red", "blue", "cyan", "purple"]):
+        pen = pen if pen is not None else turtle.Turtle()
+        pen.width(6)
+        teleport_turtle(pen, 0, 200)
+        pen.write("Can you spot any duplicate squares?", align="center", font=("arial", 20, "bold"))
+
+        x, y = -300, -300
+        for color_set in PermutationGenerator.Permute(colors):
+            teleport_turtle(pen, x, y)
+            x = x + 100 if x < 200 else -300
+            y = y + 100 if x == -300 else y
+
+            for color in color_set:
+                pen.color(color)
+                pen.forward(80)
+                pen.left(90)
 
 
 class RandomColorGenerator:
