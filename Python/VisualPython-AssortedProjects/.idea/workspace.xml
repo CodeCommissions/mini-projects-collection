@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e043b1a1-98e8-4f74-a03d-98ce6082bdd1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/FunctionFocusedProjects.py" beforeDir="false" afterPath="$PROJECT_DIR$/FunctionFocusedProjects.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BeginnerProjects.py" beforeDir="false" afterPath="$PROJECT_DIR$/BeginnerProjects.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/testingArea.py" beforeDir="false" afterPath="$PROJECT_DIR$/testingArea.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,8 +16,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/testingArea.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="332">
-              <caret line="52" column="29" lean-forward="true" selection-start-line="52" selection-start-column="29" selection-end-line="52" selection-end-column="29" />
+            <state relative-caret-position="144">
+              <caret line="42" column="37" lean-forward="true" selection-start-line="42" selection-start-column="37" selection-end-line="42" selection-end-column="37" />
               <folding>
                 <element signature="e#0#27#0" expanded="true" />
               </folding>
@@ -34,11 +34,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/BeginnerProjects.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-162">
-              <caret line="897" column="38" selection-start-line="897" selection-start-column="34" selection-end-line="897" selection-end-column="38" />
+            <state relative-caret-position="298">
+              <caret line="885" lean-forward="true" selection-start-line="885" selection-end-line="885" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -64,11 +64,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/FunctionFocusedProjects.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" column="19" lean-forward="true" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
+            <state relative-caret-position="110">
+              <caret line="209" column="24" lean-forward="true" selection-start-line="209" selection-start-column="24" selection-end-line="209" selection-end-column="24" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -110,8 +110,10 @@
       <find>bargra</find>
       <find>bubble</find>
       <find>bar</find>
-      <find>star</find>
+      <find>moon</find>
       <find>drawgard</find>
+      <find>star</find>
+      <find>piech</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -125,10 +127,10 @@
         <option value="$PROJECT_DIR$/IntermediateProjects.py" />
         <option value="$PROJECT_DIR$/mini_demo.py" />
         <option value="$PROJECT_DIR$/deleteme.py" />
-        <option value="$PROJECT_DIR$/BeginnerProjects.py" />
         <option value="$PROJECT_DIR$/IteratorProjects.py" />
-        <option value="$PROJECT_DIR$/testingArea.py" />
         <option value="$PROJECT_DIR$/FunctionFocusedProjects.py" />
+        <option value="$PROJECT_DIR$/testingArea.py" />
+        <option value="$PROJECT_DIR$/BeginnerProjects.py" />
       </list>
     </option>
   </component>
@@ -357,10 +359,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BeginnerProjects.py">
+    <entry file="file://$PROJECT_DIR$/FunctionFocusedProjects.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-162">
-          <caret line="897" column="38" selection-start-line="897" selection-start-column="34" selection-end-line="897" selection-end-column="38" />
+        <state relative-caret-position="110">
+          <caret line="209" column="24" lean-forward="true" selection-start-line="209" selection-start-column="24" selection-end-line="209" selection-end-column="24" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>
@@ -376,18 +378,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/testingArea.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="52" column="29" lean-forward="true" selection-start-line="52" selection-start-column="29" selection-end-line="52" selection-end-column="29" />
+        <state relative-caret-position="144">
+          <caret line="42" column="37" lean-forward="true" selection-start-line="42" selection-start-column="37" selection-end-line="42" selection-end-column="37" />
           <folding>
             <element signature="e#0#27#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FunctionFocusedProjects.py">
+    <entry file="file://$PROJECT_DIR$/BeginnerProjects.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="19" lean-forward="true" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
+        <state relative-caret-position="298">
+          <caret line="885" lean-forward="true" selection-start-line="885" selection-end-line="885" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>

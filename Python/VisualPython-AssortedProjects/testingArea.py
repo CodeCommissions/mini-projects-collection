@@ -40,6 +40,7 @@ import SpecialTurtles
 # BeginnerProjects.TruthTable.draw_now()
 # BeginnerProjects.Dice.draw_now(number=3)
 # BeginnerProjects.DrawWhirlpool.draw_now()
+BeginnerProjects.Jellyfish.draw_now()
 # BeginnerProjects.DrawPieChart.draw_now(data=[10, 17, 50, 52, 30])
 # BeginnerProjects.RightAngleCalculator.draw_now(a=None, b=300, c=500)
 # BeginnerProjects.LineGraph.draw_now(data=[[-374, -396], [-230, -211], [-16, -21], [158, 165], [269, 286], [398, 405]])
@@ -50,7 +51,7 @@ import SpecialTurtles
 # BeginnerProjects.DrawChessBoard.draw_now(height=7, width=7)
 
 # FunctionFocusedProjects.DrawGraph().draw_now()
-FunctionFocusedProjects.DrawGarden().draw_now()
+# FunctionFocusedProjects.DrawGarden().draw_now()
 # FunctionFocusedProjects.DrawNightSky().draw_now()
 # FunctionFocusedProjects.SpiralArt().draw_now()
 # FunctionFocusedProjects.ParallelTurtleFlock(edges=6, angle=360/6, size=200, turtle_count=25).draw_now()
