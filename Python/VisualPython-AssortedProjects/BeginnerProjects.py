@@ -878,14 +878,14 @@ class Jellyfish:
     @staticmethod
     def draw_now(pen=None):
         pen = get_default_turtle(pen)
-        pen.penup()
+        pen.color("blue")
+        pen.width(4)
+        pen.fillcolor("light blue")
 
         pen.setheading(70)
-        pen.goto(-50, 50)
         pen.pendown()
 
         pen.begin_fill()
-        pen.color("silver")
         for i in range(45):
             pen.forward(15)
             pen.left(5)
@@ -896,15 +896,18 @@ class Jellyfish:
             pen.forward(11)
             x, y = pen.position()
             bottom_coords.append((x, y))
-            pen.right(2)
+            pen.right(2.1)
 
         pen.end_fill()
 
+        pen.color("silver")
         for i in range(3, len(bottom_coords)-2, 4):
             x, y = bottom_coords[i]
-            teleport_turtle(pen, x, y)
+            teleport_turtle(pen, x, y-2)
             pen.seth(270)
-            pen.forward(100)
+            for i in range(100):
+                pen.left(random.random()*4-2)
+                pen.forward(random.randint(2,4))
 
         pen.ht()
         return pen
