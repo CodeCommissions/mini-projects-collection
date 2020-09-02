@@ -599,6 +599,7 @@ class Bubbles:
         print("You definitely need a loop to do this.")
         print("Optionally you can use random to vary sizes, and an if() to check that things don't go out of bounds.")
 
+
 class DrawMedicCross:
     @staticmethod
     def draw_now(pen=None):
@@ -1205,6 +1206,56 @@ class LineGraph:
             pen.write(f"    ({x}, {y})", align="left", font=("Arial", 10, "bold"))
 
         return pen
+
+
+class ParallelShapeFilling:
+    @staticmethod
+    def draw_now(pen=None, sides=8):
+        pen = get_default_turtle(pen)
+        pen.color("black")
+        pen.speed(0)
+        teleport_turtle(pen, -150, -150)
+
+        # Track XY positions for the outer edges of the shape
+        # coordinate_sets will end up looking like this [[(0,0),(0,1)], [(0,1),(1,1)], [(1,1),(0,0)]]
+        # The above example draws a triangle (3 edges), where each is divided into ONLY a start and end (the tuples)
+        coordinate_sets = []
+        for i in range(sides):
+            coordinate_set = []
+            for segment in range(8):
+                x, y = pen.position()
+                coordinate_set.append((x, y))
+                pen.forward(20)
+            x, y = pen.position()
+            coordinate_set.append((x, y))
+            pen.left(360/sides)
+            coordinate_sets.append(coordinate_set)
+
+        # Connect the dots between each of the lines
+        for starting_line in coordinate_sets:
+            for ending_line in coordinate_sets:
+                # Don't bother connecting dots that are on the same line
+                if starting_line == ending_line:
+                    continue
+
+                for i in range(len(starting_line)):
+                    x_start, y_start = starting_line[i]
+                    x_end, y_end = ending_line[-i-1]
+                    teleport_turtle(pen, x_start, y_start)
+                    pen.goto(x_end, y_end)
+
+        pen.ht()
+        return pen
+
+    @staticmethod
+    def print_more_info():
+        print("Draw a regular polygon where the inside is filled with parallel lines.")
+        print("This is not an easy problem, and requires use of 2D lists, triply nested loops, and more.")
+        print("")
+        print("Suggested solution: draw a regular shape using several smaller lines.")
+        print("\tFor example, when drawing a square, you might draw 20 lines in total (5 mini lines per edge).")
+        print("\tTrack the XY coordinates of each of the mini-lines.")
+        print("\tUse goto(x_start, y_start) and goto(x_end, y_end) to connect your various tracked coordinates.")
 
 
 class RandomWalking:
