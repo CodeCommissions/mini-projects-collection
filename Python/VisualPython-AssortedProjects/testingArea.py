@@ -17,7 +17,7 @@ import SpecialTurtles
 # BeginnerProjects.NestedShapes.draw_now(shapes=7, sides=4)
 # BeginnerProjects.DrawSquareSpiral.draw_now()
 # BeginnerProjects.DrawSquareSpiral.draw_doubled_version()
-BeginnerProjects.FlagPole.draw_now(image_address="flag.gif", flag_x=-22, flag_y=120)
+# BeginnerProjects.FlagPole.draw_now(image_address="flag.gif", flag_x=-22, flag_y=120)
     # Flag needs to be told its center XY coords. Default turtle can't change/read image sizes.
 # BeginnerProjects.StampArt.draw_now()
 # BeginnerProjects.StampedSpiral.draw_now()
@@ -84,6 +84,8 @@ BeginnerProjects.FlagPole.draw_now(image_address="flag.gif", flag_x=-22, flag_y=
 # spiro_drawer.draw_now()
 
 # IntermediateProjects.PandemicTurtleSimulator(turtle_count=60).draw_now()
+IntermediateProjects.MazeMaker(width=20, height=40).draw_now()
+
 
 # RecursiveProjects.KochSnowflakeDrawer().draw_snowflake(2, 50)
 # snowflake_drawer = RecursiveProjects.KochSnowflakeDrawer()

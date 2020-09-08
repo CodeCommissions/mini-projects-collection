@@ -109,6 +109,85 @@ class DrawTrueSpirograph:
         print("If you change r or R, note that they have to be integers.")
 
 
+class MazeMaker:
+    def __init__(self, width=40, height=40):
+        self.pen = turtle.Turtle()
+        self.pen.speed(0)
+        self.width, self.height = width, height
+
+        self.map_layout = [[False for _ in range(height)] for _ in range(width)]
+
+    def draw_now(self):
+        new_x, new_y = 0, 0
+        x_offset, y_offset = self.width * 10 / 2, self.height * 10 / 2
+        self.draw_border()
+
+        MazeMaker.jump_turtle_to(self.pen, new_x * 10 - x_offset, new_y * 10 - y_offset)
+        self.map_layout[new_x][new_y] = True
+        while True:
+            # Find what directions are available to move.
+            possible_directions = self.get_valid_movement_coords(new_x, new_y)
+            if len(possible_directions) == 0:
+                # If you're trapped, find a new starting spot
+                new_coords = MazeMaker.get_valid_start_coords(self.map_layout)
+                if new_coords is None:
+                    # If there are no more empty starting spots, then stop drawing the maze.
+                    break
+
+                # Jump to the new start location, mark it as used before drawing from it.
+                new_x, new_y = new_coords
+                MazeMaker.jump_turtle_to(self.pen, new_x * 10 - x_offset, new_y * 10 - y_offset)
+                self.map_layout[new_x][new_y] = True
+                continue
+
+            new_x, new_y = random.choice(possible_directions)
+            self.map_layout[new_x][new_y] = True
+            self.pen.goto(new_x * 10 - x_offset, new_y * 10 - y_offset)
+
+        self.pen.ht()
+
+    def get_valid_movement_coords(self, curr_x, curr_y):
+        directions = []
+
+        if curr_x > 0 and not self.map_layout[curr_x - 1][curr_y]:
+            directions.append([curr_x - 1, curr_y])
+        if curr_x < self.width - 1 and not self.map_layout[curr_x + 1][curr_y]:
+            directions.append([curr_x + 1, curr_y])
+        if curr_y > 0 and not self.map_layout[curr_x][curr_y - 1]:
+            directions.append([curr_x, curr_y - 1])
+        if curr_y < self.height - 1 and not self.map_layout[curr_x][curr_y + 1]:
+            directions.append([curr_x, curr_y + 1])
+
+        return directions
+
+    def draw_border(self):
+        self.pen.seth(90)
+        width, height = self.width * 10, self.height * 10
+        MazeMaker.jump_turtle_to(self.pen, -width/2, -height/2)
+        for distance in [height, width, height, width]:
+            self.pen.forward(distance-10)
+            self.pen.right(90)
+
+    @staticmethod
+    def jump_turtle_to(pen, x, y):
+        pen.penup()
+        pen.goto(x, y)
+        pen.pendown()
+
+    @staticmethod
+    def get_valid_start_coords(visited_spots):
+        valid_spots = []
+        for row in range(len(visited_spots)):
+            for col in range(len(visited_spots[row])):
+                if visited_spots[row][col]:
+                    continue
+                valid_spots.append([row, col])
+
+        if len(valid_spots) == 0:
+            return None
+        return random.choice(valid_spots)
+
+
 class PandemicTurtleSimulator:
     def __init__(self, turtle_count=20):
         self.turtles = [turtle.Turtle() for _ in range(turtle_count)]
