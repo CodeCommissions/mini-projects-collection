@@ -710,6 +710,46 @@ class DrawGradientBackground:
         pen.end_fill()
 
 
+class ColourPalette:
+    @staticmethod
+    def draw_now(pen=None, pixels_between_stamps=2):
+        pen = get_default_turtle(pen)
+        starting_tracer_rate = pen.screen.tracer()
+
+        # This solution ends up with 65,536 calls to stamp.
+        # By telling the turtle to only update its screen every x frames, we speed things up A LOT (more than speed(0))
+        update_every_x_frames = 256 * 10
+        pen.screen.tracer(update_every_x_frames)
+
+        # A shrunken square shape will let the turtle draw at a pixel-level of detail.
+        pen.shape("square")
+        pen.shapesize(0.05)
+
+        pen.screen.bgcolor("black")
+        pen.penup()
+        for x in range(-255, 256, pixels_between_stamps):
+            for y in range(-255, 256, pixels_between_stamps):
+                r = (x + 255) / 512
+                g = (y + 255) / 512
+
+                pen.color(r, g, 0.5)
+                pen.goto(x, y)
+                pen.stamp()
+
+        # Make sure the tracer is reset otherwise the screen may seem glitchy
+        pen.screen.tracer(starting_tracer_rate)
+        return pen
+
+    @staticmethod
+    def print_more_info():
+        print("A 2D version of DrawGradientBackground")
+        print("Requires use of turtle.screen.tracer() or the draw speed will be unworkable.")
+        print("Requires use of coordinate conversion logic and turtle shapesize changes.")
+        print("Requires nested loops.")
+        print("")
+        print("Warning - our default solution draws about 65000 squares, and will result in a SLOW turtle-screen.")
+
+
 class BrickWall:
     @staticmethod
     def draw_brick(pen:turtle.Turtle, color, width, height):

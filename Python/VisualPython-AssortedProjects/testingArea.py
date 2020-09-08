@@ -27,6 +27,7 @@ import SpecialTurtles
 # BeginnerProjects.DrawGrassTuft.draw_now()
 # BeginnerProjects.Bubbles.draw_now()
 # BeginnerProjects.DrawGradientBackground.draw_now()
+BeginnerProjects.ColourPalette.draw_now(pixels_between_stamps=3)
 # BeginnerProjects.TwoValueBarGraph.draw_now(value1=0.3, value2=0.7, scaling_factor=100)
 # BeginnerProjects.DrawBarGraph.draw_now(data = [20, 51, 105, 156, 201, 275, 180, -75, -150, 10])
 # BeginnerProjects.Spear.draw_now()  # Similar structure to the GradientBackground project - but with a start and end
@@ -48,7 +49,7 @@ import SpecialTurtles
 # BeginnerProjects.DrawCaptainShield.draw_now()
 # BeginnerProjects.RandomWalking.draw_now(max_steps=500)
 # BeginnerProjects.RacerTurtles.race_now()
-BeginnerProjects.ParallelShapeFilling.draw_now()
+# BeginnerProjects.ParallelShapeFilling.draw_now()
 # BeginnerProjects.DrawChessBoard.draw_now(height=7, width=7)
 
 # FunctionFocusedProjects.DrawGraph().draw_now()
