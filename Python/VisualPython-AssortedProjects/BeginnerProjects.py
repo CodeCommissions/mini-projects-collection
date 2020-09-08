@@ -183,11 +183,36 @@ class DrawSquareSpiral:
         return pen1, pen2
 
 
+class FlagPole:
+    @staticmethod
+    def draw_now(pen: turtle.Turtle = None, image_address="flag.gif", flag_x=-22, flag_y=120):
+        pen = get_default_turtle(pen)
+
+        # Draw pole
+        pen.color(0.8, 0.8, 0.8)
+        teleport_turtle(pen, -300, -300)
+        pen.width(8)
+        pen.seth(90)
+        pen.forward(600)
+
+        # Draw pole 'head'
+        pen.shape("circle")
+        pen.shapesize(3)
+        pen.color(0.9, 0.9, 0.9)
+        pen.stamp()
+
+        # Load flag image
+        pen.screen.addshape(image_address)
+        pen.shape(image_address)
+        teleport_turtle(pen, flag_x, flag_y)
+
+        return pen
+
+
 class StampArt:
     @staticmethod
     def draw_now(pen=None):
         pen = get_default_turtle(pen)
-        pen = turtle.Turtle()
 
         turtle.setup(800, 600)
         pen.shape("turtle")

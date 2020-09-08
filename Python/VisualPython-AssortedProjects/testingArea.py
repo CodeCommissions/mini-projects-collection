@@ -17,6 +17,8 @@ import SpecialTurtles
 # BeginnerProjects.NestedShapes.draw_now(shapes=7, sides=4)
 # BeginnerProjects.DrawSquareSpiral.draw_now()
 # BeginnerProjects.DrawSquareSpiral.draw_doubled_version()
+BeginnerProjects.FlagPole.draw_now(image_address="flag.gif", flag_x=-22, flag_y=120)
+    # Flag needs to be told its center XY coords. Default turtle can't change/read image sizes.
 # BeginnerProjects.StampArt.draw_now()
 # BeginnerProjects.StampedSpiral.draw_now()
 # BeginnerProjects.AgeGroupTurtle.draw_now()
@@ -27,7 +29,7 @@ import SpecialTurtles
 # BeginnerProjects.DrawGrassTuft.draw_now()
 # BeginnerProjects.Bubbles.draw_now()
 # BeginnerProjects.DrawGradientBackground.draw_now()
-BeginnerProjects.ColourPalette.draw_now(pixels_between_stamps=3)
+# BeginnerProjects.ColourPalette.draw_now(pixels_between_stamps=3)
 # BeginnerProjects.TwoValueBarGraph.draw_now(value1=0.3, value2=0.7, scaling_factor=100)
 # BeginnerProjects.DrawBarGraph.draw_now(data = [20, 51, 105, 156, 201, 275, 180, -75, -150, 10])
 # BeginnerProjects.Spear.draw_now()  # Similar structure to the GradientBackground project - but with a start and end
