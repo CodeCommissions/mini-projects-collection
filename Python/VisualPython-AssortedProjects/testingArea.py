@@ -32,6 +32,7 @@ import SpecialTurtles
 # BeginnerProjects.ColourPalette.draw_now(pixels_between_stamps=3)
 # BeginnerProjects.TwoValueBarGraph.draw_now(value1=0.3, value2=0.7, scaling_factor=100)
 # BeginnerProjects.DrawBarGraph.draw_now(data = [20, 51, 105, 156, 201, 275, 180, -75, -150, 10])
+BeginnerProjects.SolarSystem.draw_now()
 # BeginnerProjects.Spear.draw_now()  # Similar structure to the GradientBackground project - but with a start and end
 # BeginnerProjects.DrawMedicCross.draw_now()
 # BeginnerProjects.Wormhole.draw_now()
@@ -84,7 +85,7 @@ import SpecialTurtles
 # spiro_drawer.draw_now()
 
 # IntermediateProjects.PandemicTurtleSimulator(turtle_count=60).draw_now()
-IntermediateProjects.MazeMaker(width=20, height=40).draw_now()
+# IntermediateProjects.MazeMaker(width=20, height=40).draw_now()
 
 
 # RecursiveProjects.KochSnowflakeDrawer().draw_snowflake(2, 50)

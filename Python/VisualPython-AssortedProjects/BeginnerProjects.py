@@ -465,6 +465,46 @@ class DrawBarGraph:
         return pen
 
 
+class SolarSystem:
+    @staticmethod
+    def draw_now(pen=None):
+        pen = get_default_turtle(pen)
+
+        def draw_orbit(x, y):
+            from math import sqrt
+            distance = sqrt(x ** 2 + y ** 2)
+            pen.seth(90)
+            teleport_turtle(pen, distance, 0)
+            pen.circle(distance)
+
+        def draw_planet(x, y, size, color, name=None):
+            teleport_turtle(pen, x + size, y)
+            pen.seth(90)
+            pen.color(color)
+            pen.begin_fill()
+            pen.circle(size)
+            pen.end_fill()
+
+            draw_orbit(x, y)
+
+            teleport_turtle(pen, x, y + size)
+            pen.color("black")
+            pen.write(name, align="center", font=("Courier", 20, "bold"))
+
+        teleport_turtle(pen, 0, 250)
+        pen.write("NOT TO SCALE", align="center", font=("Courier", 14, "bold"))
+        teleport_turtle(pen, 0, 220)
+        pen.write("Missing many details.", align="center", font=("Courier", 14, "bold"))
+
+        draw_planet(0, 0, 5, "yellow", "Sun")
+        draw_planet(40, 0, 20, "light blue", "Earth")
+        draw_planet(0, 120, 15, "red", "Mars")
+        draw_planet(-200, 0, 40, "brown", "Jupiter")
+
+        pen.ht()
+        return pen
+
+
 class DrawTarget:
     @staticmethod
     def draw_now(pen=None):
