@@ -467,11 +467,11 @@ class DrawBarGraph:
 
 class SolarSystem:
     @staticmethod
-    def draw_now(pen=None):
+    def draw_now(pen=None, asteroid_belt_radius=None):
+        from math import sqrt
         pen = get_default_turtle(pen)
 
         def draw_orbit(x, y):
-            from math import sqrt
             distance = sqrt(x ** 2 + y ** 2)
             pen.seth(90)
             teleport_turtle(pen, distance, 0)
@@ -491,15 +491,45 @@ class SolarSystem:
             pen.color("black")
             pen.write(name, align="center", font=("Courier", 20, "bold"))
 
+        def draw_asteroid_belt():
+            pen.shape("circle")
+
+            for i in range(500):
+                grey_amount = random.uniform(0.0, 0.4)
+                pen.color(grey_amount, grey_amount, grey_amount)
+                down_scaling = random.uniform(0.1, 0.4)
+                pen.shapesize(down_scaling)
+
+                # Get a random position along a straight line, and then compute the matching Y position
+                y = random.uniform(-asteroid_belt_radius, asteroid_belt_radius)
+                x_squared = asteroid_belt_radius**2 - y**2
+                # Reintroduce the possibility for a negative sign that had to be stripped out
+                x = sqrt(x_squared) * random.choice([-1, 1])
+
+                # Shift the asteroids around a bit so they don't sit on a perfect circle
+                x, y = x+random.randint(-10, 10), y+random.randint(-10, 10)
+
+                # Avoid bias associated with quadratic equations approaching 0, by swapping X with Y
+                if i % 2 == 0:
+                    teleport_turtle(pen, x, y)
+                else:
+                    teleport_turtle(pen, y, x)
+
+                pen.stamp()
+
         teleport_turtle(pen, 0, 250)
         pen.write("NOT TO SCALE", align="center", font=("Courier", 14, "bold"))
         teleport_turtle(pen, 0, 220)
         pen.write("Missing many details.", align="center", font=("Courier", 14, "bold"))
 
+        pen.speed(0)
         draw_planet(0, 0, 5, "yellow", "Sun")
         draw_planet(40, 0, 20, "light blue", "Earth")
         draw_planet(0, 120, 15, "red", "Mars")
-        draw_planet(-200, 0, 40, "brown", "Jupiter")
+        draw_planet(-200, -200, 40, "brown", "Jupiter")
+        if asteroid_belt_radius is not None:
+            draw_asteroid_belt()
+
 
         pen.ht()
         return pen
