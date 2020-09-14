@@ -1616,3 +1616,59 @@ class Spear:
         print("You'll need circle(), forward(), left()/right(), goto(), color(), penup(), and pendown() at least.")
         print("Loops are essential for the shaft - you can either use nested loops or a rectangle() helper function")
         print("Ifs will help, but can be skipped if you know about lists and the mod operator")
+
+
+class OneOverXGraph:
+    @staticmethod
+    def draw_now(pen=None, zoom_factor=100):
+        pen = get_default_turtle(pen)
+        pen.color("black")
+        pen.speed(0)
+
+        def scale_up_xy(x_value, y_value):
+            return x_value * zoom_factor, y_value * zoom_factor
+
+        def draw_axes():
+            pen.shape("square")
+
+            pen.shapesize(0.5, 0.1)
+
+            for alignment, initial_heading in [["center", 180], ["left", 270]]:
+                pen.seth(initial_heading)
+                for sign in [-1, 1]:
+                    pen.penup()
+                    pen.goto(0, 0)
+                    pen.down()
+                    for i in range(1, 500 // zoom_factor+1):
+                        pen.forward(zoom_factor)
+                        pen.stamp()
+                        pen.write(i * sign, align=alignment, font=("courier", 14, "bold"))
+                    pen.right(180)
+
+        draw_axes()
+
+        pen.shape("circle")
+        pen.shapesize(0.25)
+        pen.penup()
+
+        steps = 0
+        boundary = 400//zoom_factor
+
+        x = -boundary
+        x_increment = 0.025
+        while x < boundary:
+            x += x_increment
+            y = 1.0 / x
+            if abs(y) > 400:
+                continue
+
+            x_pix, y_pix = scale_up_xy(x, y)
+
+            pen.goto(x_pix, y_pix)
+            pen.stamp()
+
+            if steps % 30 == 0:
+                pen.write(f"({x:.3f}, {y:.3f})")
+            steps += 1
+
+        return pen
