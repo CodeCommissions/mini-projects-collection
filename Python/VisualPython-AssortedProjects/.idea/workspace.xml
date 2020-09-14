@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e043b1a1-98e8-4f74-a03d-98ce6082bdd1" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BeginnerProjects.py" beforeDir="false" afterPath="$PROJECT_DIR$/BeginnerProjects.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/testingArea.py" beforeDir="false" afterPath="$PROJECT_DIR$/testingArea.py" afterDir="false" />
     </list>
@@ -16,8 +17,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/testingArea.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="295">
-              <caret line="57" lean-forward="true" selection-start-line="57" selection-end-line="57" />
+            <state relative-caret-position="348">
+              <caret line="55" column="50" lean-forward="true" selection-start-line="55" selection-start-column="50" selection-end-line="55" selection-end-column="50" />
               <folding>
                 <element signature="e#0#27#0" expanded="true" />
               </folding>
@@ -37,8 +38,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BeginnerProjects.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="329">
-              <caret line="1645" column="34" lean-forward="true" selection-start-line="1641" selection-start-column="58" selection-end-line="1645" selection-end-column="34" />
+            <state relative-caret-position="431">
+              <caret line="1444" lean-forward="true" selection-start-line="1444" selection-end-line="1444" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -67,7 +68,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/FunctionFocusedProjects.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
+            <state relative-caret-position="884">
               <caret line="55" column="15" selection-start-line="55" selection-start-column="8" selection-end-line="55" selection-end-column="15" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
@@ -141,8 +142,8 @@
         <option value="$PROJECT_DIR$/temp.py" />
         <option value="$PROJECT_DIR$/play.py" />
         <option value="$PROJECT_DIR$/test.py" />
-        <option value="$PROJECT_DIR$/BeginnerProjects.py" />
         <option value="$PROJECT_DIR$/testingArea.py" />
+        <option value="$PROJECT_DIR$/BeginnerProjects.py" />
       </list>
     </option>
   </component>
@@ -331,12 +332,12 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21481876" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21695095" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.43" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.43" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -381,6 +382,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/temp.py" />
     <entry file="file://$PROJECT_DIR$/play.py" />
+    <entry file="file://$PROJECT_DIR$/test.py" />
     <entry file="file://$PROJECT_DIR$/SpecialTurtles.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -395,19 +397,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/IntermediateProjects.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2975">
-          <caret line="177" column="46" selection-start-line="177" selection-start-column="46" selection-end-line="177" selection-end-column="46" />
-          <folding>
-            <element signature="e#46#59#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/FunctionFocusedProjects.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
+        <state relative-caret-position="884">
           <caret line="55" column="15" selection-start-line="55" selection-start-column="8" selection-end-line="55" selection-end-column="15" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
@@ -417,10 +409,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test.py">
+    <entry file="file://$PROJECT_DIR$/IntermediateProjects.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        <state relative-caret-position="2975">
+          <caret line="177" column="46" selection-start-line="177" selection-start-column="46" selection-end-line="177" selection-end-column="46" />
+          <folding>
+            <element signature="e#46#59#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -433,8 +428,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/BeginnerProjects.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="1645" column="34" lean-forward="true" selection-start-line="1641" selection-start-column="58" selection-end-line="1645" selection-end-column="34" />
+        <state relative-caret-position="431">
+          <caret line="1444" lean-forward="true" selection-start-line="1444" selection-end-line="1444" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>
@@ -443,8 +438,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/testingArea.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="57" lean-forward="true" selection-start-line="57" selection-end-line="57" />
+        <state relative-caret-position="348">
+          <caret line="55" column="50" lean-forward="true" selection-start-line="55" selection-start-column="50" selection-end-line="55" selection-end-column="50" />
           <folding>
             <element signature="e#0#27#0" expanded="true" />
           </folding>

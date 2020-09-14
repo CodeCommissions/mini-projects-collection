@@ -1415,6 +1415,38 @@ class ParallelShapeFilling:
         print("\tUse goto(x_start, y_start) and goto(x_end, y_end) to connect your various tracked coordinates.")
 
 
+class AbstractAngularArt:
+    @staticmethod
+    def draw_now(pen: turtle.Turtle = None, background_color="light blue", colors=["dark red", "navy", "black"]):
+        pen = get_default_turtle(pen)
+
+        # Draw Bounding Box / Canvas
+        pen.color("black")
+        pen.fillcolor(background_color)
+        pen.width(4)
+        teleport_turtle(pen, -300, 300)
+        pen.begin_fill()
+        for _ in range(4):
+            pen.forward(600)
+            pen.right(90)
+        pen.end_fill()
+
+        pen.speed(0)
+        # Add "art" scribbles to canvas
+        for color in colors*2:
+            x, y = random.randint(-300, 300), random.randint(-300, 300)
+            teleport_turtle(pen, x, y)
+            pen.color(color)
+
+            pen.begin_fill()
+            for i in range(random.randint(5, 15)):
+                pen.goto(random.randint(-300, 300), random.randint(-300,300))
+            pen.end_fill()
+
+        pen.ht()
+        return pen
+
+
 class RandomWalking:
     @staticmethod
     def draw_now(pen: turtle.Turtle = None, max_steps=400):

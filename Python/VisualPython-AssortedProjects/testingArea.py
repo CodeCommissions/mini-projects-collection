@@ -50,11 +50,12 @@ import SpecialTurtles
 # BeginnerProjects.LineGraph.draw_now(data=[[-374, -396], [-230, -211], [-16, -21], [158, 165], [269, 286], [398, 405]])
 # BeginnerProjects.DrawTarget.draw_now()
 # BeginnerProjects.DrawCaptainShield.draw_now()
+BeginnerProjects.AbstractAngularArt.draw_now(background_color="light blue", colors=["dark red", "light blue", "navy", "black"])
 # BeginnerProjects.RandomWalking.draw_now(max_steps=500)
 # BeginnerProjects.RacerTurtles.race_now()
 # BeginnerProjects.ParallelShapeFilling.draw_now()
 # BeginnerProjects.DrawChessBoard.draw_now(height=7, width=7)
-BeginnerProjects.OneOverXGraph.draw_now(zoom_factor=100)
+# BeginnerProjects.OneOverXGraph.draw_now(zoom_factor=100)
 
 # FunctionFocusedProjects.DrawGraph().draw_now()
 # FunctionFocusedProjects.DrawGarden().draw_now()
