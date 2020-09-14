@@ -32,7 +32,7 @@ import SpecialTurtles
 # BeginnerProjects.ColourPalette.draw_now(pixels_between_stamps=3)
 # BeginnerProjects.TwoValueBarGraph.draw_now(value1=0.3, value2=0.7, scaling_factor=100)
 # BeginnerProjects.DrawBarGraph.draw_now(data = [20, 51, 105, 156, 201, 275, 180, -75, -150, 10])
-BeginnerProjects.SolarSystem.draw_now(asteroid_belt_radius=200)
+BeginnerProjects.SolarSystem.draw_now(asteroid_belt_radius=200, comet_rotations=10)
 # BeginnerProjects.Spear.draw_now()  # Similar structure to the GradientBackground project - but with a start and end
 # BeginnerProjects.DrawMedicCross.draw_now()
 # BeginnerProjects.Wormhole.draw_now()

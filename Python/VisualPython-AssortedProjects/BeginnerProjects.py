@@ -467,7 +467,7 @@ class DrawBarGraph:
 
 class SolarSystem:
     @staticmethod
-    def draw_now(pen=None, asteroid_belt_radius=None):
+    def draw_now(pen=None, asteroid_belt_radius=None, comet_rotations=5):
         from math import sqrt
         pen = get_default_turtle(pen)
 
@@ -492,8 +492,13 @@ class SolarSystem:
             pen.write(name, align="center", font=("Courier", 20, "bold"))
 
         def draw_asteroid_belt():
-            pen.shape("circle")
+            if asteroid_belt_radius is None:
+                return
 
+            t = pen.screen.tracer()
+            pen.screen.tracer(50)
+
+            pen.shape("circle")
             for i in range(500):
                 grey_amount = random.uniform(0.0, 0.4)
                 pen.color(grey_amount, grey_amount, grey_amount)
@@ -517,6 +522,24 @@ class SolarSystem:
 
                 pen.stamp()
 
+            pen.screen.tracer(t)
+
+        def draw_comet():
+            if comet_rotations == 0:
+                return
+
+            radius = 180
+            pen.speed(3)
+            teleport_turtle(pen, radius, 0)
+            pen.seth(90)
+            pen.shape("circle")
+            pen.shapesize(0.25)
+
+            for _ in range(comet_rotations):
+                for i in range(2):
+                    pen.circle(radius, 90)
+                    pen.circle(radius // 2, 90)
+
         teleport_turtle(pen, 0, 250)
         pen.write("NOT TO SCALE", align="center", font=("Courier", 14, "bold"))
         teleport_turtle(pen, 0, 220)
@@ -527,11 +550,10 @@ class SolarSystem:
         draw_planet(40, 0, 20, "light blue", "Earth")
         draw_planet(0, 120, 15, "red", "Mars")
         draw_planet(-200, -200, 40, "brown", "Jupiter")
-        if asteroid_belt_radius is not None:
-            draw_asteroid_belt()
 
+        draw_asteroid_belt()
+        draw_comet()
 
-        pen.ht()
         return pen
 
 
