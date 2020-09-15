@@ -800,6 +800,36 @@ class SnailShell:
         print("\tA call like `draw_now(colors=['red','blue','green'])` will draw a 3 colored shell.")
 
 
+class ZigZagEdgedShapes:
+    @staticmethod
+    def draw_now(pen=None, zigzags_per_line=20):
+        from math import sqrt
+
+        def zig_zag_line(total_len, zig_zags):
+            h_side = total_len/zig_zags
+            z_len = sqrt(h_side**2 / 2)
+
+            pen.right(45)
+            for i in range(zig_zags*2):
+                pen.forward(z_len)
+                pen.left(90 if i % 2 == 0 else -90)
+            pen.left(45)
+
+        pen = get_default_turtle(pen)
+        pen.speed(0)
+        pen.width(3)
+        pen.color("black")
+        teleport_turtle(pen, -100, -100)
+
+        for edges in range(3, 7):
+            for _ in range(edges):
+                zig_zag_line(200, zigzags_per_line)
+                pen.left(360/edges)
+
+        return pen
+
+
+
 class DrawGradientBackground:
     @staticmethod
     def draw_now(pen=None):
