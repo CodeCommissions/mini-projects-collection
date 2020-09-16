@@ -1680,6 +1680,44 @@ class Spear:
         print("Ifs will help, but can be skipped if you know about lists and the mod operator")
 
 
+class PythagorasProof:
+    @staticmethod
+    def draw_now(pen=None, horizontal_edge=100, vertical_edge=200):
+        from math import sqrt, acos, degrees
+        pen = get_default_turtle(pen)
+        pen.color("black")
+
+        c = horizontal_edge
+        b = vertical_edge
+
+        teleport_turtle(pen, 0, -c-20)
+        message = f"Warning: this problem requires trigonometry to generalise (specifically arccos)"
+        pen.write(message, align="center", font=("courier", 10, "normal"))
+        teleport_turtle(pen, 0, 0)
+
+        a = sqrt(b ** 2 + c ** 2)
+
+        # Angle between hypotenuse and first edge:
+        B = acos((a ** 2 + c ** 2 - b ** 2) / (2 * a * c))
+        B = degrees(B)
+
+        for start_angle, distance in [[0, c], [180-B, a], [-90, b]]:
+            pen.seth(start_angle)
+            for i in range(5):
+                pen.forward(distance / 2)
+                pen.write(f"{distance:.1f}", align="center", font=("courier", 10, "bold"))
+                pen.forward(distance / 2)
+                pen.right(90)
+
+        teleport_turtle(pen, -150, -50)
+        pen.write(f"{c}² + {b}² == {a:.1f}²", align="center", font=("courier", 14, "bold"))
+        teleport_turtle(pen, -150, -70)
+        pen.write(f"{c ** 2} + {b ** 2} == {a ** 2:.1f}", align="center", font=("courier", 14, "bold"))
+
+        pen.ht()
+        return pen
+
+
 class OneOverXGraph:
     @staticmethod
     def draw_now(pen=None, zoom_factor=100):
