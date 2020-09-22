@@ -1752,17 +1752,21 @@ class OneOverXGraph:
         pen.penup()
 
         steps = 0
-        boundary = 400//zoom_factor
+        boundary = 500//zoom_factor
 
         x = -boundary
         x_increment = 0.025
         while x < boundary:
             x += x_increment
-            y = 1.0 / x
-            if abs(y) > 400:
-                continue
+            # y = 0.5*x + 2     # Y = MX + C
+            # y = (2*x)**2 - 5  # Parabola
+            # y = abs(x)        # Absolute value
+            y = 1/x if x > 0 else 1/-x
+            # y = 1/(x**2)
 
             x_pix, y_pix = scale_up_xy(x, y)
+            if abs(y_pix) > 500 or abs(y_pix) > 500:
+                continue
 
             pen.goto(x_pix, y_pix)
             pen.stamp()
