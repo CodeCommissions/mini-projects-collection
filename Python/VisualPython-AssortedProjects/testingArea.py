@@ -14,6 +14,7 @@ import SpecialTurtles
 # BeginnerProjects.DrawOverlappingShapes.draw_now()
 # BeginnerProjects.StickHouseChallenge.draw_now(size=200)
 # BeginnerProjects.PolygonFromUser.draw_now()
+BeginnerProjects.FakeButton.draw_now(message="Unclickable button")
 # BeginnerProjects.NestedShapes.draw_now(shapes=7, sides=4)
 # BeginnerProjects.DrawSquareSpiral.draw_now()
 # BeginnerProjects.DrawSquareSpiral.draw_doubled_version()
@@ -57,7 +58,7 @@ import SpecialTurtles
 # BeginnerProjects.ParallelShapeFilling.draw_now()
 # BeginnerProjects.DrawChessBoard.draw_now(height=7, width=7)
 # BeginnerProjects.PythagorasProof.draw_now(horizontal_edge=150, vertical_edge=100)
-BeginnerProjects.OneOverXGraph.draw_now(zoom_factor=75)
+# BeginnerProjects.OneOverXGraph.draw_now(zoom_factor=50)
 
 # FunctionFocusedProjects.DrawGraph().draw_now()
 # FunctionFocusedProjects.DrawGarden().draw_now()

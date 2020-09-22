@@ -1189,6 +1189,29 @@ class PolygonFromUser:
         return pen
 
 
+class FakeButton:
+    @staticmethod
+    def draw_now(pen=None, message="Button Text"):
+        pen = get_default_turtle(pen)
+
+        pen.color("black")
+        pen.width(3)
+
+        width, height, corner_radius = 200, 50, 20
+        teleport_turtle(pen, -width//2, -height//2)
+        pen.seth(0)
+        for distance in [width, height, width, height]:
+            pen.forward(distance)
+            pen.circle(corner_radius, 90)
+
+        teleport_turtle(pen, 0, corner_radius*0.75)
+        pen.write(message, align="center", font=("courier", 14, "bold"))
+
+        pen.ht()
+        return pen
+
+
+
 class DrawChessBoard:
     @staticmethod
     def draw_now(pen=None, height=8, width=8):
@@ -1763,6 +1786,7 @@ class OneOverXGraph:
             # y = abs(x)        # Absolute value
             y = 1/x if x > 0 else 1/-x
             # y = 1/(x**2)
+            y = x**3 + 2*x**2
 
             x_pix, y_pix = scale_up_xy(x, y)
             if abs(y_pix) > 500 or abs(y_pix) > 500:
