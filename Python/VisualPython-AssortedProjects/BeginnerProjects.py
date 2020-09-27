@@ -465,6 +465,200 @@ class DrawBarGraph:
         return pen
 
 
+class PeriodicTable:
+    @staticmethod
+    def draw_now(pen=None, square_width=50):
+        pen = get_default_turtle(pen)
+        WIDTH = square_width
+        pen = turtle.Turtle()
+
+        def draw_element(x, y, name, abbreviation, number, color):
+            pen.pencolor("black")
+            pen.fillcolor(color)
+            pen.width(3)
+
+            teleport_turtle(pen, x, y)
+            pen.seth(0)
+            pen.begin_fill()
+            for i in range(4):
+                pen.forward(WIDTH)
+                pen.left(90)
+            pen.end_fill()
+
+            teleport_turtle(pen, x + WIDTH / 2, y)
+            pen.write(name, align="center", font=("courier", 6, "bold"))
+
+            teleport_turtle(pen, x + WIDTH * 0.5, y + WIDTH * 0.25)
+            pen.write(abbreviation, align="center", font=("courier", 20, "bold"))
+
+            teleport_turtle(pen, x + WIDTH * 0.95, y + WIDTH * 0.6)
+            pen.write(number, align="right", font=("courier", 10, "bold"))
+
+        def get_category_color(category_name):
+            colors = {"reactive": "light yellow",
+                      "noble": "light blue",
+                      "alkali": "pink",
+                      "metalloid": "brown",
+                      "alkaline": "red",
+                      "lanthanide": "yellow",
+                      "actinide": "orange",
+                      "transition": "green",
+                      "post-transition": "grey",
+                      "unknown": "dark grey"}
+            if category_name not in colors:
+                return "white"
+            return colors[category_name]
+
+        pen.speed(0)
+        LEFT = -450
+        TOP = 150
+
+        for i in range(1, 119):
+            period, group, name, abbv, category = PeriodicTable.get_element_data(i)
+            color = get_category_color(category)
+            draw_element(LEFT + period * WIDTH, TOP - group * WIDTH, name, abbv, i, color)
+
+        teleport_turtle(pen, 0, TOP)
+        pen.write("Periodic Table", align="center", font=("courier", 20, "bold"))
+        teleport_turtle(pen, 0, TOP - 20)
+        pen.write("Use PeriodicTable.get_element_data(element_number) to get:", align="center",
+                  font=("courier", 14, "bold"))
+        teleport_turtle(pen, 0, TOP - 40)
+        pen.write("period, group, name, abbreviation, category", align="center", font=("courier", 14, "bold"))
+
+        pen.ht()
+
+    @staticmethod
+    def get_element_data(element_number):
+        elements = [(1, 1, "Hydrogen", "H", "reactive"),
+                    (18, 1, "Helium", "He", "noble"),
+                    (1, 2, "Lithium", "Li", "alkali"),
+                    (2, 2, "Beryllium", "Be", "alkaline"),
+                    (13, 2, "Boron", "B", "metalloid"),
+                    (14, 2, "Carbon", "C", "reactive"),
+                    (15, 2, "Nitrogen", "N", "reactive"),
+                    (16, 2, "Oxygen", "O", "reactive"),
+                    (17, 2, "Fluorine", "F", "reactive"),
+                    (18, 2, "Neon", "Ne", "noble"),
+                    (1, 3, "Sodium", "Na", "alkali"),
+                    (2, 3, "Magnesium", "Mg", "alkaline"),
+                    (13, 3, "Aluminium", "Al", "post-transition"),
+                    (14, 3, "Silicon", "Si", "metalloid"),
+                    (15, 3, "Phosphorous", "P", "reactive"),
+                    (16, 3, "Sulfur", "S", "reactive"),
+                    (17, 3, "Chlorine", "Cl", "reactive"),
+                    (18, 3, "Argon", "Ar", "noble"),
+
+                    (1, 4, "Potassium", "K", "alkali"),
+                    (2, 4, "Calcium", "Ca", "alkaline"),
+                    (3, 4, "Scandium", "Sc", "transition"),
+                    (4, 4, "Titanium", "Ti", "transition"),
+                    (5, 4, "Vanadium", "V", "transition"),
+                    (6, 4, "Chromium", "Cr", "transition"),
+                    (7, 4, "Manganese", "Mn", "transition"),
+                    (8, 4, "Iron", "Fe", "transition"),
+                    (9, 4, "Cobalt", "Co", "transition"),
+                    (10, 4, "Nickel", "Ni", "transition"),
+                    (11, 4, "Copper", "Cu", "transition"),
+                    (12, 4, "Zinc", "Zn", "post-transition"),
+                    (13, 4, "Gallium", "Ga", "post-transition"),
+                    (14, 4, "Germanium", "Ge", "metalloid"),
+                    (15, 4, "Arsenic", "As", "metalloid"),
+                    (16, 4, "Selenium", "Se", "reactive"),
+                    (17, 4, "Bromine", "Br", "reactive"),
+                    (18, 4, "Krypton", "Kr", "noble"),
+
+                    (1, 5, "Rubidium", "Rb", "alkali"),
+                    (2, 5, "Strontium", "Sr", "alkaline"),
+                    (3, 5, "Yttrium", "Y", "transition"),
+                    (4, 5, "Zirconium", "Zr", "transition"),
+                    (5, 5, "Niobium", "Nb", "transition"),
+                    (6, 5, "Molybdenum", "Mo", "transition"),
+                    (7, 5, "Technetium", "Tc", "transition"),
+                    (8, 5, "Ruthenium", "Ru", "transition"),
+                    (9, 5, "Rhodium", "Rh", "transition"),
+                    (10, 5, "Palladium", "Pd", "transition"),
+                    (11, 5, "Silver", "Ag", "transition"),
+                    (12, 5, "Cadmium", "Cd", "post-transition"),
+                    (13, 5, "Indium", "In", "post-transition"),
+                    (14, 5, "Tin", "Ti", "post-transition"),
+                    (15, 5, "Antimony", "Sb", "metalloid"),
+                    (16, 5, "Tellurium", "Te", "metalloid"),
+                    (17, 5, "Iodine", "I", "reactive"),
+                    (18, 5, "Xenon", "Xe", "noble"),
+
+                    (1, 6, "Caesium", "Cs", "alkali"),
+                    (2, 6, "Barium", "Ba", "alkaline"),
+                    (3, 6, "Lanthanum", "La", "lanthanide"),
+                    (3, 6, "Cerium", "Ce", "lanthanide"),
+                    (3, 6, "Praseodymium", "Pr", "lanthanide"),
+                    (3, 6, "Neodymium", "Nd", "lanthanide"),
+                    (3, 6, "Promethium", "Pm", "lanthanide"),
+                    (3, 6, "Samarium", "Sm", "lanthanide"),
+                    (3, 6, "Europium", "Eu", "lanthanide"),
+                    (3, 6, "Gadolinium", "Gd", "lanthanide"),
+                    (3, 6, "Terbium", "Tb", "lanthanide"),
+                    (3, 6, "Dysprosium", "Dy", "lanthanide"),
+                    (3, 6, "Holmium", "Ho", "lanthanide"),
+                    (3, 6, "Erbium", "Er", "lanthanide"),
+                    (3, 6, "Thulium", "Tm", "lanthanide"),
+                    (3, 6, "Ytterbium", "Yb", "lanthanide"),
+                    (3, 6, "Lutetium", "Lu", "lanthanide"),
+                    (4, 6, "Hafnium", "Hf", "transition"),
+                    (5, 6, "Tantalum", "Ta", "transition"),
+                    (6, 6, "Tungsten", "W", "transition"),
+                    (7, 6, "Rhenium", "Re", "transition"),
+                    (8, 6, "Osmium", "Os", "transition"),
+                    (9, 6, "Iridium", "Ir", "transition"),
+                    (10, 6, "Platinum", "Pt", "transition"),
+                    (11, 6, "Gold", "Au", "transition"),
+                    (12, 6, "Mercury", "Hg", "post-transition"),
+                    (13, 6, "Thallium", "Tl", "post-transition"),
+                    (14, 6, "Lead", "Pb", "post-transition"),
+                    (15, 6, "Bismuth", "Bi", "post-transition"),
+                    (16, 6, "Polonium", "Po", "post-transition"),
+                    (17, 6, "Astatine", "At", "post-transition"),
+                    (18, 6, "Radon", "Rn", "noble"),
+
+                    (1, 7, "Francium", "Fr", "alkali"),
+                    (2, 7, "Radium", "Ra", "alkaline"),
+                    (3, 7, "Actinium", "Ac", "actinide"),
+
+                    (3, 7, "Thorium", "Th", "actinide"),
+                    (3, 7, "Protactinium", "Pa", "actinide"),
+                    (3, 7, "Uranium", "U", "actinide"),
+                    (3, 7, "Neptunium", "Np", "actinide"),
+                    (3, 7, "Plutonium", "Pu", "actinide"),
+                    (3, 7, "Americium", "Am", "actinide"),
+                    (3, 7, "Curium", "Cm", "actinide"),
+                    (3, 7, "Berkelium", "Bk", "actinide"),
+                    (3, 7, "Californium", "Cf", "actinide"),
+                    (3, 7, "Einsteinium", "Es", "actinide"),
+                    (3, 7, "Fermium", "Fm", "actinide"),
+                    (3, 7, "Mendelevium", "Md", "actinide"),
+                    (3, 7, "Nobelium", "No", "actinide"),
+                    (3, 7, "Lawrencium", "Lr", "actinide"),
+
+                    (4, 7, "Rutherfordium", "Rf", "transition"),
+                    (5, 7, "Dubnium", "Db", "transition"),
+                    (6, 7, "Seaborgium", "Sg", "transition"),
+                    (7, 7, "Bohrium", "Bh", "transition"),
+                    (8, 7, "Hassium", "Hs", "transition"),
+                    (9, 7, "Meitnerium", "Mt", "unknown"),
+                    (10, 7, "Darmstadtium", "Ds", "unknown"),
+                    (11, 7, "Roentgenium", "Rg", "unknown"),
+                    (12, 7, "Copernicium", "Cn", "unknown"),
+                    (13, 7, "Nihonium", "Nh", "unknown"),
+                    (14, 7, "Flerovium", "Fl", "unknown"),
+                    (15, 7, "Moscovium", "Mc", "unknown"),
+                    (16, 7, "Livermorium", "Lv", "unknown"),
+                    (17, 7, "Tennessine", "Ts", "unknown"),
+                    (18, 7, "Oganesson", "Og", "unknown")]
+        if element_number <= 0 or element_number > len(elements):
+            return 0, 0, "Unknown", "?", ""
+        return elements[element_number - 1]
+
+
 class SolarSystem:
     @staticmethod
     def draw_now(pen=None, asteroid_belt_radius=None, comet_rotations=5):
