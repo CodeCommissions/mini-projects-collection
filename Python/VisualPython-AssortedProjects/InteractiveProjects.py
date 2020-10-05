@@ -1,6 +1,48 @@
 import turtle
 
 
+class Exosketch:
+    def __init__(self):
+        self.pen = turtle.Turtle()
+        self.pen.speed(5)
+        self.pen.width(2)
+
+    def run_now(self):
+        def up():
+            self.pen.seth(90)
+            self.pen.forward(50)
+
+        def down():
+            self.pen.seth(-90)
+            self.pen.forward(50)
+
+        def left():
+            self.pen.seth(180)
+            self.pen.forward(50)
+
+        def right():
+            self.pen.seth(0)
+            self.pen.forward(50)
+
+        self.pen.screen.listen()
+
+        self.pen.write("WASD or arrow keys to move")
+        self.pen.screen.onkeypress(up, "Up")
+        self.pen.screen.onkeypress(up, "w")
+        self.pen.screen.onkeypress(down, "Down")
+        self.pen.screen.onkeypress(down, "s")
+        self.pen.screen.onkeypress(left, "Left")
+        self.pen.screen.onkeypress(left, "a")
+        self.pen.screen.onkeypress(right, "Right")
+        self.pen.screen.onkeypress(right, "d")
+
+        turtle.mainloop()
+
+    @staticmethod
+    def print_more_info():
+        print("")
+
+
 class BasicCursorPainting:
     def __init__(self):
         self.pen = turtle.Turtle()
@@ -50,12 +92,5 @@ class BasicCursorPainting:
 
     @staticmethod
     def print_more_info():
-        print("Create a basic \n")
-        print("Do not attempt this project unless you have at least a basic understanding of trigonometry.")
-        print()
-        print("A real spirograph actually comes from something called a hypotrochoid")
-        print("""https://en.wikipedia.org/wiki/Hypotrochoid""")
-        print("This whole project is just connecting small changes in XY coordinates based on that maths.")
-        print("To see some more interesting versions, change the default values of magnification, steps, R, r, and d.")
-        print("If you change r or R, note that they have to be integers.")
+        print("")
 

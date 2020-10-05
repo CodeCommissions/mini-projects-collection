@@ -95,7 +95,8 @@ import SpecialTurtles
 # IntermediateProjects.MazeMaker(width=20, height=40).draw_now()
 
 
-InteractiveProjects.BasicCursorPainting().run_now()
+InteractiveProjects.Exosketch().run_now()
+# InteractiveProjects.BasicCursorPainting().run_now()
 
 
 # RecursiveProjects.KochSnowflakeDrawer().draw_snowflake(2, 50)
