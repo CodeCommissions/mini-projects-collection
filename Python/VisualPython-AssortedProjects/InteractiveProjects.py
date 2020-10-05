@@ -1,4 +1,4 @@
-import turtle
+import turtle, time
 
 
 class Exosketch:
@@ -87,6 +87,53 @@ class BasicCursorPainting:
 
         self.pen.screen.onkeypress(size_up, "+")
         self.pen.screen.onkeypress(size_down, "-")
+
+        turtle.mainloop()
+
+    @staticmethod
+    def print_more_info():
+        print("")
+
+
+class AsteroidsGame:
+    def __init__(self):
+        self.pen = turtle.Turtle()
+        self.pen.speed(5)
+        self.pen.width(2)
+        self.win = self.pen.getscreen()
+        self.quit = False
+
+    def run_now(self):
+        self.pen = turtle.Turtle()
+        self.pen.width(3)
+
+        def forward():
+            self.pen.forward(10)
+
+        def left():
+            self.pen.left(3.3)
+
+        def right():
+            self.pen.right(3.3)
+
+        def end_game():
+            self.quit = True
+
+        self.pen.screen.listen()
+        self.pen.write("W/Up, A/Left, D/Right, |q|uit")
+
+        self.pen.screen.onkeypress(forward, "Up")
+        self.pen.screen.onkeypress(forward, "w")
+        self.pen.screen.onkeypress(left, "Left")
+        self.pen.screen.onkeypress(left, "a")
+        self.pen.screen.onkeypress(right, "Right")
+        self.pen.screen.onkeypress(right, "d")
+        self.pen.screen.onkeypress(end_game, "q")
+
+        while not self.quit:
+            time.sleep(0.05)
+            self.pen.forward(5)
+            self.win.update()
 
         turtle.mainloop()
 
