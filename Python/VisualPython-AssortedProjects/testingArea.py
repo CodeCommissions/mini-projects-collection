@@ -1,6 +1,7 @@
 import turtle, random, time
 import BeginnerProjects, FunctionFocusedProjects
-import IntermediateProjects, RecursiveProjects, IteratorProjects
+import InteractiveProjects, IntermediateProjects
+import RecursiveProjects, IteratorProjects
 import SpecialTurtles
 
 ########################################################################################################
@@ -44,7 +45,7 @@ import SpecialTurtles
 # BeginnerProjects.BrickWall.draw_now()
 # BeginnerProjects.DrawPencilLead.draw_now()
 # BeginnerProjects.DrawCircleOfCircles.draw_now(debug_mode=False, circles=12)
-BeginnerProjects.PeriodicTable.draw_now()
+# BeginnerProjects.PeriodicTable.draw_now()
 # BeginnerProjects.SolarSystem.draw_now(asteroid_belt_radius=200, comet_rotations=10)
 # BeginnerProjects.TruthTable.draw_now()
 # BeginnerProjects.Dice.draw_now(number=3)
@@ -92,6 +93,9 @@ BeginnerProjects.PeriodicTable.draw_now()
 
 # IntermediateProjects.PandemicTurtleSimulator(turtle_count=60).draw_now()
 # IntermediateProjects.MazeMaker(width=20, height=40).draw_now()
+
+
+InteractiveProjects.BasicCursorPainting().run_now()
 
 
 # RecursiveProjects.KochSnowflakeDrawer().draw_snowflake(2, 50)
