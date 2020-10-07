@@ -1,7 +1,17 @@
 ## https://en.wikipedia.org/wiki/Hypotrochoid
 import turtle
 import random
+import time
 from math import sin, cos, pi, gcd
+
+
+def teleport_turtle(turt: turtle.Turtle, x, y):
+    if turt.isdown():
+        turt.penup()
+        turt.goto(x, y)
+        turt.pendown()
+    else:
+        turt.goto(x, y)
 
 
 class SevenSegmentDrawer:
@@ -186,6 +196,56 @@ class MazeMaker:
         if len(valid_spots) == 0:
             return None
         return random.choice(valid_spots)
+
+
+class CellularAutomaton:
+    def __init__(self, survive_counts=[2, 3], breed_counts=[3], height=40):
+        self.pen = turtle.Turtle()
+        self.pen.speed(0)
+        self.pen.shape("square")
+        self.width, self.height = 20, 20
+        self.survive_counts, self.breed_counts = survive_counts, breed_counts
+
+        self.map_layout = [[random.choice([1, 0]) for _ in range(self.height)] for _ in range(self.width)]
+
+    def draw_now(self):
+        while True:
+            self.pen.screen.clearscreen()
+            self.pen.getscreen().tracer(100, 0)
+            teleport_turtle(self.pen, -15, 15)
+            self.pen.shapesize(30)
+            self.pen.color("grey")
+            self.pen.stamp()
+            self.pen.color("black")
+            self.pen.shapesize(1)
+            temp_map = [[0 for _ in range(self.height)] for _ in range(self.width)]
+            for row in range(self.height):
+                for col in range(self.width):
+                    x, y = self._get_valid_movement_coords(row, col)
+                    teleport_turtle(self.pen, x, y)
+                    neighbors = self._sum_neighbors(row, col)
+                    if neighbors in self.survive_counts and self.map_layout[row][col] == 1 or \
+                       neighbors in self.breed_counts and self.map_layout[row][col] == 0:
+                        temp_map[row][col] = 1
+                        self.pen.stamp()
+            self.pen.screen.update()
+            self.map_layout = temp_map
+            time.sleep(1)
+
+    def _get_valid_movement_coords(self, row, col):
+        x = row * 30 - 300
+        y = 300 - col * 30
+        return x, y
+
+    def _sum_neighbors(self, row, col):
+        s = 0
+        for r in [-1, 0, 1]:
+            for c in [-1, 0, 1]:
+                if r == c == 0:
+                    continue
+                if row+r >= 0 and row+r < self.height and col + c >= 0 and col + c < self.width-1:
+                    s += self.map_layout[row+r][col+c]
+        return s
 
 
 class PandemicTurtleSimulator:

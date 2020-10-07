@@ -135,7 +135,8 @@ class AsteroidsGame:
             self.pen.forward(5)
             self.win.update()
 
-        turtle.mainloop()
+        # turtle.mainloop()
+        quit()
 
     @staticmethod
     def print_more_info():
