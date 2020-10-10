@@ -96,7 +96,7 @@ class BasicCursorPainting:
         print("")
 
 
-class TronGame:
+class SnakeSimplified:
     def __init__(self):
         self.pen = turtle.Turtle()
         self.pen.speed(5)
@@ -132,9 +132,9 @@ class TronGame:
         self.pen.screen.onkeypress(end_game, "q")
 
         while not self.quit:
-            time.sleep(0.05)
-            self.pen.forward(5)
-            self.win.update()
+            # time.sleep(0.05)
+            self.pen.forward(1)
+            # self.win.update()
 
         # turtle.mainloop()
         quit()
