@@ -93,11 +93,11 @@ import SpecialTurtles
 
 # IntermediateProjects.PandemicTurtleSimulator(turtle_count=60).draw_now()
 # IntermediateProjects.MazeMaker(width=20, height=40).draw_now()
-IntermediateProjects.CellularAutomaton(survive_counts=[2, 3], breed_counts=[3]).draw_now()
+# IntermediateProjects.CellularAutomaton(survive_counts=[2, 3], breed_counts=[3]).draw_now()
 
 # InteractiveProjects.Exosketch().run_now()
 # InteractiveProjects.BasicCursorPainting().run_now()
-# InteractiveProjects.AsteroidsGame().run_now()
+InteractiveProjects.TronGame().run_now()
 
 
 # RecursiveProjects.KochSnowflakeDrawer().draw_snowflake(2, 50)

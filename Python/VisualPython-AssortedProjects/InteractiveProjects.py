@@ -79,8 +79,9 @@ class BasicCursorPainting:
             else:
                 self.pen.pendown()
 
-        self.pen.screen.listen()
         self.pen.write("LMB - go to cursor. RMB - toggle pen-up. '-+' change width.")
+
+        self.pen.screen.listen()
         self.pen.screen.onclick(goto, 1)  # Left
         self.pen.screen.onclick(goto, 2)  # Middle
         self.pen.screen.onclick(toggle_pen, 3)  # Right
@@ -95,7 +96,7 @@ class BasicCursorPainting:
         print("")
 
 
-class AsteroidsGame:
+class TronGame:
     def __init__(self):
         self.pen = turtle.Turtle()
         self.pen.speed(5)
