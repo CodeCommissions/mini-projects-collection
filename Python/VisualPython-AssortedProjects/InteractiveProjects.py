@@ -1,4 +1,5 @@
 import turtle, time
+import BeginnerProjects
 
 
 class Exosketch:
@@ -88,6 +89,50 @@ class BasicCursorPainting:
 
         self.pen.screen.onkeypress(size_up, "+")
         self.pen.screen.onkeypress(size_down, "-")
+
+        turtle.mainloop()
+
+    @staticmethod
+    def print_more_info():
+        print("")
+
+
+class TicTacToe:
+    def __init__(self):
+        self.pen = turtle.Turtle()
+        self.pen.speed(5)
+        self.pen.width(2)
+        self.next_move = "X"
+
+    def run_now(self):
+        def draw_move_at(x, y):
+            BeginnerProjects.teleport_turtle(self.pen, x, y-40)
+            self.pen.write(f"{self.next_move}", align="center", font=("courier", 50, "bold"))
+
+        def make_move(x, y):
+            print(x,y)
+            draw_move_at(x, y)
+            self.next_move = "X" if self.next_move == "O" else "O"
+
+        def draw_grid():
+            for x_start, y_start, heading in [[-200, -67, 0], [-200, 67, 0], [-67, 200, -90], [67, 200, -90]]:
+                BeginnerProjects.teleport_turtle(self.pen, x_start, y_start)
+                self.pen.seth(heading)
+                self.pen.forward(400)
+
+        self.pen.screen.listen()
+        self.pen.screen.onclick(make_move, 1)  # 1 == Left
+
+        draw_grid()
+        self.pen.screen.onkeypress(lambda : make_move(-136, -136), "1")
+        self.pen.screen.onkeypress(lambda : make_move(0, -136), "2")
+        self.pen.screen.onkeypress(lambda : make_move(136, -136), "3")
+        self.pen.screen.onkeypress(lambda : make_move(-136, 0), "4")
+        self.pen.screen.onkeypress(lambda : make_move(0, 0), "5")
+        self.pen.screen.onkeypress(lambda : make_move(136, 0), "6")
+        self.pen.screen.onkeypress(lambda : make_move(-136, 136), "7")
+        self.pen.screen.onkeypress(lambda : make_move(0, 136), "8")
+        self.pen.screen.onkeypress(lambda: make_move(136, 136), "9")
 
         turtle.mainloop()
 

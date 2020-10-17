@@ -97,7 +97,8 @@ import SpecialTurtles
 
 # InteractiveProjects.Exosketch().run_now()
 # InteractiveProjects.BasicCursorPainting().run_now()
-InteractiveProjects.SnakeSimplified().run_now()
+InteractiveProjects.TicTacToe().run_now()
+# InteractiveProjects.SnakeSimplified().run_now()
 
 
 # RecursiveProjects.KochSnowflakeDrawer().draw_snowflake(2, 50)
