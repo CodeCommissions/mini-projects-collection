@@ -110,7 +110,7 @@ class TicTacToe:
             self.pen.write(f"{self.next_move}", align="center", font=("courier", 50, "bold"))
 
         def make_move(x, y):
-            print(x,y)
+            print(x, y)
             draw_move_at(x, y)
             self.next_move = "X" if self.next_move == "O" else "O"
 
@@ -124,14 +124,14 @@ class TicTacToe:
         self.pen.screen.onclick(make_move, 1)  # 1 == Left
 
         draw_grid()
-        self.pen.screen.onkeypress(lambda : make_move(-136, -136), "1")
-        self.pen.screen.onkeypress(lambda : make_move(0, -136), "2")
-        self.pen.screen.onkeypress(lambda : make_move(136, -136), "3")
-        self.pen.screen.onkeypress(lambda : make_move(-136, 0), "4")
-        self.pen.screen.onkeypress(lambda : make_move(0, 0), "5")
-        self.pen.screen.onkeypress(lambda : make_move(136, 0), "6")
-        self.pen.screen.onkeypress(lambda : make_move(-136, 136), "7")
-        self.pen.screen.onkeypress(lambda : make_move(0, 136), "8")
+        self.pen.screen.onkeypress(lambda: make_move(-136, -136), "1")
+        self.pen.screen.onkeypress(lambda: make_move(0, -136), "2")
+        self.pen.screen.onkeypress(lambda: make_move(136, -136), "3")
+        self.pen.screen.onkeypress(lambda: make_move(-136, 0), "4")
+        self.pen.screen.onkeypress(lambda: make_move(0, 0), "5")
+        self.pen.screen.onkeypress(lambda: make_move(136, 0), "6")
+        self.pen.screen.onkeypress(lambda: make_move(-136, 136), "7")
+        self.pen.screen.onkeypress(lambda: make_move(0, 136), "8")
         self.pen.screen.onkeypress(lambda: make_move(136, 136), "9")
 
         turtle.mainloop()

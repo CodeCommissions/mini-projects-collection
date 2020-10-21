@@ -1,6 +1,50 @@
 import turtle
 
 
+class ButtonTurtle(turtle.Turtle):
+    """
+    Moves to a starting position, scales up, changes shape, and turns on click listeners.
+    A fake button.
+    """
+    def __init__(self, x, y, width, height, *args, **kwargs):
+        self.btn_x = x
+        self.btn_y = y
+        self.btn_width = width
+        self.btn_height = height
+
+        super().__init__(*args, **kwargs)
+        self.penup()
+        self.goto(x, y)
+        self.pendown()
+
+        self.shape("square")
+        self.shapesize(self.btn_height/10, self.btn_width/10)
+        self.getscreen().listen()
+
+
+class RainbowTurtle(turtle.Turtle):
+    def __init__(self, colors=None, *args, **kwargs):
+        self._forward_steps = 0
+
+        if colors is None:
+            self._colors = ["red", "orange", "black", "blue", "indigo"]
+        else:
+            self._colors = colors
+
+        super().__init__(*args, **kwargs)
+        self.width(4)
+
+    def forward(self, distance):
+        color_index = self._forward_steps % len(self._colors)
+        self.color(self._colors[color_index])
+        self._forward_steps += 1
+
+        super().forward(distance)
+
+    def backward(self, distance):
+        self.forward(-distance)
+
+
 class CongaTurtle(turtle.Turtle):
     def __init__(self, length, *args, **kwargs):
         self.trailing_turtle = None
@@ -62,29 +106,6 @@ class CongaTurtle(turtle.Turtle):
         self.left(-angle)
 
 
-class RainbowTurtle(turtle.Turtle):
-    def __init__(self, colors=None, *args, **kwargs):
-        self._forward_steps = 0
-
-        if colors is None:
-            self._colors = ["red", "orange", "black", "blue", "indigo"]
-        else:
-            self._colors = colors
-
-        super().__init__(*args, **kwargs)
-        self.width(4)
-
-    def forward(self, distance):
-        color_index = self._forward_steps % len(self._colors)
-        self.color(self._colors[color_index])
-        self._forward_steps += 1
-
-        super().forward(distance)
-
-    def backward(self, distance):
-        self.forward(-distance)
-
-
 class Demos:
     @staticmethod
     def conga_turtle_demo():
@@ -106,3 +127,9 @@ class Demos:
             pen.left(90)
 
         return pen, screen
+
+    @staticmethod
+    def button_turtle_demo():
+        btn = ButtonTurtle(100, 100, 50, 30)
+        btn.onclick(lambda x, y: print(x, y), 1)
+        btn.onclick(lambda x, y: btn.fillcolor("red") if btn.fillcolor() == "black" else btn.fillcolor("black"), 1, True)

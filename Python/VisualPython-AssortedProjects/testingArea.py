@@ -73,12 +73,13 @@ import SpecialTurtles
 # Be a bit careful with how much you uncomment.
 ########################################################################################################
 
-# SpecialTurtles.Demos.conga_turtle_demo()
 # SpecialTurtles.Demos.rainbow_turtle_demo()
+SpecialTurtles.Demos.button_turtle_demo()
 # rainbow_pen = SpecialTurtles.rainbow_turtle_demo()
 # for i in range(6):
 #     rainbow_pen.forward(220)
 #     rainbow_pen.left(60)
+# SpecialTurtles.Demos.conga_turtle_demo()
 
 # drawer = IntermediateProjects.SevenSegmentDrawer()
 # for num in range(10):
@@ -97,7 +98,7 @@ import SpecialTurtles
 
 # InteractiveProjects.Exosketch().run_now()
 # InteractiveProjects.BasicCursorPainting().run_now()
-InteractiveProjects.TicTacToe().run_now()
+# InteractiveProjects.TicTacToe().run_now()
 # InteractiveProjects.SnakeSimplified().run_now()
 
 
@@ -118,4 +119,4 @@ InteractiveProjects.TicTacToe().run_now()
 # IteratorProjects.PermutationGenerator.demo()
 # IteratorProjects.RandomColorGenerator.demo()
 
-turtle.exitonclick()
+turtle.mainloop()
