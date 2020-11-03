@@ -1896,6 +1896,36 @@ class Spear:
         print("Loops are essential for the shaft - you can either use nested loops or a rectangle() helper function")
         print("Ifs will help, but can be skipped if you know about lists and the mod operator")
 
+class PoolBalls:
+    @staticmethod
+    def draw_now(pen=None, layers=5):
+        pen = get_default_turtle(pen)
+        LEFT = 90 + 45
+        RIGHT = 45
+
+        pen = turtle.Turtle()
+
+        def linear_circles(depth):
+            pen.seth(RIGHT)
+            pen.up()
+            for i in range(depth):
+                for j in range(depth - i):
+                    layer = (i+j)%depth+1
+                    pen.color(0.5/layer+0.1, 0.2/layer, 0.8/layer)
+                    pen.stamp()
+                    pen.forward(50)
+                pen.backward(50 * (depth - i))
+                pen.left(90)
+                pen.forward(50)
+                pen.right(90)
+            pen.ht()
+            pen.goto(0, 0)
+
+        pen.shape('circle')
+        pen.shapesize(2.5)
+        pen.speed(2)
+        linear_circles(layers)
+        return pen
 
 class PythagorasProof:
     @staticmethod

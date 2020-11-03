@@ -59,6 +59,7 @@ import SpecialTurtles
 # BeginnerProjects.RacerTurtles.race_now()
 # BeginnerProjects.ParallelShapeFilling.draw_now()
 # BeginnerProjects.DrawChessBoard.draw_now(height=7, width=7)
+BeginnerProjects.PoolBalls.draw_now(layers=5)
 # BeginnerProjects.PythagorasProof.draw_now(horizontal_edge=150, vertical_edge=100)
 # BeginnerProjects.OneOverXGraph.draw_now(zoom_factor=50)
 
@@ -74,7 +75,7 @@ import SpecialTurtles
 ########################################################################################################
 
 # SpecialTurtles.Demos.rainbow_turtle_demo()
-SpecialTurtles.Demos.button_turtle_demo()
+# SpecialTurtles.Demos.button_turtle_demo()
 # rainbow_pen = SpecialTurtles.rainbow_turtle_demo()
 # for i in range(6):
 #     rainbow_pen.forward(220)
