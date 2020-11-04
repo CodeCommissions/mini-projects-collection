@@ -2,7 +2,7 @@ import turtle
 import random
 
 
-def get_default_turtle(existing_turtle=None):
+def get_default_turtle(existing_turtle=None) -> turtle.Turtle:
     if existing_turtle is None:
         existing_turtle = turtle.Turtle()
         existing_turtle.color(0.9, 0.9, 0.9)
@@ -460,6 +460,49 @@ class DrawBarGraph:
             # Separate each bar by 5 pixels.
             x, y = pen.position()
             teleport_turtle(pen, x+5, y)
+
+        pen.ht()
+        return pen
+
+
+class TetrisShapes:
+    @staticmethod
+    def draw_now(pen=None, shape="o", square_width=50):
+        pen = get_default_turtle(pen)
+        pen.pencolor("black")
+        pen.fillcolor(random.random(),random.random(),random.random())
+        pen.width(3)
+
+        # 12 13 14 15
+        #  8  9 10 11
+        #  4  5  6  7
+        #  0  1  2  3
+        shapes = {"o": [0, 1, 4, 5],
+                  "i": [0, 4, 8, 12],
+                  "t": [0, 1, 2, 5],
+                  "s": [0, 1, 5, 6],
+                  "z": [4, 5, 1, 2],
+                  "j": [4, 0, 1, 2],
+                  "l": [0, 1, 2, 6]}
+        shapes["square"] = shapes["o"]
+        shapes["line"] = shapes["i"]
+        shapes["right snake"] = shapes["s"]
+        shapes["left snake"] = shapes["z"]
+        shapes["left gun"] = shapes["j"]
+        shapes["right gun"] = shapes["l"]
+        shapes["pyramid"] = shapes["t"]
+
+        def square_at(x, y):
+            pen.seth(0)
+            teleport_turtle(pen, x, y)
+            pen.begin_fill()
+            for i in range(4):
+                pen.forward(square_width)
+                pen.left(90)
+            pen.end_fill()
+
+        for pos in shapes[str.lower(shape)]:
+            square_at(pos%4 * square_width, pos//4 * square_width)
 
         pen.ht()
         return pen

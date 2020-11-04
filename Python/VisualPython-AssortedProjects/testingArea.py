@@ -45,6 +45,7 @@ import SpecialTurtles
 # BeginnerProjects.BrickWall.draw_now()
 # BeginnerProjects.DrawPencilLead.draw_now()
 # BeginnerProjects.DrawCircleOfCircles.draw_now(debug_mode=False, circles=12)
+BeginnerProjects.TetrisShapes.draw_now(shape="pyramid", square_width=60)
 # BeginnerProjects.PeriodicTable.draw_now()
 # BeginnerProjects.SolarSystem.draw_now(asteroid_belt_radius=200, comet_rotations=10)
 # BeginnerProjects.TruthTable.draw_now()
@@ -59,7 +60,7 @@ import SpecialTurtles
 # BeginnerProjects.RacerTurtles.race_now()
 # BeginnerProjects.ParallelShapeFilling.draw_now()
 # BeginnerProjects.DrawChessBoard.draw_now(height=7, width=7)
-BeginnerProjects.PoolBalls.draw_now(layers=5)
+# BeginnerProjects.PoolBalls.draw_now(layers=5)
 # BeginnerProjects.PythagorasProof.draw_now(horizontal_edge=150, vertical_edge=100)
 # BeginnerProjects.OneOverXGraph.draw_now(zoom_factor=50)
 
