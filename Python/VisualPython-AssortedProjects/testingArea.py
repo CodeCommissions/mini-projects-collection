@@ -33,7 +33,7 @@ import SpecialTurtles
 # BeginnerProjects.DrawGradientBackground.draw_now()
 # BeginnerProjects.DrawTarget.draw_now()
 # BeginnerProjects.DrawCaptainShield.draw_now()
-# BeginnerProjects.ColourPalette.draw_now(pixels_between_stamps=3)
+BeginnerProjects.ColourPalette.draw_now(pixels_between_stamps=3)
 # BeginnerProjects.TwoValueBarGraph.draw_now(value1=0.3, value2=0.7, scaling_factor=100)
 # BeginnerProjects.DrawBarGraph.draw_now(data = [20, 51, 105, 156, 201, 275, 180, -75, -150, 10])
 # BeginnerProjects.Spear.draw_now()  # Similar structure to the GradientBackground project - but with a start and end
@@ -45,7 +45,7 @@ import SpecialTurtles
 # BeginnerProjects.BrickWall.draw_now()
 # BeginnerProjects.DrawPencilLead.draw_now()
 # BeginnerProjects.DrawCircleOfCircles.draw_now(debug_mode=False, circles=12)
-BeginnerProjects.TetrisShapes.draw_now(shape="pyramid", square_width=60)
+# BeginnerProjects.TetrisShapes.draw_now(shape="pyramid", square_width=60)
 # BeginnerProjects.PeriodicTable.draw_now()
 # BeginnerProjects.SolarSystem.draw_now(asteroid_belt_radius=200, comet_rotations=10)
 # BeginnerProjects.TruthTable.draw_now()
