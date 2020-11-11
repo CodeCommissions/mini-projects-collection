@@ -3,18 +3,30 @@ from random import randint
 import tkinter as tk
 from tkinter import filedialog
 
+# Used to create file-prompts
+root = tk.Tk()
+root.withdraw()
+
+
 # https://pillow.readthedocs.io/en/3.0.x/reference/Image.html
-
-
 def load_image(address):
+    """
+    This function is just to fix intellisense.
+    It's a much less efficient version of `Image.open(address)`
+    """
     to_clone = Image.open(address)
     result = Image.new("RGB", (to_clone.width, to_clone.height))
     for x in range(result.width):
         for y in range(result.height):
-            color = to_clone.getpixel((x,y))
-            result.putpixel((x,y), color)
+            color = to_clone.getpixel((x, y))
+            result.putpixel((x, y), color)
 
     return result
+
+
+def prompt_user_for_image():
+    file_path = filedialog.askopenfilename(filetypes=[("",".png"), ("",".jpg")])
+    return load_image(file_path)
 
 
 my_picture = Image.new("RGB", (256, 256))
@@ -37,10 +49,6 @@ for x in range(256):
 #with_noise.show()
 #with_noise.save("noisy_gradient.png")
 
-
-root = tk.Tk()
-root.withdraw()
-
 def tuple_multiplier(tup, multiplier):
     return tuple([multiplier*i for i in tup])
 
@@ -62,9 +70,9 @@ def filter_pixel(image, center_x, center_y):
             total[2] += pixel[2]
     return tuple([int(i) for i in total])
 
-file_path = filedialog.askopenfilename()
-loaded = load_image(file_path)
-to_modify = load_image(file_path)
+
+loaded = prompt_user_for_image()
+to_modify = loaded.copy() #load_image(file_path)
 for x in range(loaded.width):
     for y in range(loaded.height):
         color = filter_pixel(loaded, x, y)
