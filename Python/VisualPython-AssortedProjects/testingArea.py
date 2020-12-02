@@ -25,6 +25,7 @@ import SpecialTurtles
 # BeginnerProjects.StampedSpiral.draw_now()
 # BeginnerProjects.AgeGroupTurtle.draw_now()
 # BeginnerProjects.Slinky.draw_now()
+BeginnerProjects.Covid19.draw_now()
 # BeginnerProjects.Star.draw_now(size=200, edges=5, bgcolor="midnight blue", turtle_color="gold")
 # BeginnerProjects.Minion.draw_now() # The minion is a long project, but isn't very complicated if you break it up.
 # BeginnerProjects.ClockFace.draw_now(size=250, hours=2, minutes=30)
@@ -33,7 +34,7 @@ import SpecialTurtles
 # BeginnerProjects.DrawGradientBackground.draw_now()
 # BeginnerProjects.DrawTarget.draw_now()
 # BeginnerProjects.DrawCaptainShield.draw_now()
-BeginnerProjects.ColourPalette.draw_now(pixels_between_stamps=3)
+# BeginnerProjects.ColourPalette.draw_now(pixels_between_stamps=3)
 # BeginnerProjects.TwoValueBarGraph.draw_now(value1=0.3, value2=0.7, scaling_factor=100)
 # BeginnerProjects.DrawBarGraph.draw_now(data = [20, 51, 105, 156, 201, 275, 180, -75, -150, 10])
 # BeginnerProjects.Spear.draw_now()  # Similar structure to the GradientBackground project - but with a start and end

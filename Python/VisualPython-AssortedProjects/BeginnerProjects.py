@@ -332,6 +332,33 @@ class Slinky:
         print("The code isn't complex, but it may take a lot of experimentation to avoid just creating a spirograph")
 
 
+class Covid19:
+    @staticmethod
+    def draw_now(pen=None):
+        pen = get_default_turtle(pen)
+        pen.speed(0)
+
+        pen.color("dark red")
+        for i in range(1, 212):
+            pen.forward(i)
+            pen.left(i)
+
+        pen.color("black")
+        for i in range(212, 100, -1):
+            pen.forward(i)
+            pen.left(i)
+
+        pen.up()
+        pen.goto(0, 250)
+        pen.write("COVID 19 Mockup", align="center", font=("Courier", 18, "bold"))
+        pen.goto(0, 225)
+        pen.write("Hint: move by X, turn by X, change X, repeat", align="center", font=("Courier", 14, "bold"))
+        pen.goto(0, 200)
+        pen.write("X => 1 -> 212 -> 100", align="center", font=("Courier", 14, "bold"))
+        pen.ht()
+        return pen
+
+
 class Star:
     @staticmethod
     def draw_now(pen=None, size=200, edges=5, bgcolor="midnight blue", turtle_color="gold"):
@@ -715,14 +742,14 @@ class SolarSystem:
             pen.circle(distance)
 
         def draw_planet(x, y, size, color, name=None):
-            teleport_turtle(pen, x + size, y)
-            pen.seth(90)
-            pen.color(color)
+            draw_orbit(x, y)
+
+            teleport_turtle(pen, x, y - size)
+            pen.seth(0)
+            pen.fillcolor(color)
             pen.begin_fill()
             pen.circle(size)
             pen.end_fill()
-
-            draw_orbit(x, y)
 
             teleport_turtle(pen, x, y + size)
             pen.color("black")
@@ -783,10 +810,19 @@ class SolarSystem:
         pen.write("Missing many details.", align="center", font=("Courier", 14, "bold"))
 
         pen.speed(0)
-        draw_planet(0, 0, 5, "yellow", "Sun")
-        draw_planet(40, 0, 20, "light blue", "Earth")
-        draw_planet(0, 120, 15, "red", "Mars")
-        draw_planet(-200, -200, 40, "brown", "Jupiter")
+        # draw_planet(40, 0, 20, "light blue", "Earth")
+        # draw_planet(0, 120, 15, "red", "Mars")
+        # draw_planet(-200, -200, 40, "brown", "Jupiter")
+
+        draw_planet(0, 0, 20, "yellow", "Sun")
+        draw_planet(0, 55, 10, "dark red", "Mercury")
+        draw_planet(-50,-60, 18, "orange", "Venus")
+        draw_planet(120, 20, 20, "light blue", "Earth")
+        draw_planet(0, -160, 15, "red", "Mars")
+        draw_planet(-220, 150, 30, "brown", "Jupiter")
+        draw_planet(190, -230, 28, "goldenrod", "Saturn")
+        draw_planet(-330, 40, 26, "powder blue", "Uranus")
+        draw_planet(400, 20, 25, "royal blue", "Neptune")
 
         draw_asteroid_belt()
         draw_comet()

@@ -6,6 +6,7 @@ from tkinter import filedialog
 root = tk.Tk()
 root.withdraw()
 
+"".spl
 
 # https://pillow.readthedocs.io/en/3.0.x/reference/Image.html
 def load_image(address):
