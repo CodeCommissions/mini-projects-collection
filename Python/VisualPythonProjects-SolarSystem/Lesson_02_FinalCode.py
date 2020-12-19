@@ -16,8 +16,7 @@ def draw_planet(x, y, size, color, name):
     pen.end_fill()
 
     jump_to(x, y + size)
-    pen.write(name, align="center",
-              font=("courier", 18, "bold"))
+    pen.write(name, align="center", font=("courier", 18, "bold"))
 
 
 draw_planet(0, 0, 20, "yellow", "Sun")
