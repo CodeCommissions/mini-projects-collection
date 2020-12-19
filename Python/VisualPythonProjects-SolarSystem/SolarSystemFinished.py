@@ -2,7 +2,7 @@ import turtle, random
 
 # Setup
 pen = turtle.Turtle()
-pen.getscreen().bgcolor("grey")
+# pen.getscreen().bgcolor("grey")
 pen.speed(0)
 
 
