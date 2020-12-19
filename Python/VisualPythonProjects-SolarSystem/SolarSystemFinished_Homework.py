@@ -125,7 +125,7 @@ draw_planets()
 draw_asteroid_belts()
 
 earth_moon = [Moon(120, 20, 40), ]
-jupiter_moons = [Moon(-220, 150, 50), Moon(-220, 150, 80), Moon(-220, 150, 80)]
+jupiter_moons = [Moon(0, 0, 100), Moon(-220, 150, 50), Moon(-220, 150, 80), Moon(-220, 150, 80)]
 draw_moons_forever(earth_moon + jupiter_moons)
 
 pen.getscreen().exitonclick()

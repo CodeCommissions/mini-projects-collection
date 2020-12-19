@@ -1011,11 +1011,44 @@ class DrawMedicCross:
         pen.ht()
         return pen
 
+class TriangleSpammer:
+    @staticmethod
+    def draw_now(pen=None):
+        pen = get_default_turtle(pen)
+        pen.speed(0)
+        pen.up()
+        pen.getscreen().tracer(100)
+        bound = 100
+
+        for i in range(1000):
+            pen.color(random.random(), random.random(), random.random())
+            pen.goto(random.randint(-bound, bound), random.randint(-bound, bound))
+            pen.seth([0, 90, 180, 270][random.randint(0, 3)])
+
+            pen.begin_fill()
+            pen.forward(random.randint(50, 150))
+            pen.right(90)
+            pen.forward(random.randint(50, 150))
+            pen.end_fill()
+
+        pen.getscreen().tracer(1)
+        pen.ht()
+
+        pen.color("black")
+        pen.up()
+        pen.goto(0, 275)
+        pen.write("90° Triangles", align="center", font=("Courier", 18, "bold"))
+        pen.goto(0, 255)
+        pen.write("Hint: random() for colors, randint(x, y) for sizes and positions", align="center",
+                  font=("Courier", 14, "bold"))
+        pen.goto(0, -275)
+        pen.write("turtle.getscreen().tracer(100) --> draw every 100th frame --> super speed", align="center",
+                  font=("Courier", 14, "bold"))
+        return pen
 
 class Wormhole:
     @staticmethod
     def draw_now(pen=None):
-        pen = get_default_turtle(pen)
         pen.speed(0)
         pen.width(1)
         pen.color("black")

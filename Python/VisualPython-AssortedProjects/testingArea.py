@@ -39,6 +39,7 @@ import SpecialTurtles
 # BeginnerProjects.DrawBarGraph.draw_now(data = [20, 51, 105, 156, 201, 275, 180, -75, -150, 10])
 # BeginnerProjects.Spear.draw_now()  # Similar structure to the GradientBackground project - but with a start and end
 # BeginnerProjects.DrawMedicCross.draw_now()
+BeginnerProjects.TriangleSpammer.draw_now()
 # BeginnerProjects.Wormhole.draw_now()
 # BeginnerProjects.SnailShell.draw_now()
 # BeginnerProjects.SnailShell.draw_now(colors=["red", "orange", "yellow", "green", "blue", "indigo", "violet"])
@@ -48,7 +49,7 @@ import SpecialTurtles
 # BeginnerProjects.DrawCircleOfCircles.draw_now(debug_mode=False, circles=12)
 # BeginnerProjects.TetrisShapes.draw_now(shape="pyramid", square_width=60)
 # BeginnerProjects.PeriodicTable.draw_now()
-BeginnerProjects.SolarSystem.draw_now(asteroid_belt_radius=200, comet_rotations=10)
+# BeginnerProjects.SolarSystem.draw_now(asteroid_belt_radius=200, comet_rotations=10)
 # BeginnerProjects.TruthTable.draw_now()
 # BeginnerProjects.Dice.draw_now(number=3)
 # BeginnerProjects.DrawWhirlpool.draw_now()
