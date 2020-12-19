@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="7b970d93-dbe9-4faf-98b5-d19b47e46931" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../VisualPython-AssortedProjects/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../VisualPython-AssortedProjects/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../VisualPython-AssortedProjects/testingArea.py" beforeDir="false" afterPath="$PROJECT_DIR$/../VisualPython-AssortedProjects/testingArea.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SolarSystem.py" beforeDir="false" afterPath="$PROJECT_DIR$/SolarSystem.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SolarSystemFinished_Homework.py" beforeDir="false" afterPath="$PROJECT_DIR$/SolarSystemFinished_Homework.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,8 +17,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SolarSystem.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret lean-forward="true" />
+            <state relative-caret-position="250">
+              <caret line="11" lean-forward="true" selection-end-line="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Lesson_01_FinalCode.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="16" selection-start-line="16" selection-end-line="16" />
             </state>
           </provider>
         </entry>
@@ -25,8 +35,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SolarSystemFinished.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="164">
-              <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
+            <state relative-caret-position="479">
+              <caret line="64" lean-forward="true" selection-start-line="64" selection-end-line="64" />
               <folding>
                 <element signature="e#1788#2161#0" />
                 <element signature="e#2204#2315#0" />
@@ -35,15 +45,14 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SolarSystemFinished_Homework.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="385">
-              <caret line="101" column="29" lean-forward="true" selection-start-line="101" selection-start-column="29" selection-end-line="101" selection-end-column="29" />
+            <state relative-caret-position="356">
+              <caret line="131" selection-start-line="131" selection-end-line="131" />
               <folding>
                 <element signature="e#69#1587#0" />
                 <element signature="e#1636#2009#0" />
-                <element signature="e#2052#2163#0" />
               </folding>
             </state>
           </provider>
@@ -64,21 +73,11 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/SolarSystem.py" />
-        <option value="$PROJECT_DIR$/SolarSystemFinished.py" />
         <option value="$PROJECT_DIR$/SolarSystemFinished_PlusMoons.py" />
         <option value="$PROJECT_DIR$/SolarSystemFinished_Homework.py" />
-      </list>
-    </option>
-  </component>
-  <component name="ProjectConfigurationFiles">
-    <option name="files">
-      <list>
-        <option value="$PROJECT_DIR$/.idea/VisualPythonProjects-SolarSystem.iml" />
-        <option value="$PROJECT_DIR$/.idea/misc.xml" />
-        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
-        <option value="$PROJECT_DIR$/.idea/modules.xml" />
-        <option value="$PROJECT_DIR$/.idea/libraries/R_User_Library.xml" />
+        <option value="$PROJECT_DIR$/SolarSystemFinished.py" />
+        <option value="$PROJECT_DIR$/SolarSystem.py" />
+        <option value="$PROJECT_DIR$/Lesson_01_FinalCode.py" />
       </list>
     </option>
   </component>
@@ -108,6 +107,9 @@
       <pane id="Scope" />
     </panes>
   </component>
+  <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -120,7 +122,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.SolarSystemFinished_PlusMoons">
+  <component name="RunManager" selected="Python.SolarSystem">
     <configuration name="SolarSystem" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="VisualPythonProjects-SolarSystem" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -186,9 +188,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.SolarSystemFinished_PlusMoons" />
-        <item itemvalue="Python.SolarSystemFinished" />
         <item itemvalue="Python.SolarSystem" />
+        <item itemvalue="Python.SolarSystemFinished" />
+        <item itemvalue="Python.SolarSystemFinished_PlusMoons" />
       </list>
     </recent_temporary>
   </component>
@@ -231,17 +233,21 @@
     </layout>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/SolarSystem.py">
+    <entry file="file://$PROJECT_DIR$/SolarSystemFinished_Homework.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret lean-forward="true" />
+        <state relative-caret-position="356">
+          <caret line="131" selection-start-line="131" selection-end-line="131" />
+          <folding>
+            <element signature="e#69#1587#0" />
+            <element signature="e#1636#2009#0" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SolarSystemFinished.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
+        <state relative-caret-position="479">
+          <caret line="64" lean-forward="true" selection-start-line="64" selection-end-line="64" />
           <folding>
             <element signature="e#1788#2161#0" />
             <element signature="e#2204#2315#0" />
@@ -249,15 +255,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SolarSystemFinished_Homework.py">
+    <entry file="file://$PROJECT_DIR$/SolarSystem.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="101" column="29" lean-forward="true" selection-start-line="101" selection-start-column="29" selection-end-line="101" selection-end-column="29" />
-          <folding>
-            <element signature="e#69#1587#0" />
-            <element signature="e#1636#2009#0" />
-            <element signature="e#2052#2163#0" />
-          </folding>
+        <state relative-caret-position="250">
+          <caret line="11" lean-forward="true" selection-end-line="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Lesson_01_FinalCode.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
         </state>
       </provider>
     </entry>

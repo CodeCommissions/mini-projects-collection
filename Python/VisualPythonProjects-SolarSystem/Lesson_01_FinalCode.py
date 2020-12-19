@@ -14,23 +14,3 @@ draw_planet(0, 0, 50)
 draw_planet(60, 60, 10)
 
 pen.getscreen().exitonclick()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

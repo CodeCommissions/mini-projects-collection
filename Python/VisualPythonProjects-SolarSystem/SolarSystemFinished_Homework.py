@@ -74,7 +74,7 @@ def draw_planet(x, y, size, color, name):
 
 def randomise_turtle(to_randomise):
     to_randomise.shapesize(random.random()+0.2)
-    grey = random.random()
+    grey = random.random()*0.5+0.25
     to_randomise.color(grey, grey, grey)
 
 
