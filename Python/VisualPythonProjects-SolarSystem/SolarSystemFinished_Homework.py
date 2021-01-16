@@ -4,12 +4,23 @@ import turtle, random
 # # README:
 # # This module was put together to DEMO several of the homework projects proposed.
 # # It uses concepts like classes, and lists of objects. So just hit play and see it run ^_^
+# # It also isn't clean. So you might find hard-coded values, or things that belong in dedicated functions.
 # ### ### ### ### ### ###
 
 # Setup
 pen = turtle.Turtle()
 pen.getscreen().bgcolor("grey")
 pen.speed(0)
+
+
+def jump_to(turtle_to_move : turtle.Turtle, x, y):
+    if turtle_to_move.isdown():
+        turtle_to_move.up()
+        turtle_to_move.goto(x, y)
+        turtle_to_move.down()
+    else:
+        turtle_to_move.goto(x, y)
+
 
 # Use a class to track each moons state as it moves
 # Wraps movement logic and positional logic together
@@ -55,26 +66,37 @@ class Moon:
         self.distance_travelled += 5+self.speed
 
 
-def draw_planet(x, y, size, color, name):
+def draw_planet(x, y, size, color, name, rings = 0):
+    # Orbits
     orbit = (x**2+y**2)**0.5
     pen.up()
     pen.goto(0, -orbit)
     pen.down()
     pen.circle(orbit)
 
-    pen.penup()
-    pen.goto(x, y - size)
-    pen.pendown()
+    # Planet outline
+    jump_to(pen, x, y - size)
 
+    # Planet coloring
     pen.fillcolor(color)
     pen.begin_fill()
     pen.circle(size)
     pen.end_fill()
 
-    pen.penup()
-    pen.goto(x, y + size)
-    pen.pendown()
+    # Rings - not a clean solution (any planet with rings will use the same coloring)
+    current_color = pen.pencolor()
+    for i in range(rings):
+        pen.color(0.8, random.random(), 0.2)
+        ring_radius = size + i*2 + 10
+        jump_to(pen, x, y-ring_radius)
+        pen.circle(ring_radius)
+    pen.pencolor(current_color)
+
+    # Label
+    jump_to(pen, x, y + size)
     pen.write(name, align="center", font=("courier", 18, "bold"))
+
+
 
 
 def randomise_turtle(to_randomise):
@@ -120,7 +142,7 @@ def draw_planets():
     draw_planet(120, 20, 20, "light blue", "Earth")
     draw_planet(0, -160, 15, "red", "Mars")
     draw_planet(-220, 150, 30, "brown", "Jupiter")
-    draw_planet(190, -230, 28, "goldenrod", "Saturn")
+    draw_planet(190, -230, 28, "goldenrod", "Saturn", rings=15)
     draw_planet(-330, 40, 26, "powder blue", "Uranus")
     draw_planet(400, 20, 25, "royal blue", "Neptune")
 
