@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e043b1a1-98e8-4f74-a03d-98ce6082bdd1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/BeginnerProjects.py" beforeDir="false" afterPath="$PROJECT_DIR$/BeginnerProjects.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testingArea.py" beforeDir="false" afterPath="$PROJECT_DIR$/testingArea.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../VisualPythonProjects-SolarSystem/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../VisualPythonProjects-SolarSystem/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../VisualPythonProjects-SolarSystem/SolarSystem.py" beforeDir="false" afterPath="$PROJECT_DIR$/../VisualPythonProjects-SolarSystem/SolarSystem.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../VisualPythonProjects-SolarSystem/SolarSystemFinished_Homework.py" beforeDir="false" afterPath="$PROJECT_DIR$/../VisualPythonProjects-SolarSystem/SolarSystemFinished_Homework.py" afterDir="false" />
-    </list>
+    <list default="true" id="e043b1a1-98e8-4f74-a03d-98ce6082bdd1" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,7 +26,7 @@
         <entry file="file://$PROJECT_DIR$/BeginnerProjects.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="351">
-              <caret line="1031" column="26" lean-forward="true" selection-start-line="1031" selection-start-column="26" selection-end-line="1031" selection-end-column="26" />
+              <caret line="1031" column="26" selection-start-line="1031" selection-start-column="26" selection-end-line="1031" selection-end-column="26" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -52,7 +46,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/testingArea.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="185">
+            <state relative-caret-position="629">
               <caret line="41" column="43" selection-start-line="41" selection-start-column="43" selection-end-line="41" selection-end-column="43" />
               <folding>
                 <element signature="e#0#27#0" expanded="true" />
@@ -183,7 +177,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -195,6 +188,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -361,8 +355,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.08635394" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.086886995" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -474,6 +469,9 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/temp.py" />
+    <entry file="file://$PROJECT_DIR$/temp2.py" />
+    <entry file="file://$PROJECT_DIR$/Playground.py" />
     <entry file="file://$PROJECT_DIR$/ImageStarterPack.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
@@ -488,6 +486,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1411">
           <caret line="83" column="22" selection-start-line="83" selection-start-column="19" selection-end-line="83" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testingArea.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="41" column="43" selection-start-line="41" selection-start-column="43" selection-end-line="41" selection-end-column="43" />
+          <folding>
+            <element signature="e#0#27#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -520,50 +528,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/temp.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="69" lean-forward="true" selection-start-line="69" selection-end-line="69" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-            <element signature="e#69#1587#0" />
-            <element signature="e#1636#2009#0" />
-            <element signature="e#2052#2163#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/temp2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Playground.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testingArea.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="41" column="43" selection-start-line="41" selection-start-column="43" selection-end-line="41" selection-end-column="43" />
-          <folding>
-            <element signature="e#0#27#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/BeginnerProjects.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="351">
-          <caret line="1031" column="26" lean-forward="true" selection-start-line="1031" selection-start-column="26" selection-end-line="1031" selection-end-column="26" />
+          <caret line="1031" column="26" selection-start-line="1031" selection-start-column="26" selection-end-line="1031" selection-end-column="26" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>
