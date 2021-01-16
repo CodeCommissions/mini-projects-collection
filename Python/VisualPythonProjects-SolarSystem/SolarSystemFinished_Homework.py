@@ -1,10 +1,15 @@
 import turtle, random
 
+# ### ### ### ### ### ###
+# # README:
+# # This module was put together to DEMO several of the homework projects proposed.
+# # It uses concepts like classes, and lists of objects. So just hit play and see it run ^_^
+# ### ### ### ### ### ###
+
 # Setup
 pen = turtle.Turtle()
 pen.getscreen().bgcolor("grey")
 pen.speed(0)
-
 
 # Use a class to track each moons state as it moves
 # Wraps movement logic and positional logic together
